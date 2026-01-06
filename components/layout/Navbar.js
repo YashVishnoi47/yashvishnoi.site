@@ -9,12 +9,11 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { motion } from "framer-motion";
-import { Duru_Sans } from "next/font/google";
 
 const Navbar = () => {
   return (
     <motion.div
-      className="h-20 max-w-[1228.8px] flex items-center justify-center gap-8 px-4 mt-4 rounded-lg text-white bg-black border border-black sm:w-[75%] w-[90%]"
+      className="h-20 max-w-[1228.8px] flex items-center justify-center gap-8 px-4 mt-4 rounded-lg text-white bg-black border border-black sm:w-[75%] w-[90%] z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
@@ -38,9 +37,9 @@ const Navbar = () => {
 
       <div className="h-full w-full lg:flex hidden gap-6 justify-center items-center">
         {[
-          { name: "Home", link: "/" },
+          { name: "Home", link: "#home" },
           { name: "About", link: "/" },
-          { name: "Services", link: "/" },
+          { name: "Services", link: "#services" },
           { name: "Projects", link: "/" },
         ].map((item, idx) => {
           return (

@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full flex flex-col gap-16 justify-center items-center min-h-170 borde border-black">
+    <div className="w-full flex flex-col gap-16 justify-center items-center min-h-165 borde border-black">
       <div className="w-full flex flex-col justify-center items-center gap-6">
         <Tag />
         <MainHeading />
