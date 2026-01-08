@@ -38,6 +38,7 @@ const ProjectsSection = () => {
       <div className="w-full h-fit flex flex-col justify-center items-center gap-6">
         {projects.map((item, idx) => (
           <div
+            data-text={item.name}
             key={idx}
             className={`w-[78.5%] h-112.5 flex lg:flex-row flex-col border ${
               idx % 2 == 0 ? "lg:flex-row-reverse" : "flex-row"

@@ -26,9 +26,15 @@ const Navbar = () => {
       <div className="h-full w-full flex justify-start items-center">
         <Link
           href={"/"}
-          className="flex justify-center items-center gap-4 cursor-pointer"
+          className="flex justify-center items-center gap-4 cursor-pointer transition-all duration-300 ease-in-out group"
         >
-          <Image src="/yash-logo.svg" alt="logo" width={50} height={50} />
+          <Image
+            className="group-hover:-rotate-15 transition-all duration-300 ease-in-out"
+            src="/yash-logo.svg"
+            alt="logo"
+            width={50}
+            height={50}
+          />
           <h1 className="lg:text-2xl text-lg sm:block hidden font-bold">
             Yash Vishnoi
           </h1>
@@ -69,8 +75,9 @@ const NavLink = ({ item, idx }) => {
       key={idx}
       href={item.link}
       className="cursor-pointer text-[17px] font-medium flex relative group"
+      data-text={item.name}
     >
-      {item.name}
+      <span>{item.name}</span>
       <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
     </Link>
   );
@@ -91,17 +98,14 @@ const MobileDropdown = () => {
               { name: "Services", link: "/" },
               { name: "Projects", link: "/" },
             ].map((item, idx) => (
-              <li
+              <Link
                 key={idx}
-                className="group relative overflow-hidden rounded-lg"
+                href={item.link}
+                className="group relative overflow-hidden rounded-lg px-4 py-2 cursor-pointer"
               >
-                <NavLink
-                  idx={idx}
-                  item={item}
-                  className="relative z-10 flex w-full items-center px-4 py-2 text-sm font-medium text-white/80 transition-colors duration-300 ease-out group-hover:text-white"
-                />
+                {item.name}
                 <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0" />
-              </li>
+              </Link>
             ))}
           </ul>
         </PopoverContent>
