@@ -1,14 +1,27 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const AboutSection = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  
   return (
-    <div
+    <motion.div
+      ref={ref}
+      style={{ scale }}
+      transition={{ type: "spring", stiffness: 800, damping: 2 }}
       id="#about"
       className="w-full min-h-180 flex justify-center items-center lg:flex-row flex-col bg-white rounded-xl p-12 border-black/30 mt-37.5 mb-40"
     >
@@ -61,7 +74,7 @@ const AboutSection = () => {
       <div className="w-125 h-fit flex justify-end items-center  border-black">
         <div className="w-75 h-75 rounded-[40px] bg-gray-400 rotate-3" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

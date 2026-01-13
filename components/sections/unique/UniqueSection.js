@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import HeadingCard from "@/components/ui/HeadingCard";
+import WorldMap from "@/components/ui/world-map";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
 import Card3 from "./Card3";

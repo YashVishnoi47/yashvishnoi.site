@@ -1,7 +1,6 @@
 "use client";
-import AniButton1 from "@/components/ui/AniButton1";
-import CTAButton from "@/components/ui/CTAButton";
-import { ArrowBigRight, ArrowRight } from "lucide-react";
+import ConnectPopOver from "@/components/shared/ConnectPopOver";
+import { ArrowRight } from "lucide-react";
 import React from "react";
 import { toast } from "sonner";
 
@@ -20,7 +19,7 @@ const HeroSection = () => {
       </div>
 
       <div className="w-full flex md:flex-row flex-col justify-center items-center gap-6">
-        <AniButton1 text={"Start a Project"} />
+        <ConnectPopOver text={"Start a Project"} />
         <button
           data-text="Click to copy"
           type="button"

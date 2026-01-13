@@ -1,6 +1,8 @@
+"use client"
 import HeadingCard from '@/components/ui/HeadingCard'
 import { ArrowBigDown, ArrowDown, CaseLower } from 'lucide-react'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const FaqSection = () => {
     const FAQ = [
@@ -19,10 +21,10 @@ const FaqSection = () => {
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center'>
                 {FAQ.map((faq, idx) => {
                     return (
-                        <div key={idx} className='w-[45%] h-17.5 flex justify-between items-center border border-black/20 p-3 bg-white rounded-md cursor-pointer'>
+                        <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: 0.1, duration: 0.7 }} key={idx} className='w-[45%] h-17.5 flex justify-between items-center border border-black/20 p-3 bg-white rounded-md cursor-pointer'>
                             <span className='text-[20px] font-medium'>{faq.question}</span>
                             <ArrowDown />
-                        </div>
+                        </motion.div>
                     )
                 })}
             </div>

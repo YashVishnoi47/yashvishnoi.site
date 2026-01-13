@@ -1,19 +1,29 @@
 "use client";
 import Tag from "@/components/ui/Tag";
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import LogoLoop from "@/components/LogoLoop";
+import Marquee from "react-fast-marquee";
+import { ArrowRight } from "lucide-react";
+import { TextShimmer } from "@/components/motion-primitives/text-shimmer";
+import HeadingCard from "@/components/ui/HeadingCard";
 
 // TODO: MAke it resposive and  add micro  hover animations.
 const ServiceSection = () => {
   return (
     <div
       id="services"
-      className="w-full min-h-200 flex flex-col gap-14 bg-white rounded-xl p-12 border-black/30"
+      className="w-full min-h-200 flex flex-col gap-14 bg-white rounded-xl lg:p-12 border-black"
     >
       <div className="w-full flex flex-col gap-4 items-center justify-center">
-        <Heading />
-        <div className="w-full flex gap-3 flex-wrap items-center justify-center">
+        {/* <Heading /> */}
+        <HeadingCard
+          head={"I am a Full-Stack Developer & UI/UX Designer"}
+          subHead={"I design it. I build it. I ship it."}
+        />
+
+        {/* <div className="w-full flex gap-3 flex-wrap items-center justify-center">
           {[
             { name: "React JS", image: "/techIcons/react.svg" },
             { name: "Next JS", image: "/techIcons/next.svg" },
@@ -26,7 +36,7 @@ const ServiceSection = () => {
           ].map((item, idx) => (
             <TechTags key={idx} item={item} />
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div className="w-full h-fit flex flex-col flex-wrap gap-4 justify-center items-center">
@@ -34,6 +44,7 @@ const ServiceSection = () => {
           <ServiceCard1 />
           <ServiceCard2 />
         </div>
+
         <BigServiceCard />
       </div>
     </div>
@@ -44,7 +55,7 @@ export default ServiceSection;
 
 const Heading = () => {
   return (
-    <h1 className="lg:text-[40px] text-[36px] font-semibold w-full lg:leading-17.5 tracking-[-0.02em] text-center">
+    <h1 className="lg:text-[40px] sm:text-[30px] font-semibold w-full tracking-[-0.02em] text-center">
       I am a Full-Stack Developer & UI/UX Designer
     </h1>
   );
@@ -54,66 +65,106 @@ const TechTags = ({ item }) => {
   return (
     <div className="flex justify-center items-center gap-2 px-3 py-2 bg-[#7C3AED]/3 border border-[#7C3AED]/5 rounded-md cursor-default hover:scale-95 transition-all duration-300 ease-in-out">
       <Image src={item.image} alt={item.name} width={20} height={20} />
-      <span className="text-[14px]">{item.name}</span>
+      <span className="md:text-[14px] text-[10px]">{item.name}</span>
     </div>
   );
 };
 
 const ServiceCard1 = () => {
   return (
-    <div className="w-full border rounded-xl overflow-hidden p-6 flex flex-col gap-10 border-black/30 h-full CardGradiant">
-      <div className="gap-2 flex flex-col justify-center items-start w-full">
+    <motion.div className="w-full border rounded-xl overflow-hidden p-6 flex flex-col gap-10 border-black/30 h-full CardGradiant group">
+      <div className="gap-2 flex flex-col justify-center lg:items-start items-center w-full">
         <Tag text={"Modern. Efficient. Reliable."} />
-        <h4 className="text-[36px]">Full-Stack Web development</h4>
-        <span className="text-[16px] font-light">
+        <h4 className="lg:text-[36px] text-[30px] lg:text-left text-center">
+          Full-Stack Web development
+        </h4>
+        <span className="text-[16px] font-light lg:text-left text-center">
           Creating reliable, high-performance digital systems.
         </span>
       </div>
       <div className="w-full  h-fit flex justify-center items-center">
         <Window />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const ServiceCard2 = () => {
   return (
     <div className="w-full border rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full CardGradiant group">
-      <div className="gap-2 flex flex-col justify-center items-start w-full">
+      <div className="gap-2 flex flex-col justify-center lg:items-start items-center w-full">
         <Tag text={"Design that performs"} />
-        <h4 className="text-[36px]">UI/UX Designing</h4>
-        <span className="text-[16px] font-light">
+        <h4 className="lg:text-[36px] text-[30px] lg:text-left text-center">
+          UI/UX Designing
+        </h4>
+        <span className="text-[16px] font-light lg:text-left text-center">
           Crafting clean, modern layouts optimized for clarity, usability, and
           visual balance.
         </span>
       </div>
 
-      <div className="w-fit h-full flex gap-5 border-black justify-center items-center oveflow-hidden ">
-        {[
-          { dim: "60", image: "/techIcons/figma.svg" },
-          { dim: "70", image: "/techIcons/react.svg" },
-          { dim: "80", image: "/techIcons/figma.svg" },
-          { dim: "90", image: "/techIcons/shadcn.svg" },
-          { dim: "100", image: "/techIcons/figma.svg" },
-          { dim: "90", image: "/techIcons/framer-motion.svg" },
-          { dim: "80", image: "/techIcons/figma.svg" },
-          { dim: "70", image: "/techIcons/tailwind.svg" },
-          { dim: "60", image: "/techIcons/react.svg" },
-        ].map((item, idx) => {
-          return (
-            <div
-              key={idx}
-              style={{
-                height: `${item.dim}px`,
-                width: `${item.dim}px`,
-                animationDelay: `${idx * 1}s`,
-              }}
-              className={`border-6 border-black/20 flex justify-center items-center bg-white rounded-lg group-over:bg-black/10 transition-all duration-300  ease-in-out`}
-            >
-              <Image src={item.image} alt={item.dim} width={55} height={55} />
-            </div>
-          );
-        })}
+      <div className="w-full h-full flex flex-col gap-6 border-black justify-center items-center oveflow-hidden ">
+        <Marquee
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"left"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
+        <Marquee
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"right"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
+        <Marquee
+          delay={10}
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"left"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
       </div>
     </div>
   );
@@ -124,60 +175,154 @@ const BigServiceCard = () => {
     <div className="w-full h-125 rounded-xl border border-black/30 flex flex-col gap-4 justify-start items-center CardGradiant p-6">
       <div className="gap-2 flex flex-col justify-center items-center w-full">
         <Tag text={"Design that performs"} />
-        <h4 className="text-[36px] font-medium">
+        <h4 className="lg:text-[36px] text-[30px] text-center font-medium">
           End to End Website Devlopment
         </h4>
-        <span className="text-[16px] font-light">
+        <span className="text-[16px] font-light lg:text-left text-center">
           Creating high-impact digital experiences with and precision.
         </span>
       </div>
 
-      <div className="w-full h-full flex gap-5 border-black justify-center items-center oveflow-hidden  border rounded-2xl"></div>
+      <div className="w-full h-full flex gap-5 border-black justify-center items-center oveflow-hidden rounded-2xl">
+        <Image
+          src="/graphics/ennToend.svg"
+          alt="figma"
+          width={1200}
+          height={303}
+        />
+      </div>
     </div>
   );
 };
 
 const Window = () => {
   return (
-    <motion.div
-      className="w-[60%] h-75 rounded-xl border border-black/30 flex flex-col gap-8  justify-start items-center group-hover:w-[65%] transition-all duration-300 ease-in-out bg-white"
-      initial={{ y: 100, opacity: 0.7 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{
-        type: "spring",
-        stiffness: 90,
-        damping: 22,
-        mass: 0.5,
-      }}
-    >
-      <div className="w-full h-[12%] flex px-3 gap-1 justify-star items-center  border-b border-black/20">
-        {["#FF0000", "#F6FF00", "#00FF62"].map((item, idx) => (
-          <div
-            key={idx}
-            style={{ backgroundColor: item }}
-            className={`w-4 h-4 rounded-full `}
-          ></div>
-        ))}
+    <motion.div className="lg:w-[60%] w-[80%] h-75 rounded-xl border border-black/10 flex flex-col gap-8  justify-start items-center relative bg-white shadow-xl  shadow-black/10 group-hover:shadow-[#7C3AED]/50 transition-all duration-300 ease-in-out group-hover:-translate-y-3">
+      <div className="w-full h-[12%] flex px-3 gap-1 justify-center relative items-center  border-b border-black/20">
+        <div className="flex gap-1 justify-center items-center absolute left-3">
+          {["#FF0000", "#F6FF00", "#00FF62"].map((item, idx) => (
+            <div
+              key={idx}
+              style={{ backgroundColor: item }}
+              className={`w-4 h-4 rounded-full relative z-1000`}
+            ></div>
+          ))}
+        </div>
+
+        <div className="w-1/2 flex gap-2 justify-center items-center h-[60%] bg-[#F2F2F2] relative z-1000 rounded-full transition-all duration-300 ease-in-out group-hover:w-[65%] ml-8">
+          <LockSvg />
+          <span className="text-xs opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
+            www.yashvishnoi.com
+          </span>
+        </div>
       </div>
 
-      <div className="w-full h-fit gap-4 flex flex-col justify-center items-center">
-        <span className="text-[18px] font-bold  w-[55%] tracking-tight leading-6 text-center">
-          Websites that stand out and make a difference
+      <div className="w-full h-fit gap-5 flex flex-col justify-center items-center">
+        <span className="text-[22px] font-extrabold  w-[40%] tracking-tight leading-6 text-center">
+          Websites that <span className="text-[#7C3AED]">Stand Out</span>
         </span>
 
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-4">
           {/* Primary button */}
-          <button className=" px-2 py-1  text-[10px]  rounded-lg border border-black  bg-black text-white  font-medium  transition-colors duration-150 hover:bg-black/90 focus:outline-none focus:ring-1 focus:ring-black/40">
-            Button
+          <button className=" px-2 py-1  text-[12px]  rounded-lg border border-black  bg-black text-white  font-medium  transition-colors duration-150 hover:bg-black/90 focus:outline-none focus:ring-1 focus:ring-black/40 flex justify-center items-center gap-1">
+            Start
+            <ArrowRight size={12} />
           </button>
 
           {/* Secondary button */}
-          <button className=" px-2 py-1  text-[10px]  rounded-lg border border-black/40  text-black  font-medium  bg-transparent transition-colors duration-150 hover:bg-black/5 focus:outline-none focus:ring-1 focus:ring-black/30">
-            Button
+          <button className=" px-2 py-1  text-[12px]  rounded-lg border border-black/40  text-black  font-medium  bg-white transition-colors duration-150 relative z-1000 hover:bg-black/5 focus:outline-none focus:ring-1 focus:ring-black/30 ">
+            Details
           </button>
         </div>
       </div>
+
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-70"
+        style={{
+          backgroundImage: `
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+          backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+        }}
+      />
     </motion.div>
   );
 };
+
+const LockSvg = () => {
+  return (
+    <svg
+      className="opacity-50  group-hover:opacity-100 transition-all duration-300 ease-in-out"
+      viewBox="0 0 24 24"
+      height={10}
+      width={10}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <path
+          d="M2 16C2 13.1716 2 11.7574 2.87868 10.8787C3.75736 10 5.17157 10 8 10H16C18.8284 10 20.2426 10 21.1213 10.8787C22 11.7574 22 13.1716 22 16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16Z"
+          stroke="#000"
+          strokeWidth="1.5"
+        ></path>{" "}
+        <path
+          d="M6 10V8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8V10"
+          stroke="#000"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        ></path>{" "}
+      </g>
+    </svg>
+  );
+};
+
+const TechTags2 = ({ item }) => {
+  return (
+    <div className="flex ml-2 mr-2 justify-center items-center gap-2 px-2 py-2 bg-black/5 border border-black/5 rounded-md cursor-default">
+      <Image src={item.image} alt={item.name} width={20} height={20} />
+      <span className="md:text-[12px] text-[10px]">{item.name}</span>
+    </div>
+  );
+};
+
+//  {[
+//           { dim: "60", image: "/techIcons/figma.svg" },
+//           { dim: "70", image: "/techIcons/react.svg" },
+//           { dim: "80", image: "/techIcons/figma.svg" },
+//           { dim: "90", image: "/techIcons/shadcn.svg" },
+//           { dim: "100", image: "/techIcons/figma.svg" },
+//           { dim: "90", image: "/techIcons/framer-motion.svg" },
+//           { dim: "80", image: "/techIcons/figma.svg" },
+//           { dim: "70", image: "/techIcons/tailwind.svg" },
+//           { dim: "60", image: "/techIcons/react.svg" },
+//         ].map((item, idx) => {
+//           return (
+//             <div
+//               key={idx}
+//               style={{
+//                 height: `${item.dim}px`,
+//                 width: `${item.dim}px`,
+//                 animationDelay: `${idx * 1}s`,
+//               }}
+//               className={`border-6 border-black/20 flex justify-center items-center bg-white rounded-lg group-over:bg-black/10 transition-all duration-300  ease-in-out`}
+//             >
+//               <Image
+//                 src={item.image}
+//                 alt={item.dim}
+//                 className="lg:w-13.75 lg:h-13.75 w-10 h-10"
+//                 width={55}
+//                 height={55}
+//               />
+//             </div>
+//           );
+//         })}

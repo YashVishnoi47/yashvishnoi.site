@@ -1,4 +1,5 @@
 import HeadingCard from "@/components/ui/HeadingCard";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -6,14 +7,14 @@ import React from "react";
 const ProjectsSection = () => {
   const projects = [
     {
-      name: "Project 1",
+      name: "ParaMotion",
       subHeading:
-        "This is the subheading of the project which I will include later.!!!",
+        "A comprehensive and highly customizable library of React components, designed to facilitate the creation of visually stunning user interfaces.",
       link: "https://github.com/yashvishnoi/nextjs-portfolio",
       techIcons: [
-        "/techIcons/react.svg",
-        "/techIcons/next.svg",
-        "/techIcons/javascript.svg",
+        { icon: "/techIcons/nodejs.svg", name: "NODE JS" },
+        { icon: "/techIcons/next.svg", name: "Next JS" },
+        { icon: "/techIcons/javascript.svg", name: "Javascript" },
       ],
     },
     {
@@ -22,9 +23,9 @@ const ProjectsSection = () => {
         "This is the subheading of the project which I will include later.!!!",
       link: "https://github.com/yashvishnoi/nextjs-portfolio",
       techIcons: [
-        "/techIcons/javascript.svg",
-        "/techIcons/javascript.svg",
-        "/techIcons/javascript.svg",
+        { icon: "/techIcons/nodejs.svg", name: "NODE JS" },
+        { icon: "/techIcons/next.svg", name: "Next JS" },
+        { icon: "/techIcons/javascript.svg", name: "Javascript" },
       ],
     },
   ];
@@ -35,42 +36,56 @@ const ProjectsSection = () => {
         head={"Featured Work"}
         subHead={"Highlighting the best of my development journey."}
       />
-      <div className="w-full h-fit flex flex-col justify-center items-center gap-6">
+      <div className="w-full h-fit flex flex-wrap justify-center items-center gap-6">
         {projects.map((item, idx) => (
           <div
             data-text={item.name}
             key={idx}
-            className={`w-[78.5%] h-112.5 flex lg:flex-row flex-col border ${
-              idx % 2 == 0 ? "lg:flex-row-reverse" : "flex-row"
-            } bg-white cursor-pointer rounded-2xl p-8 gap-8 transition duration-300 ease-in-out hover:shadow-md hover:-translate-y-1  active:translate-y-1  active:shadow-white`}
+            className={`w-[40%] h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-white cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out hover:shadow-md shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
           >
-            <div className="h-full bg-black/40 lg:w-1/2 w-full rounded-2xl" />
+            <div className="h-[55%] bg-black/20 w-full rounded-xl" />
 
-            <div className="h-full lg:w-1/2 w-full flex flex-col justify-start items-center border-black">
+            <div className="h-fit w-full flex flex-col justify-start items-center border-black">
               <div className="w-full flex justify-center lg:items-start items-center flex-col gap-3">
-                <h5 className="text-[36px] font-bold">{item.name}</h5>
-                <span className="text-[16px] text-[#1A1A1A]">
-                  {item.subHeading}
-                </span>
+                <h5 className="text-[36px] font-medium">{item.name}</h5>
+
+                <p className="text-[15px] font-light text-[#1A1A1A]">{item.subHeading}</p>
+
                 <div className="flex justify-center gap-1 items-center w-fit h-fit">
                   {item.techIcons.map((item, idx) => (
-                    <Image
-                      key={idx}
-                      src={item}
-                      alt={item}
-                      width={20}
-                      height={20}
-                      className="rouded-full"
-                    />
+                    <TechTags key={idx} item={item} />
                   ))}
                 </div>
+              </div>
+            </div>
+
+            <div className="w-full flex justify-end gap-2 items-end h-[12%] ">
+              <div className="flex justify-center items-center gap-2 px-2 py-1 rounded-md group-hover:bg-black/5 transition-all duration-300 ease-in-out">
+                <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  See more
+                </span>
+                <ArrowRight
+                  size={26}
+                  className="-rotate-45 group-hover:rotate-0 transition-all duration-300 ease-in-out"
+                />
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <div className="w-[90%] h-90 rounded-xl border bg-white"></div>
     </div>
   );
 };
 
 export default ProjectsSection;
+
+const TechTags = ({ item }) => {
+  return (
+    <div className="flex justify-center items-center gap-2 px-2 py-1 bg-[#7C3AED]/5 border border-[#7C3AED]/5 rounded-sm cursor-default hover:scale-95 transition-all duration-300 ease-in-out">
+      <Image src={item.icon} alt={item.name} width={18} height={18} />
+      <span className="md:text-[12px] text-[10px]">{item.name}</span>
+    </div>
+  );
+};

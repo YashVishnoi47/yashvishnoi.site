@@ -5,6 +5,7 @@ import React from 'react'
 const CtaCardSection = () => {
     return (
         <div className="w-full min-h-180 flex justify-center items-center mt-37.5 ">
+
             <div className='w-[80%] gap-10 flex justify-center items-center h-125 overflow-hidden rounded-[24px] bg-white shadow-xl shadow-black/20'>
                 <div className='w-1/2 flex ml-10 gap-7 flex-col justify-start items-start h-full py-10 border-black'>
 
@@ -35,7 +36,6 @@ const CtaCardSection = () => {
 
                 </div>
             </div>
-
 
         </div>
     )
