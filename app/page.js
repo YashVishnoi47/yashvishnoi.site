@@ -15,7 +15,6 @@ export default function Home() {
       <HeroSection />
       <ServiceSection />
       <ProjectsSection />
-      {/* <OnlyText /> */}
       <UniqueSection />
       <PerksComponent />
       <AboutSection />

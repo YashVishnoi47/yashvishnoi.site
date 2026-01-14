@@ -43,10 +43,10 @@ const Navbar = () => {
 
       <div className="h-full w-full lg:flex hidden gap-6 justify-center items-center">
         {[
-          { name: "Home", link: "#home" },
-          { name: "About", link: "/" },
+          { name: "Home", link: "/" },
+          { name: "About", link: "#about" },
           { name: "Services", link: "#services" },
-          { name: "Projects", link: "/" },
+          { name: "Projects", link: "#projects" },
         ].map((item, idx) => {
           return (
             <div key={idx}>

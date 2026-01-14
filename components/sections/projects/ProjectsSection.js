@@ -1,3 +1,4 @@
+import CTAButton from "@/components/ui/CTAButton";
 import HeadingCard from "@/components/ui/HeadingCard";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -31,7 +32,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 border-black ">
+    <div id="projects" className="w-full flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 border-black ">
       <HeadingCard
         head={"Featured Work"}
         subHead={"Highlighting the best of my development journey."}
@@ -49,7 +50,9 @@ const ProjectsSection = () => {
               <div className="w-full flex justify-center lg:items-start items-center flex-col gap-3">
                 <h5 className="text-[36px] font-medium">{item.name}</h5>
 
-                <p className="text-[15px] font-light text-[#1A1A1A]">{item.subHeading}</p>
+                <p className="text-[15px] font-light text-[#1A1A1A]">
+                  {item.subHeading}
+                </p>
 
                 <div className="flex justify-center gap-1 items-center w-fit h-fit">
                   {item.techIcons.map((item, idx) => (
@@ -74,7 +77,27 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      <div className="w-[90%] h-90 rounded-xl border bg-white"></div>
+      <div className="w-[90%] flex flex-col justify-center items-center relative overflow-hidden text-whie p-6 gap-8 h-90 border bg-white shadow-black/5 shadow-xl rounded-2xl">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: `linear-gradient(
+      135deg,
+      #F5F3FF 0%,   /* very light violet base */
+      #EDE9FE 25%,  /* subtle brand tint */
+      #F8FAFC 50%,  /* near-white for maximum readability */
+      #EEF2FF 75%,  /* soft indigo hint */
+      #FFFFFF 100%  /* clean white finish */
+    )`,
+          }}
+        />
+
+        <h4 className="text-[50px] w-[85%] leading-14 font-bold text-center relative z-1000">
+          Building reliable, scalable web applications with clarity and
+          precision.
+        </h4>
+        <CTAButton text={"Let's work"} />
+      </div>
     </div>
   );
 };

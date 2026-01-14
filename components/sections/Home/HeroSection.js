@@ -20,6 +20,7 @@ const HeroSection = () => {
 
       <div className="w-full flex md:flex-row flex-col justify-center items-center gap-6">
         <ConnectPopOver text={"Start a Project"} />
+        
         <button
           data-text="Click to copy"
           type="button"

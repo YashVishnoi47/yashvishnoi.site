@@ -29,22 +29,11 @@ const PerksComponent = () => {
 
             <div className='w-full flex flex-wrap justify-center items-center gap-4'>
                 {perks.map((item, idx) => (
-                    <Tilt className='w-[32%]' rotationFactor={5} isRevese>
+                    <Tilt key={idx} className='w-[32%]' rotationFactor={5} isRevese>
 
                         <motion.div
-                            // initial={{ backdropFilter: "blur(100px)",opacity:0 }}
-                            // whileInView={{ backdropFilter: "blur(0px)",opacity:1 }}
-                            // transition={{ delay: 0.5, duration: 1 }}
-                            className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-white/50 backdrop-blu text-black border-black/30 transition-all duration-300 ease-in-out shadow-white shadow-md hover:shadow-[#7C3AED]/30 relative'>
-                            {/* <Spotlight
-                            className='bg-[#7C3AED] blur-2xl'
-                            size={32}
-                            springOptions={{
-                                bounce: 0.3,
-                                duration: 0.1,
-                                delay: idx * 0.1
-                            }}
-                        /> */}
+                            className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-white/50 backdrop-blu text-black border-black/30 transition-all duration-300 ease-in-out shadow-white shadow-md hover:shadow-[#7C3AED]/30 relative cursor-default'>
+
                             <Image src={item.icon} alt={item.head} width={32} height={32} />
                             <div className='w-full flex flex-col gap-2'>
                                 <h5 className='text-[24px] font-medium'>{item.head}</h5>
