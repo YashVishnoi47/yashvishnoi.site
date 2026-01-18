@@ -1,13 +1,12 @@
+import Footer from "@/components/layout/Footer";
 import AboutSection from "@/components/sections/about/AboutSection";
 import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
 import FaqSection from "@/components/sections/FAQ/FaqSection";
 import HeroSection from "@/components/sections/Home/HeroSection";
-import OnlyText from "@/components/sections/onlyText/OnlyText";
 import PerksComponent from "@/components/sections/perks/PerksComponent";
 import ProjectsSection from "@/components/sections/projects/ProjectsSection";
 import ServiceSection from "@/components/sections/Services/ServiceSection";
 import UniqueSection from "@/components/sections/unique/UniqueSection";
-import Cursor from "@/components/ui/Cursor";
 
 export default function Home() {
   return (
@@ -20,6 +19,7 @@ export default function Home() {
       <AboutSection />
       <FaqSection />
       <CtaCardSection />
+      <Footer />
     </div>
   );
 }

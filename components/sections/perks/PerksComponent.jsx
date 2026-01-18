@@ -8,17 +8,17 @@ import React from 'react'
 
 const PerksComponent = () => {
     const perks = [
-        { icon: "/techIcons/next.svg", head: "SEO-ready foundations", subHead: "Built with clean structure, performance in mind, and SEO best practices — so your site is discoverable from day one.", tag: "Discoverability" },
+        { icon: "/other/CTA.svg", head: "SEO-ready foundations", subHead: "Built with clean structure, performance in mind, and SEO best practices, so your site is discoverable from day one.", tag: "Discoverability" },
 
-        { icon: "/techIcons/nodejs.svg", head: "Website content support", subHead: "Help with structuring content, page flow, and clarity — turning ideas into clear, user-friendly web copy.", tag: "Clarity" },
+        { icon: "/other/content.svg", head: "Website content support", subHead: "Help with structuring content, page flow, and clarity — turning ideas into clear, user-friendly web copy.", tag: "Clarity" },
 
-        { icon: "/techIcons/next.svg", head: "Hosting & deployment", subHead: "Guidance and setup for hosting and deployment, ensuring your site is live, stable, and production-ready.", tag: "Launch" },
+        { icon: "/other/hosting.svg", head: "Hosting & deployment", subHead: "Guidance and setup for hosting and deployment, ensuring your site is live, stable, and production-ready.", tag: "Launch" },
 
-        { icon: "/techIcons/figma.svg", head: "Domain setup assistance", subHead: "Support with domain selection, configuration, and linking — so everything works smoothly without confusion.", tag: "Identity" },
+        { icon: "/other/domain.svg", head: "Domain setup assistance", subHead: "Support with domain selection, configuration, and linking — so everything works smoothly without confusion.", tag: "Identity" },
 
-        { icon: "/techIcons/next.svg", head: "Regular updates & improvements", subHead: "Ongoing fixes, refinements, and updates based on feedback — not a “build once and disappear” approach.", tag: "Continuity" },
+        { icon: "/other/updates.svg", head: "Regular updates & improvements", subHead: "Ongoing fixes, refinements, and updates based on feedback — not a “build once and disappear” approach.", tag: "Continuity" },
 
-        { icon: "/techIcons/next.svg", head: "Performance-focused builds", subHead: "Optimized layouts, efficient code, and thoughtful architecture for fast, reliable user experiences.", tag: "Performance" },
+        { icon: "/other/performance.svg", head: "Performance-focused builds", subHead: "Optimized layouts, efficient code, and thoughtful architecture for fast, reliable user experiences.", tag: "Performance" },
 
     ]
     return (

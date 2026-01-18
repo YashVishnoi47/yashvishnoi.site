@@ -61,14 +61,7 @@ const Heading = () => {
   );
 };
 
-const TechTags = ({ item }) => {
-  return (
-    <div className="flex justify-center items-center gap-2 px-3 py-2 bg-[#7C3AED]/3 border border-[#7C3AED]/5 rounded-md cursor-default hover:scale-95 transition-all duration-300 ease-in-out">
-      <Image src={item.image} alt={item.name} width={20} height={20} />
-      <span className="md:text-[14px] text-[10px]">{item.name}</span>
-    </div>
-  );
-};
+
 
 const ServiceCard1 = () => {
   return (
@@ -172,7 +165,7 @@ const ServiceCard2 = () => {
 
 const BigServiceCard = () => {
   return (
-    <div className="w-full h-125 rounded-xl border border-black/30 flex flex-col gap-4 justify-start items-center CardGradiant p-6">
+    <div className="w-full h-200 rounded-xl border border-black/30 flex flex-col gap-10 justify-start items-center CardGradiant p-6">
       <div className="gap-2 flex flex-col justify-center items-center w-full">
         <Tag text={"Design that performs"} />
         <h4 className="lg:text-[36px] text-[30px] text-center font-medium">
@@ -183,13 +176,11 @@ const BigServiceCard = () => {
         </span>
       </div>
 
-      <div className="w-full h-full flex gap-5 border-black justify-center items-center oveflow-hidden rounded-2xl">
-        <Image
-          src="/graphics/ennToend.svg"
-          alt="figma"
-          width={1200}
-          height={303}
-        />
+      <div className="w-full h-full flex -space-x-45 border-black justify-center items-end oveflow-hidden rounded-2xl">
+
+        <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
+        <div className="w-110 h-[95%] relative z-3 bg-white rounded-md shadow-[12px_0_20px_-12px_rgba(0,0,0,0.6),-12px_0_20px_-12px_rgba(0,0,0,0.6)]"></div>
+        <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
       </div>
     </div>
   );
@@ -295,34 +286,4 @@ const TechTags2 = ({ item }) => {
   );
 };
 
-//  {[
-//           { dim: "60", image: "/techIcons/figma.svg" },
-//           { dim: "70", image: "/techIcons/react.svg" },
-//           { dim: "80", image: "/techIcons/figma.svg" },
-//           { dim: "90", image: "/techIcons/shadcn.svg" },
-//           { dim: "100", image: "/techIcons/figma.svg" },
-//           { dim: "90", image: "/techIcons/framer-motion.svg" },
-//           { dim: "80", image: "/techIcons/figma.svg" },
-//           { dim: "70", image: "/techIcons/tailwind.svg" },
-//           { dim: "60", image: "/techIcons/react.svg" },
-//         ].map((item, idx) => {
-//           return (
-//             <div
-//               key={idx}
-//               style={{
-//                 height: `${item.dim}px`,
-//                 width: `${item.dim}px`,
-//                 animationDelay: `${idx * 1}s`,
-//               }}
-//               className={`border-6 border-black/20 flex justify-center items-center bg-white rounded-lg group-over:bg-black/10 transition-all duration-300  ease-in-out`}
-//             >
-//               <Image
-//                 src={item.image}
-//                 alt={item.dim}
-//                 className="lg:w-13.75 lg:h-13.75 w-10 h-10"
-//                 width={55}
-//                 height={55}
-//               />
-//             </div>
-//           );
-//         })}
+

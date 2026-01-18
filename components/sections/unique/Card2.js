@@ -15,7 +15,7 @@ const Card2 = () => {
       </div>
 
       <div className="w-full h-full flex justify-center overflow-hidden items-center">
-        {/* <WorldMap
+        <WorldMap
           dots={[
             // India → USA (huge freelance & startup market)
             {
@@ -60,7 +60,7 @@ const Card2 = () => {
             },
           ]}
           lineColor="#0ea5e9"
-        /> */}
+        />
       </div>
     </div>
   );

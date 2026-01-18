@@ -1,5 +1,7 @@
 import Tag from "@/components/ui/Tag";
+import Image from "next/image";
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 const Card3 = () => {
   return (
@@ -15,9 +17,80 @@ const Card3 = () => {
         </span>
       </div>
 
-      <div className="w-full  h-full flex justify-center items-center"></div>
+      <div className="w-full h-full flex flex-col gap-6 border-black justify-center items-center oveflow-hidden ">
+        <Marquee
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"left"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
+        <Marquee
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"right"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
+        <Marquee
+          delay={2}
+          autoFill={true}
+          gradient={true}
+          gradientWidth={15}
+          pauseOnHover={false}
+          direction={"left"}
+        >
+          {[
+            { name: "React JS", image: "/techIcons/react.svg" },
+            { name: "Next JS", image: "/techIcons/next.svg" },
+            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
+            { name: "Node JS", image: "/techIcons/nodejs.svg" },
+            { name: "Javascript", image: "/techIcons/javascript.svg" },
+            { name: "Figma", image: "/techIcons/figma.svg" },
+            { name: "Vercel", image: "/techIcons/vercel.svg" },
+            { name: "Framer Motion", image: "/techIcons/figma.svg" },
+          ].map((item, idx) => (
+            <TechTags2 key={idx} item={item} />
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 };
 
 export default Card3;
+
+const TechTags2 = ({ item }) => {
+  return (
+    <div className="flex ml-2 mr-2 justify-center items-center gap-2 px-2 py-2 bg-black/5 border border-black/5 rounded-md cursor-default">
+      <Image src={item.image} alt={item.name} width={20} height={20} />
+      <span className="md:text-[12px] text-[10px]">{item.name}</span>
+    </div>
+  );
+};

@@ -12,10 +12,15 @@ import AniButton1 from '../ui/AniButton1'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ConnectPopOver = () => {
+const ConnectPopOver = ({ children }) => {
     return (
         <Dialog>
-            <DialogTrigger><AniButton1 text={"Start a Project"} /></DialogTrigger>
+            <DialogTrigger>
+                {children || (
+
+                    <AniButton1 text={"Start a Project"} />
+                )}
+            </DialogTrigger>
             <DialogContent className={""}>
                 <DialogHeader>
                     <DialogTitle></DialogTitle>

@@ -39,7 +39,7 @@ export default HeroSection;
 const MainHeading = () => {
   return (
     <h1 className="lg:text-[60px] sm:text-[40px] text-[30px] font-bold lg:w-[70%] w-[90%] lg:leading-17.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center">
-      I create stunning digital experiences for businesses that want results.
+      I create stunning digital experiences for businesses that want growth.
     </h1>
   );
 };
