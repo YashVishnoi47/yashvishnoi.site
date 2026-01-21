@@ -3,10 +3,7 @@ import Tag from "@/components/ui/Tag";
 import Image from "next/image";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import LogoLoop from "@/components/LogoLoop";
-import Marquee from "react-fast-marquee";
 import { ArrowRight } from "lucide-react";
-import { TextShimmer } from "@/components/motion-primitives/text-shimmer";
 import HeadingCard from "@/components/ui/HeadingCard";
 
 // TODO: MAke it resposive and  add micro  hover animations.
@@ -17,13 +14,13 @@ const ServiceSection = () => {
       className="w-full min-h-200 flex flex-col gap-14 bg-white rounded-xl lg:p-12 border-black"
     >
       <div className="w-full flex flex-col gap-4 items-center justify-center">
-        {/* <Heading /> */}
-        <HeadingCard
+        <Heading />
+        {/* <HeadingCard
           head={"I am a Full-Stack Developer & UI/UX Designer"}
           subHead={"I design it. I build it. I ship it."}
-        />
+        /> */}
 
-        {/* <div className="w-full flex gap-3 flex-wrap items-center justify-center">
+        <div className="w-full flex gap-3 flex-wrap items-center justify-center">
           {[
             { name: "React JS", image: "/techIcons/react.svg" },
             { name: "Next JS", image: "/techIcons/next.svg" },
@@ -36,7 +33,7 @@ const ServiceSection = () => {
           ].map((item, idx) => (
             <TechTags key={idx} item={item} />
           ))}
-        </div> */}
+        </div>
       </div>
 
       <div className="w-full h-fit flex flex-col flex-wrap gap-4 justify-center items-center">
@@ -56,12 +53,10 @@ export default ServiceSection;
 const Heading = () => {
   return (
     <h1 className="lg:text-[40px] sm:text-[30px] font-semibold w-full tracking-[-0.02em] text-center">
-      I am a Full-Stack Developer & UI/UX Designer
+      Full-Stack Development & UI/UX Designing
     </h1>
   );
 };
-
-
 
 const ServiceCard1 = () => {
   return (
@@ -97,67 +92,41 @@ const ServiceCard2 = () => {
       </div>
 
       <div className="w-full h-full flex flex-col gap-6 border-black justify-center items-center oveflow-hidden ">
-        <Marquee
-          autoFill={true}
-          gradient={true}
-          gradientWidth={15}
-          pauseOnHover={false}
-          direction={"left"}
+        <motion.div
+          className="w-40 h-40 rounded-full border border-black/20 
+                 flex justify-center items-center 
+                 bg-white relative overflow-hidden"
+          whileHover={{
+            scale: 1.08,
+            boxShadow: "0 0 0 6px rgba(0,0,0,0.05)",
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 180,
+            damping: 14,
+          }}
         >
-          {[
-            { name: "React JS", image: "/techIcons/react.svg" },
-            { name: "Next JS", image: "/techIcons/next.svg" },
-            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
-            { name: "Node JS", image: "/techIcons/nodejs.svg" },
-            { name: "Javascript", image: "/techIcons/javascript.svg" },
-            { name: "Figma", image: "/techIcons/figma.svg" },
-            { name: "Vercel", image: "/techIcons/vercel.svg" },
-            { name: "Framer Motion", image: "/techIcons/figma.svg" },
-          ].map((item, idx) => (
-            <TechTags2 key={idx} item={item} />
-          ))}
-        </Marquee>
-        <Marquee
-          autoFill={true}
-          gradient={true}
-          gradientWidth={15}
-          pauseOnHover={false}
-          direction={"right"}
-        >
-          {[
-            { name: "React JS", image: "/techIcons/react.svg" },
-            { name: "Next JS", image: "/techIcons/next.svg" },
-            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
-            { name: "Node JS", image: "/techIcons/nodejs.svg" },
-            { name: "Javascript", image: "/techIcons/javascript.svg" },
-            { name: "Figma", image: "/techIcons/figma.svg" },
-            { name: "Vercel", image: "/techIcons/vercel.svg" },
-            { name: "Framer Motion", image: "/techIcons/figma.svg" },
-          ].map((item, idx) => (
-            <TechTags2 key={idx} item={item} />
-          ))}
-        </Marquee>
-        <Marquee
-          delay={10}
-          autoFill={true}
-          gradient={true}
-          gradientWidth={15}
-          pauseOnHover={false}
-          direction={"left"}
-        >
-          {[
-            { name: "React JS", image: "/techIcons/react.svg" },
-            { name: "Next JS", image: "/techIcons/next.svg" },
-            { name: "Tailwind CSS", image: "/techIcons/tailwind.svg" },
-            { name: "Node JS", image: "/techIcons/nodejs.svg" },
-            { name: "Javascript", image: "/techIcons/javascript.svg" },
-            { name: "Figma", image: "/techIcons/figma.svg" },
-            { name: "Vercel", image: "/techIcons/vercel.svg" },
-            { name: "Framer Motion", image: "/techIcons/figma.svg" },
-          ].map((item, idx) => (
-            <TechTags2 key={idx} item={item} />
-          ))}
-        </Marquee>
+          {/* Floating glow ring */}
+          <span
+            className="absolute inset-0 rounded-full 
+                   bg-gradient-to-tr from-black/5 to-transparent 
+                   opacity-0 group-hover:opacity-100"
+          />
+
+          {/* Icon animation */}
+          <motion.div
+            // Move icon slightly up on hover
+            whileHover={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <Image
+              src="/techIcons/figma.svg"
+              alt="Figma"
+              width={100}
+              height={100}
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
@@ -177,7 +146,6 @@ const BigServiceCard = () => {
       </div>
 
       <div className="w-full h-full flex -space-x-45 border-black justify-center items-end oveflow-hidden rounded-2xl">
-
         <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
         <div className="w-110 h-[95%] relative z-3 bg-white rounded-md shadow-[12px_0_20px_-12px_rgba(0,0,0,0.6),-12px_0_20px_-12px_rgba(0,0,0,0.6)]"></div>
         <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
@@ -281,9 +249,16 @@ const TechTags2 = ({ item }) => {
   return (
     <div className="flex ml-2 mr-2 justify-center items-center gap-2 px-2 py-2 bg-black/5 border border-black/5 rounded-md cursor-default">
       <Image src={item.image} alt={item.name} width={20} height={20} />
-      <span className="md:text-[12px] text-[10px]">{item.name}</span>
+      <span className="md:text-[12px] text-[12px]">{item.name}</span>
     </div>
   );
 };
 
-
+const TechTags = ({ item }) => {
+  return (
+    <div className="flex justify-center items-center gap-2 px-2 py-1 bg-[#7C3AED]/5 border border-[#7C3AED]/5 rounded-sm cursor-default hover:scale-95 transition-all duration-300 ease-in-out">
+      <Image src={item.image} alt={item.name} width={18} height={18} />
+      <span className="md:text-[12px] text-[10px]">{item.name}</span>
+    </div>
+  );
+};

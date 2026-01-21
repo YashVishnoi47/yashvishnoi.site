@@ -3,6 +3,7 @@ import HeadingCard from '@/components/ui/HeadingCard'
 import { ArrowBigDown, ArrowDown, CaseLower } from 'lucide-react'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { ChevronDown } from "lucide-react"
 
 const FaqSection = () => {
     const FAQ = [
@@ -41,41 +42,50 @@ const FaqSection = () => {
             <HeadingCard head={"Frequently Asked Questions"} subHead={`Can’t find the answer you’re looking for? Reach out to us and we will get in touch with you`} />
 
 
-            <div className='w-full h-fit flex flex-col gap-4 justify-center items-center'>
-                {FAQ.map((faq, idx) => {
-                    return (
-                        <motion.div
-                            initial={{ y: 100, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.1 * idx, duration: 0.7 }}
-                            viewport={{ once: true }}
-                            animate={
-                                open === idx ? { height: "140px" } :
-                                    { height: "70px" }
+            <div className="w-full flex flex-col items-center gap-4">
+                {FAQ.map((faq, idx) => (
+                    <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: idx * 0.05 }}
+                        className="w-full max-w-3xl bg-white border border-black/10 rounded-xl overflow-hidden"
+                    >
+                        <button
+                            onClick={() => setOpen(open === idx ? null : idx)}
+                            className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-black/5 transition-colors"
+                        >
+                            <span className="text-lg font-medium text-gray-900">
+                                {faq.question}
+                            </span>
 
-                            }
-                            key={idx}
-                            onClick={() => setOpen(idx)}
-                            className={`w-[60%]  flex flex-col gap-2 justify-cnter items-center border border-black/20 p-3 bg-white rounded-md cursor-pointer overflow-hidden`}>
+                            <motion.span
+                                animate={{ rotate: open === idx ? 180 : 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="text-gray-600"
+                            >
+                                <ChevronDown />
+                            </motion.span>
+                        </button>
 
-                            <div className='w-full flex justify-between items-center transition-all duration-300 ease-in-out'>
-
-                                <span className='text-[20px] font-medium'>{faq.question}</span>
-
-                                <ArrowDown className={`${open === idx ? "rotate-180" : ""} transition-all duration-500 ease-in-out`} />
-                            </div>
-
-                            <motion.div animate={
-                                open === idx ? { opacity: 1 } :
-                                    { opacity: 0 }}
-                                transition={{ delay: 0.5 }}
-                                className='w-full'>
-                                <span className='text-[16px] font-light'>{faq.Answer}</span>
-                            </motion.div>
-
-                        </motion.div>
-                    )
-                })}
+                        <AnimatePresence initial={false}>
+                            {open === idx && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                    className="px-5 pb-4"
+                                >
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {faq.Answer}
+                                    </p>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
+                ))}
             </div>
         </div>
     )
