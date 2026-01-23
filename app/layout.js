@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
 import { Toaster } from "@/components/ui/sonner";
+import SmoothScroll from "@/components/SmootheScroll";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],

@@ -92,41 +92,7 @@ const ServiceCard2 = () => {
       </div>
 
       <div className="w-full h-full flex flex-col gap-6 border-black justify-center items-center oveflow-hidden ">
-        <motion.div
-          className="w-40 h-40 rounded-full border border-black/20 
-                 flex justify-center items-center 
-                 bg-white relative overflow-hidden"
-          whileHover={{
-            scale: 1.08,
-            boxShadow: "0 0 0 6px rgba(0,0,0,0.05)",
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 180,
-            damping: 14,
-          }}
-        >
-          {/* Floating glow ring */}
-          <span
-            className="absolute inset-0 rounded-full 
-                   bg-gradient-to-tr from-black/5 to-transparent 
-                   opacity-0 group-hover:opacity-100"
-          />
-
-          {/* Icon animation */}
-          <motion.div
-            // Move icon slightly up on hover
-            whileHover={{ y: -6 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            <Image
-              src="/techIcons/figma.svg"
-              alt="Figma"
-              width={100}
-              height={100}
-            />
-          </motion.div>
-        </motion.div>
+       <Image src="/graphics/ui-ux.svg" alt="service" width={1000} height={195} />
       </div>
     </div>
   );
