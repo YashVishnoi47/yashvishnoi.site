@@ -115,6 +115,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="1Tw-JhoSrQ04RxMwArE7pimVOTJ2Y9wIlas6ak6i-jM"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
