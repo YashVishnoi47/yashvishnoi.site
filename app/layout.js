@@ -13,9 +13,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Yash Vishnoi",
+  title: "Yash Vishnoi | Full-Stack Next.js Developer",
   description:
-    "Hy, I am Yash Vishnoi. I am a Full Stack Web Developer and UI/UX Designer",
+    "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications.",
 };
 
 export default function RootLayout({ children }) {
