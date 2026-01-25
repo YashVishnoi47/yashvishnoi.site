@@ -21,6 +21,7 @@ const Navbar = () => {
         bounce: 0.3,
         visualDuration: 0.5,
         stiffness: 50,
+        delay: 1.4,
       }}
     >
       <div className="h-full w-full flex justify-start items-center">

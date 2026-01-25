@@ -7,16 +7,46 @@ body {
   background-color: #F9F9F9;
 }
 
-/* *{
+*{
   scroll-behavior: smooth;
 
-} */
+}
 
 
 
 .CardGradiant{
   background: linear-gradient(to top, #7c3aed03 0%, #ffffff 100%);
 }
+
+
+
+
+/* apply to any scrollable div */
+.hsb2::-webkit-scrollbar {
+  /* set the width of scrollbar */
+  width: 10px;
+}
+
+/* track (background area) */
+.hsb2::-webkit-scrollbar-track {
+  /* transparent track like screenshot */
+  background: transparent;
+}
+
+/* scrollbar thumb (scroll handle) */
+.hsb2::-webkit-scrollbar-thumb {
+  /* grey thumb color */
+  background: rgba(0, 0, 0, 0.25);
+  /* rounded corners */
+  border-radius: 10px;
+}
+
+/* thumb hover effect */
+.hsb2::-webkit-scrollbar-thumb:hover {
+  /* slightly brighter on hover */
+  background: rgba(0, 0, 0, 0.35);
+}
+
 
 
 

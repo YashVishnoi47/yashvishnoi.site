@@ -14,14 +14,62 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "Yash Vishnoi",
-  description: "Full Stack Web Developer and UI/UX Designer",
+  description:
+    "Hy, I am Yash Vishnoi. I am a Full Stack Web Developer and UI/UX Designer",
 };
 
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://yashvishnoi.vercel.app/#person",
+        name: "Yash Vishnoi",
+        url: "https://yashvishnoi.vercel.app/",
+        image: "https://yashvishnoi.vercel.app/og-image.jpg",
+        jobTitle: "Full-Stack Next.js Developer",
+        description:
+          "Full-Stack Web Developer specializing in Next.js, React, and scalable web applications.",
+        sameAs: [
+          "https://github.com/YashVishnoi47",
+          "https://www.linkedin.com/in/yash-vishnoi-654318384/",
+        ],
+        knowsAbout: [
+          "Next.js",
+          "React.js",
+          "Node.js",
+          "MongoDB",
+          "Web Development",
+          "Full-Stack Development",
+          "JavaScript",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://yashvishnoi.vercel.app/#website",
+        url: "https://yashvishnoi.vercel.app",
+        name: "Yash Vishnoi | Full-Stack Next.js Developer",
+        description:
+          "Portfolio website of Yash Vishnoi, a Full-Stack Next.js Developer building modern, fast, and scalable web applications.",
+        publisher: {
+          "@id": "https://yashvishnoi.vercel.app/#person",
+        },
+      },
+    ],
+  };
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
+      </head>
       <body
-        className={`${roboto.className} relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
+        className={`${roboto.className} hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
       >
         <Navbar />
         {children}

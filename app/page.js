@@ -10,7 +10,7 @@ import UniqueSection from "@/components/sections/unique/UniqueSection";
 
 export default function Home() {
   return (
-    <div className="bg-[#F9F9F9] flex flex-col justify-center items-center h-fit w-full max-w-360 relative">
+    <div className="bg-[#F9F9F9] flex flex-col justify-center items-center h-fit w-full max-w-360 relative ">
       <HeroSection />
       <ServiceSection />
       <ProjectsSection />

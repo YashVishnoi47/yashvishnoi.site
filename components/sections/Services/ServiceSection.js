@@ -1,10 +1,9 @@
 "use client";
 import Tag from "@/components/ui/Tag";
 import Image from "next/image";
-import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import HeadingCard from "@/components/ui/HeadingCard";
 
 // TODO: MAke it resposive and  add micro  hover animations.
 const ServiceSection = () => {
@@ -92,15 +91,28 @@ const ServiceCard2 = () => {
       </div>
 
       <div className="w-full h-full flex flex-col gap-6 border-black justify-center items-center oveflow-hidden ">
-       <Image src="/graphics/ui-ux.svg" alt="service" width={1000} height={195} />
+        <Image
+          src="/graphics/ui-ux.svg"
+          alt="service"
+          width={1000}
+          height={195}
+        />
       </div>
     </div>
   );
 };
 
 const BigServiceCard = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [0, 5]);
+
   return (
-    <div className="w-full h-200 rounded-xl border border-black/30 flex flex-col gap-10 justify-start items-center CardGradiant p-6">
+    <motion.div className="w-full h-200 rounded-xl border border-black/30 flex flex-col gap-10 justify-start items-center CardGradiant p-6 perspective-distant [transform-style: preserve-3d]">
       <div className="gap-2 flex flex-col justify-center items-center w-full">
         <Tag text={"Design that performs"} />
         <h4 className="lg:text-[36px] text-[30px] text-center font-medium">
@@ -111,12 +123,19 @@ const BigServiceCard = () => {
         </span>
       </div>
 
-      <div className="w-full h-full flex -space-x-45 border-black justify-center items-end oveflow-hidden rounded-2xl">
+      <motion.div
+        ref={ref}
+        style={{
+          translateZ: "50px",
+          rotateX: rotateX,
+        }}
+        className="w-full h-full flex -space-x-45 border-black justify-center items-end oveflow-hidden rounded-2xl"
+      >
         <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
         <div className="w-110 h-[95%] relative z-3 bg-white rounded-md shadow-[12px_0_20px_-12px_rgba(0,0,0,0.6),-12px_0_20px_-12px_rgba(0,0,0,0.6)]"></div>
         <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
