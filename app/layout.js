@@ -15,7 +15,61 @@ const roboto = Roboto({
 export const metadata = {
   title: "Yash Vishnoi | Full-Stack Next.js Developer",
   description:
-    "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications.",
+    "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications for startups and businesses.",
+
+  keywords: [
+    "Yash Vishnoi",
+    "Full-Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Web Developer Portfolio",
+    "JavaScript Developer",
+  ],
+
+  authors: [{ name: "Yash Vishnoi", url: "https://yashvishnoi.vercel.app" }],
+  creator: "Yash Vishnoi",
+  publisher: "Yash Vishnoi",
+
+  alternates: {
+    canonical: "https://yashvishnoi.vercel.app",
+  },
+
+  openGraph: {
+    title: "Yash Vishnoi | Full-Stack Next.js Developer",
+    description:
+      "Full-Stack Next.js Developer & UI/UX Designer building modern, scalable web applications.",
+    url: "https://yashvishnoi.vercel.app",
+    siteName: "Yash Vishnoi Portfolio",
+    images: [
+      {
+        url: "https://yashvishnoi.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Yash Vishnoi - Full-Stack Next.js Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Yash Vishnoi | Full-Stack Next.js Developer",
+    description:
+      "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer building modern web apps.",
+    images: ["https://yashvishnoi.vercel.app/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -27,7 +81,7 @@ export default function RootLayout({ children }) {
         "@id": "https://yashvishnoi.vercel.app/#person",
         name: "Yash Vishnoi",
         url: "https://yashvishnoi.vercel.app/",
-        image: "https://yashvishnoi.vercel.app/og-image.jpg",
+        image: "https://yashvishnoi.vercel.app/og-image.png",
         jobTitle: "Full-Stack Next.js Developer",
         description:
           "Full-Stack Web Developer specializing in Next.js, React, and scalable web applications.",
