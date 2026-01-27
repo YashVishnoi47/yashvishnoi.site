@@ -4,6 +4,8 @@ import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
 import { Toaster } from "@/components/ui/sonner";
 import SmoothScroll from "@/components/SmootheScroll";
+import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
+import Footer from "@/components/layout/Footer";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -131,6 +133,9 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <CtaCardSection />
+        <div className="w-full h-10 bg-black/5 rounded-sm max-w-360"></div>
+        <Footer />
         <Toaster />
         <Cursor />
       </body>

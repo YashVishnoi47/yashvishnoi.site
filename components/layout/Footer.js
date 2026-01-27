@@ -5,23 +5,40 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center items-center min-h-70">
-      <div className="h-90 w-1/2 gap-4 flex flex-col justify-center items-center py-4">
-        <div className="flex flex-col justify-center items-center gap-2">
-          <Image src="/yash-logo-black.svg" alt="logo" width={50} height={50} />
-          <span className="text-[28px] font-bold">Yash Vishnoi</span>
-        </div>
-
-        <span className="text-[15px] text-[#1A1A1A]">
-          Full-Stack Web Developer | UI/UX Designer | Problem Solver
+    <div className="w-full p-8 flex justify-center items-center  h-fit border-black bg-white max-w-360">
+      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex flex-col">
+        <Image src="/yash-logo-black.svg" alt="logo" width={50} height={50} />
+        <span className="text-[16px] font-light w-[40%]">
+          I'm Yash Vishnoi - a full-stack developer, freelancer & problem
+          solver. Thanks for checking out my site!
         </span>
-
-        <ConnectPopOver>
-          <span className="bg-green-400/10 rounded-[2px] border border-green-400 flex justify-center items-center gap-3 text-[12px] px-1.5 py-1 select-none w-fit cursor-pointer">
-            Available for Work
-          </span>
-        </ConnectPopOver>
       </div>
+
+      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex">
+        <div className="w-1/2 h-full flex flex-col gap-2 border-black">
+          <span className="text-[20px] font-bold mb-2">Generel</span>
+
+          {["Home", "Contact", "Book a call"].map((item, index) => {
+            return (
+              <Link className="w-fit" href={`/`} key={index}>
+                <span className="text-[16px] font-light w-fit">{item}</span>
+              </Link>
+            );
+          })}
+        </div>
+        <div className="w-1/2 h-full flex flex-col gap-2 border-black">
+          <span className="text-[20px] font-bold mb-2">Specifics</span>
+
+          {["Privacy", "Terms", "Uses"].map((item, index) => {
+            return (
+              <Link className="w-fit" href={`/`} key={index}>
+                <span className="text-[16px] font-light w-fit">{item}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+      
     </div>
   );
 };

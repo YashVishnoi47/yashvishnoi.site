@@ -19,8 +19,7 @@ export default function Home() {
       <PerksComponent />
       <AboutSection />
       <FaqSection />
-      <CtaCardSection />
-      <Footer />
+      
     </div>
   );
 }
