@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 const Card3 = () => {
   return (
-    <div className="w-full border rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
+    <div className="w-full boder shadow-md shadow-black/10 rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
       <div className="gap-2 flex flex-col justify-center items-start w-full">
         <Tag text={"Built to Scale"} />
         <h4 className="text-[36px]  font-medium">

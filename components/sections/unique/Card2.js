@@ -5,7 +5,7 @@ import Tag from "@/components/ui/Tag";
 import WorldMap from "@/components/ui/world-map";
 const Card2 = () => {
   return (
-    <div className="lg:w-[40%] w-full relative border rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
+    <div className="lg:w-[40%] w-full relative bordr shadow-md shadow-black/10 rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
       <div className="gap-2 flex flex-col justify-center items-start w-full">
         <Tag text={"Remote-Work"} />
         <h4 className="text-[36px]  font-medium">Borderless Collaboration</h4>

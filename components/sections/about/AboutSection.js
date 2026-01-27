@@ -24,7 +24,7 @@ const AboutSection = () => {
       style={{ scale }}
       transition={{ type: "spring", stiffness: 800, damping: 2 }}
       id="about"
-      className="w-full min-h-180 flex justify-center items-center lg:flex-row flex-col bg-white rounded-xl p-12 border-black/30 mt-37.5 mb-40  relative "
+      className="w-full min-h-180 flex justify-center items-center lg:flex-row flex-col bg-white rounded-xl p-12 border-black/30 mt-37.5 mb-40  relative  "
     >
       <Spotlight
         className="bg-[#7C3AED] blur-2xl"

@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       ],
     },
     {
-      name: "Project 1",
+      name: "Vibrium",
       subHeading:
         "This is the subheading of the project which I will include later.!!!",
       link: "https://github.com/yashvishnoi/nextjs-portfolio",

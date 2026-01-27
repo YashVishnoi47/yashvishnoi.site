@@ -14,7 +14,8 @@ export default function Home() {
       <HeroSection />
       <ServiceSection />
       <ProjectsSection />
-      <UniqueSection />
+      {/* remove unique and add service packs */}
+      {/* <UniqueSection /> */}
       <PerksComponent />
       <AboutSection />
       <FaqSection />

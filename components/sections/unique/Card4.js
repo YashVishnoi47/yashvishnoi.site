@@ -3,7 +3,7 @@ import React from "react";
 
 const Card4 = () => {
   return (
-    <div className="w-full border rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
+    <div className="w-full borer shadow-md shadow-black/10 rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border-black/30 h-full  bg-white group">
       <div className="gap-2 flex flex-col justify-center items-start w-full">
         <Tag text={"Automation & Flow"} />
         <h4 className="text-[36px]  font-medium">Systems That Work Together</h4>

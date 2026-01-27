@@ -18,13 +18,13 @@ const UniqueSection = () => {
         }
       />
 
-      <div className="w-full h-fit flex flex-col gap-4 justify-center  items-center">
-        <div className="w-[96%] lg:h-122.5 h-245 order border-black bg-transparent flex lg:flex-row flex-col gap-4 justify-center items-center">
+      <div className="w-full h-fit flex flex-col gap-6 justify-center  items-center">
+        <div className="w-[96%] lg:h-122.5 h-245 order border-black bg-transparent flex lg:flex-row flex-col gap-6 justify-center items-center">
           <Card1 />
           <Card2 />
         </div>
 
-        <div className="w-[96%] lg:h-110 h-245 order border-black bg-transparent flex lg:flex-row flex-col gap-4 justify-center items-center">
+        <div className="w-[96%] lg:h-110 h-245 order border-black bg-transparent flex lg:flex-row flex-col gap-6 justify-center items-center">
           <Card3 />
           <Card4 />
         </div>
