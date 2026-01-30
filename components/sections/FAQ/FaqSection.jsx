@@ -50,13 +50,13 @@ const FaqSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: idx * 0.05 }}
-                        className="w-full max-w-3xl bg-white border border-black/10 rounded-xl overflow-hidden"
+                        className="w-full max-w-3xl bg-bg-light border border-black/10 rounded-xl overflow-hidden"
                     >
                         <button
                             onClick={() => setOpen(open === idx ? null : idx)}
                             className="w-full flex justify-between items-center px-5 py-4 text-left hover:bg-black/5 transition-colors"
                         >
-                            <span className="text-lg font-medium text-gray-900">
+                            <span className="text-lg font-medium text-text">
                                 {faq.question}
                             </span>
 
@@ -78,7 +78,8 @@ const FaqSection = () => {
                                     transition={{ duration: 0.4, ease: "easeInOut" }}
                                     className="px-5 pb-4"
                                 >
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-text-muted2lay
+                                     leading-relaxed">
                                         {faq.Answer}
                                     </p>
                                 </motion.div>

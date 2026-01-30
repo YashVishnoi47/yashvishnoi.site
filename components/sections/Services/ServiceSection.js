@@ -9,7 +9,7 @@ const ServiceSection2 = () => {
   return (
     <div
       id="services"
-      className="w-full min-h-200 flex flex-col gap-14 bg-white rounded-xl lg:p-12 border-black"
+      className="w-full min-h-200 flex flex-col gap-14 bg-bg-light rounded-xl lg:p-12 border-black"
     >
       <div className="w-full flex flex-col gap-4 items-center justify-center">
         <Heading />
@@ -39,7 +39,7 @@ const ServiceSection2 = () => {
               <h4 className="lg:text-[36px] text-[30px] lg:text-left text-center">
                 Full-Stack Web development
               </h4>
-              <span className="text-[16px] font-light lg:text-left text-center">
+              <span className="text-[16px] font-light lg:text-left text-text-muted text-center">
                 Creating reliable, high-performance digital systems.
               </span>
             </div>
@@ -50,13 +50,13 @@ const ServiceSection2 = () => {
           </motion.div>
 
           {/* card 2 */}
-          <div className="w-[40%]  rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group">
+          <div className="w-[40%]  rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group"> 
             <div className="gap-2 flex flex-col justify-center items-center w-full">
               <Tag text={"We handle the boring stuff"} />
               <h4 className="lg:text-[36px] text-[30px] text-center">
                 Ongoing Website Care
               </h4>
-              <span className="text-[16px] font-light  text-center">
+              <span className="text-[16px] font-light text-text-muted text-center">
                 From updates to issue resolution, we make sure your website
                 works flawlessly at all times.
               </span>
@@ -91,7 +91,7 @@ const ServiceSection2 = () => {
               <h4 className="lg:text-[36px] text-[30px]  text-center">
                 Launch-Ready Websites
               </h4>
-              <span className="text-[13 px] w-[72%] font-light text-center">
+              <span className="text-[] text-text-muted w-[72%] font-light text-center">
                 Domain setup, SEO, and responsive design—built{" "}
                 <span className="text-black">I provide everything.</span>
               </span>
@@ -105,7 +105,7 @@ const ServiceSection2 = () => {
               <h4 className="lg:text-[36px] text-[30px]  text-center">
                 UI/UX Designing
               </h4>
-              <span className="text-[16px] font-light lg:text-left text-center">
+              <span className="text-[16px] text-text-muted font-light lg:text-left text-center">
                 Crafting clean, modern layouts optimized for clarity, usability,
                 and visual balance.
               </span>
@@ -130,48 +130,13 @@ export default ServiceSection2;
 
 const Heading = () => {
   return (
-    <h1 className="lg:text-[40px] sm:text-[30px] font-semibold w-full tracking-[-0.02em] text-center">
+    <h1 className="lg:text-[40px] sm:text-[30px] font-semibold w-full tracking-[-0.02em] text-center text-text">
       End-to-End Website Developement
     </h1>
   );
 };
 
-const BigServiceCard = () => {
-  const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const rotateX = useTransform(scrollYProgress, [0, 1], [0, 5]);
-
-  return (
-    <motion.div className="w-full h-200 rounded-xl border border-black/30 flex flex-col gap-10 justify-start items-center CardGradiant p-6 perspective-distant [transform-style: preserve-3d]">
-      <div className="gap-2 flex flex-col justify-center items-center w-full">
-        <Tag text={"Design that performs"} />
-        <h4 className="lg:text-[36px] text-[30px] text-center font-medium">
-          End to End Website Devlopment
-        </h4>
-        <span className="text-[16px] font-light lg:text-left text-center">
-          Creating high-impact digital experiences with and precision.
-        </span>
-      </div>
-
-      <motion.div
-        ref={ref}
-        style={{
-          translateZ: "50px",
-          rotateX: rotateX,
-        }}
-        className="w-full h-full flex -space-x-45 border-black justify-center items-end oveflow-hidden rounded-2xl"
-      >
-        <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
-        <div className="w-110 h-[95%] relative z-3 bg-white rounded-md shadow-[12px_0_20px_-12px_rgba(0,0,0,0.6),-12px_0_20px_-12px_rgba(0,0,0,0.6)]"></div>
-        <div className="w-110 h-[92%] relative z-2 bg-black/20 rounded-md border-black"></div>
-      </motion.div>
-    </motion.div>
-  );
-};
 
 const Window = () => {
   return (

@@ -57,7 +57,7 @@ const MainHeading = () => {
         ease: "easeOut",
         duration: 0.7,
       }}
-      className="lg:text-[60px] sm:text-[40px] text-[30px] font-bold lg:w-[70%] w-[90%] lg:leading-17.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center"
+      className="lg:text-[60px] sm:text-[40px] text-[30px] font-bold lg:w-[70%] w-[90%] lg:leading-17.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center text-text"
     >
       I create stunning digital experiences for businesses that want growth.
     </motion.h1>
@@ -74,7 +74,7 @@ const SubHeading = () => {
         duration: 1,
         delay: 0.7,
       }}
-      className="lg:text-[22px] sm:text-[18px] lg:w-[55%] w-[70%] text-center text-[#595F66]"
+      className="lg:text-[22px] sm:text-[18px] lg:w-[55%] w-[70%] text-center text-text-muted"
     >
       Creating high-impact digital experiences with unmatched speed and
       precision. No Hassle. No BS.{" "}

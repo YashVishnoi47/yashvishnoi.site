@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
     ],
   };
   return (
-    <html lang="en">
+    <html className="" lang="en">
       <head>
         <meta
           name="google-site-verification"
@@ -129,7 +129,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${roboto.className} hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
+        className={`${roboto.className} bg-bg-dark hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
       >
         <Navbar />
         {children}

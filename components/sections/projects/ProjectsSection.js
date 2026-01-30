@@ -42,15 +42,15 @@ const ProjectsSection = () => {
           <div
             data-text={item.name}
             key={idx}
-            className={`w-[40%] h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-white cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out hover:shadow-md shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
+            className={`w-[40%] h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-bg-light cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out hover:shadow-md shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
           >
             <div className="h-[55%] bg-black/20 w-full rounded-xl" />
 
             <div className="h-fit w-full flex flex-col justify-start items-center border-black">
               <div className="w-full flex justify-center lg:items-start items-center flex-col gap-3">
-                <h5 className="text-[36px] font-medium">{item.name}</h5>
+                <h5 className="text-[36px] font-medium text-text">{item.name}</h5>
 
-                <p className="text-[15px] font-light text-[#1A1A1A]">
+                <p className="text-[15px] font-light text-text-muted">
                   {item.subHeading}
                 </p>
 
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
           }}
         />
 
-        <h4 className="text-[50px] w-[85%] leading-14 font-bold text-center relative z-1000">
+        <h4 className="text-[50px] w-[85%] text-text leading-14 font-bold text-center relative z-1000">
           Building reliable, scalable web applications with clarity and
           precision.
         </h4>

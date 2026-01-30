@@ -5,7 +5,7 @@ import React from 'react'
 
 const CtaCardSection = () => {
     return (
-        <div data-text="Let's Work Together" className="w-full min-h-160 max-w-360 rounded-lg bg-white flex flex-col gap-12 border-black justify-center items-center mt-37.5 ">
+        <div data-text="Let's Work Together" className="w-full min-h-160 max-w-360 rounded-lg bg-bg-light flex flex-col gap-12 border-black justify-center items-center mt-37.5 ">
 
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center'>
                 <Image src="/yash-logo-black.svg" alt="logo" width={80} height={80} />

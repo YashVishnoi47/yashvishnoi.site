@@ -32,12 +32,12 @@ const PerksComponent = () => {
                     <Tilt key={idx} className='w-[32%]' rotationFactor={5} isRevese>
 
                         <motion.div
-                            className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-white/50 backdrop-blu text-black border-black/30 transition-all duration-300 ease-in-out shadow-white shadow-md hover:shadow-[#7C3AED]/30 relative cursor-default'>
+                            className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
 
                             <Image src={item.icon} alt={item.head} width={32} height={32} />
                             <div className='w-full flex flex-col gap-2'>
-                                <h5 className='text-[24px] font-medium'>{item.head}</h5>
-                                <span className='text-[15px] text-[#1A1A1A] font-light'>{item.subHead}</span>
+                                <h5 className='text-[24px] font-medium text-text'>{item.head}</h5>
+                                <span className='text-[15px]  font-light text-text-muted2'>{item.subHead}</span>
 
                             </div>
 
