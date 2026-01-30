@@ -23,7 +23,7 @@ const PerksComponent = () => {
     ]
     return (
         <div
-            className="w-full min-h-200 flex flex-col gap-14 rounded-xl lg:p-12 border-black mt-37.5"
+            className="w-full max-w-360 min-h-200 flex flex-col gap-14 rounded-xl lg:p-12 border-black mt-37.5"
         >
             <HeadingCard head={"Additional Perks"} subHead={"What you can expect beyond just code and deliverables"} />
 

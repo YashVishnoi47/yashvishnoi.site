@@ -5,13 +5,14 @@ import React from 'react'
 
 const CtaCardSection = () => {
     return (
-        <div data-text="Let's Work Together" className="w-full min-h-160 max-w-360 rounded-lg bg-bg-light flex flex-col gap-12 border-black justify-center items-center mt-37.5 ">
+        <div data-ext="Let's Work Together" className="w-full min-h-160 max-w-360 rounded-lg bg-bg-light flex flex-col gap-12 border-black justify-center items-center mt-37.5 ">
 
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center'>
-                <Image src="/yash-logo-black.svg" alt="logo" width={80} height={80} />
-                <div className='w-full -space-y-1 flex flex-col justify-center items-center'>
-                    <h5 className='text-[40px] w-[50%] font-black text-center'>I dont just build websites </h5>
-                    <h5 className='text-[40px] w-[50%] font-black text-center'>I build Web Systems that perform.</h5>
+                <Image
+                    className="hover:-rotate-15 transition-all duration-300 ease-in-out" src="/yash-logo-black.svg" alt="logo" width={80} height={80} />
+                <div className='w-full -space-y-0.5 flex flex-col justify-center items-center'>
+                    <h5 className='text-[48px] w-[70%] font-black text-center'>I dont just build websites </h5>
+                    <h5 className='text-[48px] w-[70%] font-black text-center'>I build Web Systems that perform.</h5>
                 </div>
             </div>
 

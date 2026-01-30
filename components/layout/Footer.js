@@ -7,7 +7,13 @@ const Footer = () => {
   return (
     <div className="w-full p-8 flex justify-center items-center  h-fit border-black bg-bg-light max-w-360">
       <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex flex-col">
-        <Image src="/yash-logo-black.svg" alt="logo" width={50} height={50} />
+        <Image
+          className="hover:-rotate-15 transition-all duration-300 ease-in-out"
+          src="/yash-logo-black.svg"
+          alt="logo"
+          width={50}
+          height={50}
+        />
         <span className="text-[16px] text-text font-light w-[40%]">
           I'm Yash Vishnoi - a full-stack developer, freelancer & problem
           solver. Thanks for checking out my site!

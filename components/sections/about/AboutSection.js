@@ -16,12 +16,13 @@ const AboutSection = () => {
     offset: ["start end", "end end"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const bRadius = useTransform(scrollYProgress, [0, 1], [16, 0]);
 
   return (
     <motion.div
       ref={ref}
-      style={{ scale }}
+      style={{ scale, borderRadius: bRadius }}
       transition={{ type: "spring", stiffness: 800, damping: 2 }}
       id="about"
       className="w-full min-h-180 flex justify-center items-center lg:flex-row flex-col bg-bg-light rounded-xl p-12 border-black/30 mt-37.5 mb-40  relative  "
@@ -35,7 +36,7 @@ const AboutSection = () => {
         }}
       />
 
-      <div
+      {/* <div
         className="absolute inset-0"
         style={{
           backgroundImage: `
@@ -48,7 +49,53 @@ const AboutSection = () => {
           maskImage:
             "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
         }}
-      /> 
+      /> */}
+
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
+        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+      `,
+          backgroundSize: "20px 20px",
+          backgroundPosition: "0 0, 0 0",
+          maskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+          WebkitMaskImage: `
+        repeating-linear-gradient(
+          to right,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          black 0px,
+          black 3px,
+          transparent 3px,
+          transparent 8px
+        )
+      `,
+          maskComposite: "intersect",
+          WebkitMaskComposite: "source-in",
+        }}
+      />
 
       <div className="w-165 h-fit flex gap-6 flex-col justify-start items-start border-black relative z-10">
         <h1 className="text-[40px] text-text font-medium text-left">

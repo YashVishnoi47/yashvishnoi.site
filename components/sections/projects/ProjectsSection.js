@@ -32,29 +32,34 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div id="projects" className="w-full flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 border-black ">
+    <div
+      id="projects"
+      className="w-full max-w-360 flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 border-black "
+    >
       <HeadingCard
         head={"Featured Work"}
         subHead={"Highlighting the best of my development journey."}
       />
-      <div className="w-full h-fit flex flex-wrap justify-center items-center gap-6">
+      <div className="w-full h-fit flex lg:flex-row flex-col flex-wrap justify-center items-center gap-6">
         {projects.map((item, idx) => (
           <div
             data-text={item.name}
             key={idx}
-            className={`w-[40%] h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-bg-light cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out hover:shadow-md shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
+            className={`lg:w-[40%] w-full h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-bg-light cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out hover:shadow-md shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
           >
             <div className="h-[55%] bg-black/20 w-full rounded-xl" />
 
             <div className="h-fit w-full flex flex-col justify-start items-center border-black">
               <div className="w-full flex justify-center lg:items-start items-center flex-col gap-3">
-                <h5 className="text-[36px] font-medium text-text">{item.name}</h5>
+                <h5 className="text-[36px] font-medium text-text text-start w-full">
+                  {item.name}
+                </h5>
 
                 <p className="text-[15px] font-light text-text-muted">
                   {item.subHeading}
                 </p>
 
-                <div className="flex justify-center gap-1 items-center w-fit h-fit">
+                <div className="flex justify-start gap-1 items-start w-fit h-fit">
                   {item.techIcons.map((item, idx) => (
                     <TechTags key={idx} item={item} />
                   ))}
@@ -63,7 +68,7 @@ const ProjectsSection = () => {
             </div>
 
             <div className="w-full flex justify-end gap-2 items-end h-[12%] ">
-              <div className="flex justify-center items-center gap-2 px-2 py-1 rounded-md group-hover:bg-black/5 transition-all duration-300 ease-in-out">
+              <div className="flex justify-center items-center gap-2 px-3 py-1 rounded-md group-hover:bg-bg-c transition-all duration-300 ease-in-out">
                 <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
                   See more
                 </span>
@@ -92,10 +97,14 @@ const ProjectsSection = () => {
           }}
         />
 
-        <h4 className="text-[50px] w-[85%] text-text leading-14 font-bold text-center relative z-1000">
+        <h4
+          className=" lg:text-[50px] lg:leading-15 md:text-[40px] md:leading-12.5 sm:text-[30px] sm:leading-8.5 w-[85%] text-text font-bold text-center relative z-1000
+"
+        >
           Building reliable, scalable web applications with clarity and
           precision.
         </h4>
+
         <CTAButton text={"Let's work"} />
       </div>
     </div>

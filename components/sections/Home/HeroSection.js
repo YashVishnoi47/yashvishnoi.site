@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const handleCopy = () => {
-    navigator.clipboard.writeText("email@gmail.com");
+    navigator.clipboard.writeText("email@gmail.com"); 
     toast.success("Email has been copied to clipboard.");
   };
 
   return (
-    <div className="w-full flex flex-col gap-16 justify-center items-center min-h-165 borde border-black">
+    <div className="w-full max-w-360 flex flex-col gap-16 justify-center items-center min-h-165 borde border-black">
       <div className="w-full flex flex-col justify-center items-center gap-6">
         <Tag />
         <MainHeading />

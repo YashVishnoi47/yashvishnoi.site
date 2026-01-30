@@ -7,9 +7,9 @@ import { ArrowRight } from "lucide-react";
 
 const ServiceSection2 = () => {
   return (
-    <div
+    <div 
       id="services"
-      className="w-full min-h-200 flex flex-col gap-14 bg-bg-light rounded-xl lg:p-12 border-black"
+      className="w-full max-w-360 min-h-200 flex flex-col gap-14 bg-bg-light rounded-xl lg:p-12 border-black"
     >
       <div className="w-full flex flex-col gap-4 items-center justify-center">
         <Heading />
@@ -33,7 +33,7 @@ const ServiceSection2 = () => {
       <div className="w-full h-fit flex flex-col flex-wrap gap-4 justify-center items-center">
         <div className="w-full lg:h-100 h-200 border-black flex lg:flex-row flex-col gap-4 justify-center items-center">
           {/* Card 1 */}
-          <motion.div className="w-[60%]  rounded-xl overflow-hidden p-6 flex flex-col gap-10 border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group">
+          <motion.div className="lg:w-[60%] w-full  rounded-xl overflow-hidden p-6 flex flex-col gap-10 border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group">
             <div className="gap-2 flex flex-col justify-center  items-center w-full">
               <Tag text={"Modern. Efficient. Reliable."} />
               <h4 className="lg:text-[36px] text-[30px] lg:text-left text-center">
@@ -50,7 +50,7 @@ const ServiceSection2 = () => {
           </motion.div>
 
           {/* card 2 */}
-          <div className="w-[40%]  rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group"> 
+          <div className="lg:w-[40%] w-full rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-center items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group"> 
             <div className="gap-2 flex flex-col justify-center items-center w-full">
               <Tag text={"We handle the boring stuff"} />
               <h4 className="lg:text-[36px] text-[30px] text-center">
@@ -71,7 +71,7 @@ const ServiceSection2 = () => {
 
           <motion.div
             data-text="Let's work together"
-            className="w-[40%]  rounded-xl overflow-hidden p-6 flex flex-col gap-10 border border-black/10 shadow-md hover:shadow-[0_0_12px_rgba(0,0,0,0.08)] hover:scale-[1.02] cursor-pointer shadow-black/10 h-full CardGradiant group justify-center  items-center relative transition-all duration-300 ease-in-out"
+            className="lg:w-[40%] w-full  rounded-xl overflow-hidden p-6 flex flex-col gap-10 border border-black/10 shadow-md hover:shadow-[0_0_12px_rgba(0,0,0,0.08)] hover:scale-[1.02] cursor-pointer shadow-black/10 h-full CardGradiant group justify-center  items-center relative transition-all duration-300 ease-in-out"
           >
             <div
               className="absolute inset-0 z-0 pointer-events-none opacity-70"
@@ -99,7 +99,7 @@ const ServiceSection2 = () => {
           </motion.div>
 
           {/* card 4 */}
-          <div className="w-[60%]  rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-between items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group">
+          <div className="lg:w-[60%] w-full  rounded-xl p-6 flex flex-col gap-10 overflow-hidden justify-between items-center border border-black/10 shadow-md shadow-black/10 h-full CardGradiant group">
             <div className="gap-2 flex flex-col justify-center items-center w-full">
               <Tag text={"Design that performs"} />
               <h4 className="lg:text-[36px] text-[30px]  text-center">

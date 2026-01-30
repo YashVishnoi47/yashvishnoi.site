@@ -11,17 +11,16 @@ import UniqueSection from "@/components/sections/unique/UniqueSection";
 
 export default function Home() {
   return (
-    <div className="bg-bg-k flex flex-col justify-center items-center h-fit w-full max-w-360 relative ">
+    <div className="bg-bg-k flex flex-col justify-center items-center h-fit w-full mx-w-360 relative ">
       <HeroSection />
       <ServiceSection />
       <ProjectsSection />
-      {/* remove unique and add service packs */}
-      {/* <UniqueSection /> */}
       <ServiceCards />
       <PerksComponent />
-      {/* Add Web+ Monlthy plannn */}
       <AboutSection />
       <FaqSection />
     </div>
   );
 }
+
+{/* Add Web+ Monlthy plannn */}
