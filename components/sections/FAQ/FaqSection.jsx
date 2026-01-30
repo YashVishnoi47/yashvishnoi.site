@@ -41,7 +41,6 @@ const FaqSection = () => {
         <div className="w-full flex flex-col gap-16 justify-start  items-center min-h-165 mt-37.5">
             <HeadingCard head={"Frequently Asked Questions"} subHead={`Can’t find the answer you’re looking for? Reach out to us and we will get in touch with you`} />
 
-
             <div className="w-full flex flex-col items-center gap-4">
                 {FAQ.map((faq, idx) => (
                     <motion.div

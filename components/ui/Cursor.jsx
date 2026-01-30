@@ -70,12 +70,10 @@ const Cursor = () => {
     return (
         <AnimatePresence>
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 style={{ x: smoothX, y: smoothY, opacity: smoothOpacity }}
 
-                className={`fixed top-0 left-0 px-4 py-2 z-1000 pointer-events-none  flex items-center justify-center rounded-sm border border-[#7C3AED]/50 ${hover ? " bg-[#7C3AED] text-white" : " bg-[#7C3AED] opacity-0"}`}
+                className={`fixed top-0 left-0 px-4 py-2 z-1000 pointer-events-none  flex items-center justify-center rounded-sm border border-[#7C3AED]/50 ${hover ? " bg-[#7C3AED] text-white" : " bg-[#7C3AED]"}`}
             >
                 <AnimatePresence>
                     {text && (

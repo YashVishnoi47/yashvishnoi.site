@@ -18,7 +18,7 @@ const ServiceCards = () => {
                             Core Website
                         </h4>
                         <span className="text-[16px] text-text-muted2 font-light lg:text-left text-center">
-                           Perfect for startups, local businesses & personal brands
+                            Perfect for startups, local businesses & personal brands
                         </span>
                     </div>
 
@@ -35,7 +35,7 @@ const ServiceCards = () => {
 
                         ].map((item, index) => {
                             return (
-                                <div className='w-full flex justify-start items-center gap-2'>
+                                <div key={index} className='w-full flex justify-start items-center gap-2'>
                                     <div className='w-5 h-5 bg-[#7C3AED] rounded-full border-black flex justify-center items-center'>
                                         <Check size={12} className='text-white' />
 
@@ -46,21 +46,7 @@ const ServiceCards = () => {
                         })}
 
 
-                        {/* {[
-                            "4 pages website",
-                            "Mobile friendly",
-                            "Basic SEO setup",
 
-                        ].map((item, index) => {
-                            return (
-                                <div className='w-full flex justify-start items-center gap-2'>
-                                    <div className='w-5 h-5 bg-black/10 rounded-full  border-black flex justify-center items-center'>
-                                        <X size={14} className='text-black' />
-                                    </div>
-                                    <span className='text-text-muted text-[18px] font-medium'>{item}</span>
-                                </div>
-                            )
-                        })} */}
                     </div>
 
                     <div className='w-full flex flex-col gap-6 h-fit'>
@@ -76,7 +62,6 @@ const ServiceCards = () => {
                     </div>
 
                 </div>
-                
 
 
                 <div className='w-150  p-2 h-216.5 shadow-2xl shadow-black/15 rounded-xl bg-[#7C3AED]'>
@@ -107,7 +92,7 @@ const ServiceCards = () => {
 
                             ].map((item, index) => {
                                 return (
-                                    <div className='w-full flex justify-start items-center gap-2'>
+                                    <div key={index} className='w-full flex justify-start items-center gap-2'>
                                         <div className='w-5 h-5 bg-[#7C3AED] rounded-full border-black flex justify-center items-center'>
                                             <Check size={12} className='text-white' />
 
