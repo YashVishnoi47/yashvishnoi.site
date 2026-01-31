@@ -114,8 +114,11 @@ export default function RootLayout({ children }) {
       },
     ],
   };
+
+
+
   return (
-    <html className="" lang="en">
+    <html lang="en">
       <head>
         <meta
           name="google-site-verification"
@@ -134,7 +137,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <CtaCardSection />
-        <div className="w-full h-10 bg-black/5 rounded-sm max-w-360"></div>
+        <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
         <Footer />
         <Toaster />
         <Cursor />

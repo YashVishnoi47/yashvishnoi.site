@@ -21,10 +21,10 @@ const ConnectPopOver = ({ children }) => {
                     <AniButton1 text={"Start a Project"} />
                 )}
             </DialogTrigger>
-            <DialogContent className={""}>
+            <DialogContent className={" z-1000000"}>
                 <DialogHeader>
                     <DialogTitle></DialogTitle>
-                    <div className='w-full h-90 border-black flex flex-col justify-center items-center gap-4'>
+                    <div className='w-full h-90  border-black flex flex-col justify-center items-center gap-4'>
                         <h6 className='text-[32px] font-normal border-black '>Get in touch</h6>
 
                         <div className='w-full h-full flex flex-col gap-4 border-black justify-start items-center'>

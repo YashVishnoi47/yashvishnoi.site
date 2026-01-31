@@ -5,8 +5,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="w-full p-8 flex justify-center items-center  h-fit border-black bg-bg-light max-w-360">
-      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex flex-col">
+    <div className="w-full p-8 flex justify-center items-center  h-fit border-black bg-bg-light max-w-360 relative">
+      
+      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex flex-col relative z-2">
         <Image
           className="hover:-rotate-15 transition-all duration-300 ease-in-out"
           src="/yash-logo-black.svg"
@@ -20,7 +21,7 @@ const Footer = () => {
         </span>
       </div>
 
-      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex">
+      <div className="h-60 w-1/2 gap-4 justify-start items-start border-black flex relative z-2">
         <div className="w-1/2 h-full flex flex-col gap-2 border-black">
           <span className="text-[20px] text-text font-bold mb-2">Generel</span>
 
