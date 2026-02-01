@@ -7,7 +7,7 @@ import React from 'react'
 
 const ServiceCards = () => {
     return (
-        <div className='w-full max-w-360 h-fit flex flex-col gap-16 justify-center items-center min-h-165 borde border-black mt-32 overflow-hidden'>
+        <div id="services" className='w-full max-w-360 h-fit flex flex-col gap-16 justify-center items-center min-h-165 borde border-black mt-32 overflow-hidden'>
             <HeadingCard head={"Websites tailored to your goals"} subHead={"End-to-end website experiences designed with a strong focus on performance, scalability, and long-term growth"} />
 
             <div className='w-full flex 2xl:flex-row flex-col gap-8 justify-center items-center'>

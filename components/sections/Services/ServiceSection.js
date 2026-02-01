@@ -8,7 +8,6 @@ import { ArrowRight } from "lucide-react";
 const ServiceSection2 = () => {
   return (
     <div 
-      id="services"
       className="w-full max-w-360 min-h-200 flex flex-col gap-14 bg-bg-light rounded-xl lg:p-12 border-black"
     >
       <div className="w-full flex flex-col gap-4 items-center justify-center">
