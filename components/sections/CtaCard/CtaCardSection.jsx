@@ -23,16 +23,16 @@ const CtaCardSection = () => {
                 <Image
                     className="hover:-rotate-15 transition-all duration-300 ease-in-out" src="/yash-logo-black.svg" alt="logo" width={80} height={80} />
                 <div className='w-full -space-y-0.5 flex flex-col justify-center items-center'>
-                    <h5 className='text-[48px] w-[70%] text-text font-black text-center'>I dont just build websites </h5>
-                    <h5 className='text-[48px] w-[70%] text-text font-black text-center'>I build Web Systems that perform.</h5>
+                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I dont just build websites </h5>
+                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I build Web Systems that perform.</h5>
                 </div>
             </div>
 
             <ConnectPopOver />
 
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center relative z-2'>
-                <span className='text-[24px] text-text font-bold'>Let’s do your next project toghter</span>
-                <span className='text-[16px] text-text-muted2 font-light w-[40%] text-center'>Thoughtfully engineered products, designed with performance at the core, built for maintainability, and structured to support long-term growth.</span>
+                <span className='lg:text-[24px] text-[20px] text-text font-bold'>Let’s do your next project toghter</span>
+                <span className='lg:text-[16px] text-[12px] text-text-muted2 font-light lg:w-[40%] w-[98%] text-center'>Thoughtfully engineered products, designed with performance at the core, built for maintainability, and structured to support long-term growth.</span>
             </div>
 
 

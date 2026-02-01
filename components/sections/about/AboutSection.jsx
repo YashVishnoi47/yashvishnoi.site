@@ -25,7 +25,7 @@ const AboutSection = () => {
       style={{ scale, borderRadius: bRadius }}
       transition={{ type: "spring", stiffness: 800, damping: 2 }}
       id="about"
-      className="w-full min-h-180 flex justify-center items-center lg:flex-row flex-col bg-bg-light rounded-xl p-12 border-black/30 mt-37.5 mb-40  relative  "
+      className="w-full max-w-400 min-h-180 flex justify-center items-center lg:flex-row flex-col bg-bg-light rounded-xl p-12 border-black/30 mt-37.5 mb-40 relative lg:gap-0 gap-12"
     >
       <Spotlight
         className="bg-[#7C3AED] blur-2xl"
@@ -35,21 +35,6 @@ const AboutSection = () => {
           duration: 1,
         }}
       />
-
-      {/* <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-        linear-gradient(45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%),
-        linear-gradient(-45deg, transparent 49%, #e5e7eb 49%, #e5e7eb 51%, transparent 51%)
-      `,
-          backgroundSize: "40px 40px",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
-          maskImage:
-            "radial-gradient(ellipse 80% 80% at 100% 100%, #000 50%, transparent 90%)",
-        }}
-      /> */}
 
       <div
         className="absolute inset-0 z-0"
@@ -97,23 +82,23 @@ const AboutSection = () => {
         }}
       />
 
-      <div className="w-165 h-fit flex gap-6 flex-col justify-start items-start border-black relative z-10">
-        <h1 className="text-[40px] text-text font-medium text-left">
+      <div className="lg:w-[46.2%] w-full h-fit flex gap-6 flex-col lg:justify-start justify-center lg:items-start items-center border-black relative z-10">
+        <h1 className="lg:text-[40px] text-[30px] text-text font-medium lg:text-left text-center">
           Who’s really doing all of this
         </h1>
 
-        <span className="text-[20px]  text-left text-text-muted">
+        <span className="lg:text-[20px] text-[18px]  lg:text-left text-center text-text-muted">
           Hi, <span className="font-bold">I’m Yash</span>. I build modern web
           applications with a strong focus on clarity, scalability, and
           <span className="font-bold"> real-world usability</span>.{" "}
         </span>
-        <span className="text-[20px]  text-left text-text-muted">
+        <span className="lg:text-[20px] text-[18px]  lg:text-left text-center text-text-muted">
           I work mainly with <span className="font-bold">Next.js</span> and the
           modern JavaScript ecosystem, building{" "}
           <span className="font-bold">full-stack products</span> that are clean
           on the frontend and reliable on the backend.
         </span>
-        <span className="text-[20px]  text-left text-text-muted">
+        <span className="lg:text-[20px] text-[18px]  lg:text-left text-center text-text-muted">
           People often label this as{" "}
           <span className="font-bold">“full-stack development,”</span> but I
           prefer to think of it as solving problems end-to-end — from
@@ -121,7 +106,7 @@ const AboutSection = () => {
           scales.
         </span>
 
-        <div className="flex gap-4 w-full justify-start items-center border-black">
+        <div className="lg:flex hidden gap-4 w-full justify-start items-center border-black">
           {[
             { name: "Github", link: "/socials/github.svg" },
             { name: "Twitter", link: "/socials/twitter.svg" },
@@ -143,7 +128,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="w-125 h-fit flex justify-end items-center  border-black relative z-10">
+      <div className="w-125 h-fit flex lg:justify-end justify-center items-center  border-black relative z-10">
         <div className="w-75 h-75 rounded-[40px] bg-gray-400 rotate-3" />
       </div>
     </motion.div>

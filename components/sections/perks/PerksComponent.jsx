@@ -27,9 +27,9 @@ const PerksComponent = () => {
         >
             <HeadingCard head={"Additional Perks"} subHead={"What you can expect beyond just code and deliverables"} />
 
-            <div className='w-full flex flex-wrap justify-center items-center gap-4'>
+            <div className='w-full flex flex-wrap lg:flex-row flex-col justify-center items-center gap-4'>
                 {perks.map((item, idx) => (
-                    <Tilt key={idx} className='w-[32%]' rotationFactor={5} isRevese>
+                    <Tilt key={idx} className='lg:w-[32%] w-full' rotationFactor={5} isRevese>
 
                         <motion.div
                             className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
