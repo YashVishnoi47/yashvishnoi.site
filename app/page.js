@@ -3,6 +3,7 @@ import FaqSection from "@/components/sections/FAQ/FaqSection";
 import HeroSection from "@/components/sections/Home/HeroSection";
 import PerksComponent from "@/components/sections/perks/PerksComponent";
 import ProjectsSection from "@/components/sections/projects/ProjectsSection";
+import OngoingCard from "@/components/sections/Services/OngoingCard";
 import ServiceCards from "@/components/sections/Services/ServiceCards";
 import ServiceSection from "@/components/sections/Services/ServiceSection";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <ServiceSection />
       <ProjectsSection />
       <ServiceCards />
+      <OngoingCard />
       <PerksComponent />
       <AboutSection />
       <FaqSection />
@@ -20,4 +22,6 @@ export default function Home() {
   );
 }
 
-{/* Add Web+ Monlthy plannn */}
+{
+  /* Add Web+ Monlthy plannn */
+}

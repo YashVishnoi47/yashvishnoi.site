@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // TODO: Make it resposive and add the remaining design elements...
 const ProjectsSection = () => {
   const [open, setOpen] = useState(0);
+  const [expanded, setExpanded] = useState(null);
   const projects = [
     {
       name: "ParaMotion",
@@ -87,48 +88,52 @@ const ProjectsSection = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="w-full h-fit flex lg:flex-row flex-col flex-wrap justify-center items-center gap-6">
-            {projects.map((item, idx) => (
-              <div
-                data-text={item.name}
-                key={idx}
-                className={`lg:w-[40%] w-full h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-bg-light cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out shadow-md hover:shadow-md shadow-black/10 hover:shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
-              >
-                <div className="h-[55%] bg-black/20 w-full rounded-xl" />
+            className="w-full h-fit flex lg:flex-row flex-col flex-wrap justify-center items-center gap-6 relative">
+            {projects.map((item, idx) => {
+              return (
+                <motion.div
+                  data-text={item.name}
+                  key={idx}
+                  onClick={() => setExpanded(idx)}
+                  className={`lg:w-[40%] w-full h-150 flex flex-col border hover:border-[#7C3AED]/30 bg-bg-light cursor-pointer rounded-2xl p-4 gap-6 transition duration-300 ease-in-out shadow-md hover:shadow-md shadow-black/10 hover:shadow-[#7C3AED]/30 hover:-translate-y-1  active:translate-y-1  active:shadow-white relative group`}
+                >
+                  <div className="h-[55%] bg-black/20 w-full rounded-xl" />
 
-                <div className="h-fit w-full flex flex-col justify-start items-center border-black">
-                  <div className="w-full flex justify-center lg:items-start items-center flex-col gap-6">
-                    <div className="w-full h-fit flex flex-col gap-1 justify-start items-start">
-                      <h5 className="text-[36px] font-medium text-text text-start w-full">
-                        {item.name}
-                      </h5>
+                  <div className="h-fit w-full flex flex-col justify-start items-center border-black">
+                    <div className="w-full flex justify-center lg:items-start items-center flex-col gap-6">
+                      <div className="w-full h-fit flex flex-col gap-1 justify-start items-start">
+                        <h5 className="text-[36px] font-medium text-text text-start w-full">
+                          {item.name}
+                        </h5>
 
-                      <p className="text-[15px] font-light text-text-muted">
-                        {item.subHeading}
-                      </p>
-                    </div>
+                        <p className="text-[15px] font-light text-text-muted">
+                          {item.subHeading}
+                        </p>
+                      </div>
 
-                    <div className="flex justify-start gap-1 items-start w-fit h-fit">
-                      {item.techIcons.map((item, idx) => (
-                        <TechTags key={idx} item={item} />
-                      ))}
+                      <div className="flex justify-start gap-1 items-start w-fit h-fit">
+                        {item.techIcons.map((item, idx) => (
+                          <TechTags key={idx} item={item} />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="w-full flex justify-end gap-2 items-end h-[12%] ">
-                  <div className="flex justify-center items-center gap-2 px-3 py-1 rounded-md group-hover:bg-bg-c transition-all duration-300 ease-in-out">
-                    <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                      See more
-                    </span>
-                    <ArrowRight
-                      size={26}
-                      className="-rotate-45 group-hover:rotate-0 transition-all duration-300 ease-in-out"
-                    />
+                  <div className="w-full flex justify-end gap-2 items-end h-[12%] ">
+                    <div className="flex justify-center items-center gap-2 px-3 py-1 rounded-md group-hover:bg-bg-c transition-all duration-300 ease-in-out">
+                      <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                        See more
+                      </span>
+                      <ArrowRight
+                        size={26}
+                        className="-rotate-45 group-hover:rotate-0 transition-all duration-300 ease-in-out"
+                      />
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </motion.div>
+              )
+
+            })}
           </motion.div>
         ) :
           (
@@ -183,6 +188,8 @@ const ProjectsSection = () => {
             </motion.div>
           )}
       </AnimatePresence>
+
+
 
       <div className="w-[90%] flex flex-col justify-center items-center relative overflow-hidden text-whie p-6 gap-8 h-90 border bg-white shadow-black/5 shadow-xl rounded-2xl">
         <div
