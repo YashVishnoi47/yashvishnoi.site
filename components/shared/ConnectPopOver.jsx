@@ -63,7 +63,7 @@ const ConnectPopOver = ({ children }) => {
                                             id="name"
                                             type={"text"}
                                             placeholder={"Eg. John Doe"}
-                                            className={"placeholder:text-xs"} />
+                                            className={"placeholder:text-xs bg-bg-dark"} />
                                         <ValidationError
                                             prefix="Name"
                                             field="name"
@@ -76,7 +76,7 @@ const ConnectPopOver = ({ children }) => {
                                         <FieldLabel
                                             htmlFor="email"
                                             className='lg:text-[14px] text-[12px] w-full text-text-muted text-start'>Email</FieldLabel >
-                                        <Input name="email" id="email" type={"text"} placeholder={"Eg. joz3m@example.com"} className={"placeholder:text-xs"} />
+                                        <Input name="email" id="email" type={"text"} placeholder={"Eg. joz3m@example.com"} className={"placeholder:text-xs bg-bg-dark"} />
                                         <ValidationError
                                             prefix="Email"
                                             field="email"
@@ -96,7 +96,7 @@ const ConnectPopOver = ({ children }) => {
                                             id="message"
                                             name="message"
                                             placeholder={"Your Message"}
-                                            className={"placeholder:text-xs resize-none h-30"} />
+                                            className={"placeholder:text-xs bg-bg-dark resize-none h-30"} />
                                         <ValidationError
                                             prefix="Message"
                                             field="message"
