@@ -53,7 +53,7 @@ const ProjectsSection = () => {
   return (
     <div
       id="projects"
-      className="w-full max-w-360 flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 border-black "
+      className="w-full max-w-360 flex flex-col gap-16 justify-start items-center min-h-165 mt-37.5 mb-10 border-black "
     >
       <div className="w-full h-fit justify-center items-center flex flex-col gap-8">
         <HeadingCard
@@ -191,31 +191,7 @@ const ProjectsSection = () => {
 
 
 
-      <div className="w-[90%] flex flex-col justify-center items-center relative overflow-hidden text-whie p-6 gap-8 h-90 border bg-white shadow-black/5 shadow-xl rounded-2xl">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            background: `linear-gradient(
-      135deg,
-      #F5F3FF 0%,   /* very light violet base */
-      #EDE9FE 25%,  /* subtle brand tint */
-      #F8FAFC 50%,  /* near-white for maximum readability */
-      #EEF2FF 75%,  /* soft indigo hint */
-      #FFFFFF 100%  /* clean white finish */
-    )`,
-          }}
-        />
-
-        <h4
-          className=" lg:text-[50px] lg:leading-15 md:text-[40px] md:leading-12.5 sm:text-[30px] sm:leading-8.5 w-[85%] text-text font-bold text-center relative z-100
-"
-        >
-          Building reliable, scalable web applications with clarity and
-          precision.
-        </h4>
-
-        <ConnectPopOver />
-      </div>
+      
     </div>
   );
 };
