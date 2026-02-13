@@ -13,25 +13,25 @@ const ServiceCards = () => {
             <div className='w-full flex 2xl:flex-row flex-col gap-8 justify-center items-center'>
                 <div className='lg:w-[42%] w-full lg:h-216.5 min-h-216.5 p-6 border flex flex-col justify-between border-black/40 rounded-xl bg-bg-light gap-10'>
                     <div className="gap-2 flex flex-col justify-start items-start w-full">
-                        <Tag text={"Clean. Fast. Professional Online Presence."} />
+                        <Tag text={"Best for small Businesses"} />
                         <h4 className="lg:text-[36px] text-text text-[30px] lg:text-left font-medium text-start">
-                            Core Website
+                            Business Starter Website
                         </h4>
                         <span className="text-[16px] text-text-muted2 font-light text-left">
-                            Perfect for startups, local businesses & personal brands
+                            Perfect for small businesses & personal brands who need a strong, trustworthy online presence.
                         </span>
                     </div>
 
                     <div className='w-full h-[70%] border-black flex flex-col gap-4 jucctify-start items-start'>
                         {[
-                            "4-page responsive website",
-                            "Mobile-first design",
-                            "CTC & WhatsApp integration for instant customer contact",
-                            "Contact form integration",
-                            "Google Maps / Location integration",
-                            "Basic SEO setup",
-                            "Fast loading & secure setup",
-                            "Basic performance optimization",
+                            "Up to 5 strategic Website pages",
+                            "Custom UI design tailored for your website",
+                            "Modern, mobile-optimized design for all devices",
+                            "Lead capture forms with email integration",
+                            "SEO-ready structure for better visibility",
+                            "Fast-loading optimized performance",
+                            "Custom Code and file based CMS integration",
+                            "Delivered within 10–15 business days",
 
                         ].map((item, index) => {
                             return (
@@ -72,23 +72,25 @@ const ServiceCards = () => {
                         <div className="gap-2 flex flex-col justify-start items-start w-full">
                             <Tag text={"Engaging. Scalable. Conversion-Focused."} />
                             <h4 className="lg:text-[36px] text-[30px] text-text lg:text-left font-medium text-start">
-                                Interactive Experience Website
+                                Premium Business Website
                             </h4>
                             <span className="text-[16px] font-light text-text-muted2 text-left">
-                                For brands that want to stand out & convert visitors into customers
+                                For brands that want to stand out, build authority, and convert more visitors into customers.
                             </span>
                         </div>
 
                         <div className='w-full h-[70%]  border-black flex flex-col gap-4 jucctify-start items-start'>
                             <span className='text-[17px] text-text mb-2 font-bold'>Everything in Tier 1, plus:</span>
                             {[
-                                "CMS integration - easily manage content without coding",
-                                "Advanced SEO optimization",
-                                "Smooth animations & micro-interactions",
-                                "Advanced UI components",
-                                "Media optimization",
-                                "Enhanced performance optimization",
-                                "Scalable structure for future upgrades",
+                                "8–12 strategically structured pages",
+                                "Custom-designed UI components with interactive animations",
+                                "Blog or dynamic content system setup",
+                                "Advanced technical & on-page SEO optimization",
+                                "Core Web Vitals & performance optimization",
+                                "Scalable architecture built for future growth",
+                                "CMS dashboard for easy content management",
+                                "Priority project timeline (20–30 business days)",
+                                "10 days of post-launch priority support",
 
                             ].map((item, index) => {
                                 return (
