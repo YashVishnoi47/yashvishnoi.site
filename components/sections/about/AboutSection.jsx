@@ -111,7 +111,7 @@ const AboutSection = () => {
           {[
             { name: "Github", link: "/socials/github.svg", url: "https://github.com/YashVishnoi47" },
             { name: "Twitter", link: "/socials/twitter.svg", url: "https://x.com/Yash_Vishnoi7" },
-            { name: "LinkedIn", link: "/socials/linkedin.svg", url: "https://www.linkedin.com/in/yash-vishnoi-654318384/" },
+            { name: "LinkedIn", link: "/socials/linkedIn.svg", url: "https://www.linkedin.com/in/yash-vishnoi-654318384/" },
           ].map((item, idx) => (
             <Link key={idx} target="_blank" href={item.url} data-text={item.name}>
               <Image
