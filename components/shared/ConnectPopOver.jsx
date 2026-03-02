@@ -161,11 +161,11 @@ const ConnectPopOver = ({ children }) => {
 
                                     <div className="flex gap-4 w-full justify-center items-center border-black">
                                         {[
-                                            { name: "Github", link: "/socials/github.svg" },
-                                            { name: "Twitter", link: "/socials/twitter.svg" },
-                                            { name: "LinkedIn", link: "/socials/linkedin.svg" },
+                                            { name: "Github", link: "/socials/github.svg", url: "https://github.com/YashVishnoi47" },
+                                            { name: "Twitter", link: "/socials/twitter.svg", url: "https://x.com/Yash_Vishnoi7" },
+                                            { name: "LinkedIn", link: "/socials/linkedin.svg", url: "https://www.linkedin.com/in/yash-vishnoi-654318384/" },
                                         ].map((item, idx) => (
-                                            <div key={idx}>
+                                            <Link target="_blank" href={item.url} key={idx}>
                                                 <Image
                                                     className="cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
                                                     src={item.link}
@@ -173,7 +173,7 @@ const ConnectPopOver = ({ children }) => {
                                                     width={18}
                                                     height={18}
                                                 />
-                                            </div>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>

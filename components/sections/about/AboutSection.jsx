@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/tooltip";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Spotlight } from "@/components/motion-primitives/spotlight";
+import Link from "next/link";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -108,22 +109,20 @@ const AboutSection = () => {
 
         <div className="lg:flex hidden gap-4 w-full justify-start items-center border-black">
           {[
-            { name: "Github", link: "/socials/github.svg" },
-            { name: "Twitter", link: "/socials/twitter.svg" },
-            { name: "LinkedIn", link: "/socials/linkedin.svg" },
+            { name: "Github", link: "/socials/github.svg", url: "https://github.com/YashVishnoi47" },
+            { name: "Twitter", link: "/socials/twitter.svg", url: "https://x.com/Yash_Vishnoi7" },
+            { name: "LinkedIn", link: "/socials/linkedin.svg", url: "https://www.linkedin.com/in/yash-vishnoi-654318384/" },
           ].map((item, idx) => (
-            <Tooltip key={idx}>
-              <TooltipTrigger>
-                <Image
-                  className="cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
-                  src={item.link}
-                  alt={item}
-                  width={20}
-                  height={20}
-                />
-              </TooltipTrigger>
-              <TooltipContent>{item.name}</TooltipContent>
-            </Tooltip>
+            <Link key={idx} target="_blank" href={item.url} data-text={item.name}>
+              <Image
+                className="cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out"
+                src={item.link}
+                alt={item}
+                width={20}
+                height={20}
+              />
+            </Link>
+
           ))}
         </div>
       </div>

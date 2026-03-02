@@ -6,15 +6,15 @@ import React from 'react'
 
 const OngoingCard = () => {
     return (
-        <div className="w-full max-w-360 flex mt-32  justify-center items-center">
-            <div className='h-170 w-[93%] rounded-xl bg-brand p-4 border-black'>
+        <div className="w-full max-w-360 flex mt-48 justify-center items-center">
+            <div className='h-170 w-full rounded-xl bg-[#303030] p-2 border-black'>
                 <div className='w-full h-full flex lg:flex-row flex-col gap-8 bg-bg-light p-6 rounded-xl'>
 
-                    <div className='lg:w-[40%] w-full h-full flex flex-col gap-8'>
+                    <div className='lg:w-[45%] w-full h-full flex flex-col gap-8'>
                         <div className="gap-2 flex flex-col justify-center items-start w-full">
                             <Tag text={"Ongoing Care"} />
                             <h4 className="lg:text-[36px] font-bold text-[30px] lg:text-left text-center">
-                                Website Maintenance & Support +
+                                Website Growth & Maintenance Subscription
                             </h4>
                             <span className="text-[16px] font- lg:text-left text-text-muted text-center">
                                 Keep your website fast, secure, and up-to-date — without the hassle.
@@ -52,7 +52,7 @@ const OngoingCard = () => {
 
                     </div>
 
-                    <div className='lg:w-[60%] border-black h-full lg:flex hidden flex-col gap-3'>
+                    <div className='lg:w-[55%] border-black h-full lg:flex hidden flex-col gap-3'>
                         <div className='w-full h-1/2 flex justify-center items-center gap-3 border-black'>
                             <div className='w-[60%] border border-black/10 shadow-md shadow-black/10 h-full rounded-xl'></div>
                             <div className='w-[40%] border border-black/10 shadow-md shadow-black/10 h-full rounded-xl'></div>

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="w-full p-8 flex lg:flex-row flex-col justify-center items-center lg:gap-0 gap-12 h-fit border-black bg-bg-light max-w-360 relative">
 
-      <div className="h-50 lg:w-1/2 w-full gap-4 lg:justify-start justify-center lg:items-start items-center border-black flex flex-col relative z-2">
+      <div className="h-50 lg:w-1/2 w-full gap-6 lg:justify-start justify-center lg:items-start items-center border-black flex flex-col relative z-2">
         <Image
           className="hover:-rotate-15 transition-all duration-300 ease-in-out"
           src="/yash-logo-black.svg"
@@ -16,8 +16,9 @@ const Footer = () => {
           width={50}
           height={50}
         />
-        <span className="text-[16px] text-text lg:text-left text-center font-light lg:w-[40%] w-full">
-          I'm Yash Vishnoi - a full-stack developer, freelancer & problem
+
+        <span className="text-[14px] text-text lg:text-left text-center font-light lg:w-[40%] w-full">
+          I'm<span className="font-bold"> Yash Vishnoi</span> - a full-stack developer, freelancer & problem
           solver. Thanks for checking out my site!
         </span>
       </div>

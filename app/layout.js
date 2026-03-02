@@ -15,7 +15,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Yash Vishnoi | Full-Stack Next.js Developer",
+  title: "Yash Vishnoi | Full-Stack Web-Developer",
   description:
     "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications for startups and businesses.",
 

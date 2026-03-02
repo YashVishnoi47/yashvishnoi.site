@@ -1,6 +1,7 @@
 import ConnectPopOver from '@/components/shared/ConnectPopOver'
 import CTAButton from '@/components/ui/CTAButton'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const CtaCardSection = () => {
@@ -20,8 +21,12 @@ const CtaCardSection = () => {
 
 
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center relative z-2'>
-                <Image
-                    className="hover:-rotate-15 transition-all duration-300 ease-in-out" src="/yash-logo-black.svg" alt="logo" width={80} height={80} />
+                <Link target='_blank' href={"https://x.com/Yash_Vishnoi7"} >
+                    <Image
+                        className="hover:-rotate-15 transition-all duration-300 ease-in-out" src="/yash-logo-black.svg" alt="logo" width={80} height={80} />
+
+                </Link>
+
                 <div className='w-full -space-y-0.5 flex flex-col justify-center items-center'>
                     <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I dont just build websites </h5>
                     <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I build Web Systems that perform.</h5>

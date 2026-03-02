@@ -23,28 +23,40 @@ const PerksComponent = () => {
     ]
     return (
         <div
-            className="w-full max-w-360 min-h-200 flex flex-col gap-14 rounded-xl lg:p-12 border-black mt-37.5"
+            className="w-full max-w-360 min-h-200 flex flex-col gap-14 rounded-xl lg:py-12 border-black mt-37.5"
         >
             <HeadingCard head={"Additional Perks"} subHead={"What you can expect beyond just code and deliverables"} />
 
-            <div className='w-full flex flex-wrap lg:flex-row flex-col justify-center items-center gap-4'>
+            <div className='w-full flex flex-wrap justify-center items-center border-black gap-4'>
                 {perks.map((item, idx) => (
-                    <Tilt key={idx} className='lg:w-[32%] w-full' rotationFactor={5} isRevese>
 
-                        <motion.div
-                            className='w-full rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
+                    <motion.div
+                        key={idx}
+                        className='w-[32%] rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
 
-                            <Image src={item.icon} alt={item.head} width={32} height={32} />
-                            <div className='w-full flex flex-col gap-2'>
-                                <h5 className='text-[24px] font-medium text-text'>{item.head}</h5>
-                                <span className='text-[15px]  font-light text-text-muted2'>{item.subHead}</span>
+                        <div
+                            className="absolute inset-0 z-0 pointer-events-none opacity-50"
+                            style={{
+                                backgroundImage: `
+        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
+        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
+      `,
+                                backgroundSize: '40px 40px, 40px 40px, 40px 40px, 40px 40px',
+                            }}
+                        />
 
-                            </div>
+                        <Image src={item.icon} alt={item.head} width={32} height={32} />
+                        <div className='w-full flex flex-col gap-2'>
+                            <h5 className='text-[24px] font-medium text-text'>{item.head}</h5>
+                            <span className='text-[15px]  font-light text-text-muted2'>{item.subHead}</span>
 
-                            <Tag text={item.tag} />
-                        </motion.div>
+                        </div>
 
-                    </Tilt>
+                        <Tag text={item.tag} />
+                    </motion.div>
+
                 ))}
             </div>
 

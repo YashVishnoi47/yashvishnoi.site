@@ -47,7 +47,7 @@ const Navbar = () => {
           { name: "Home", link: "/" },
           { name: "About", link: "#about" },
           { name: "Services", link: "#services" },
-          { name: "Projects", link: "#projects" },
+          { name: "Projects", link: "/projects" },
         ].map((item, idx) => {
           return (
             <div key={idx}>
@@ -97,7 +97,7 @@ const MobileDropdown = () => {
               { name: "Home", link: "/" },
               { name: "About", link: "/" },
               { name: "Services", link: "/" },
-              { name: "Projects", link: "/" },
+              { name: "Projects", link: "/projects" },
             ].map((item, idx) => (
               <Link
                 key={idx}
