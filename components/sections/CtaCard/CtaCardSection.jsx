@@ -28,16 +28,16 @@ const CtaCardSection = () => {
                 </Link>
 
                 <div className='w-full -space-y-0.5 flex flex-col justify-center items-center'>
-                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I dont just build websites </h5>
-                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I build Web Systems that perform.</h5>
+                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I don’t just build websites</h5>
+                    <h5 className='lg:text-[48px] text-[32px] lg:w-[70%] w-full text-text font-black text-center'>I build systems that bring you growth.</h5>
                 </div>
             </div>
 
-            <ConnectPopOver />
+            <ConnectPopOver  />
 
             <div className='w-full h-fit flex flex-col gap-4 justify-center items-center relative z-2'>
                 <span className='lg:text-[24px] text-[20px] text-text font-bold'>Let’s do your next project toghter</span>
-                <span className='lg:text-[16px] text-[12px] text-text-muted2 font-light lg:w-[40%] w-[98%] text-center'>Thoughtfully engineered products, designed with performance at the core, built for maintainability, and structured to support long-term growth.</span>
+                <span className='lg:text-[16px] text-[12px] text-text-muted2 font-light lg:w-[40%] w-[98%] text-center'>Fast, high-converting websites designed to turn visitors into customers — built for performance, clarity, and real business growth without the hassle.</span>
             </div>
 
 

@@ -128,25 +128,25 @@ const ServiceCards = () => {
                     <div className="gap-2 flex flex-col justify-start items-start w-full">
                         <Tag text={"Best for small Businesses"} />
                         <h4 className="lg:text-[32px] text-text text-[30px] lg:text-left font-medium text-start">
-                            Business Starter Website
+                            Advanced Growth Website
                         </h4>
                         <span className="text-[14px] text-text-muted2 font-light text-left">
-                            Perfect for small businesses & personal brands who need a strong, trustworthy online presence.
+                           Built to scale your business and maximize conversions.
                         </span>
                     </div>
 
                     <div className='w-full h-[70%]  border-black flex flex-col gap-4 jucctify-start items-start'>
                         <span className='text-[15px] text-text mb-2 font-bold'>Everything in Tier 1 and Tier 2, plus:</span>
                         {[
-                            "8–12 strategically structured pages",
-                            "Custom-designed UI components with interactive animations",
-                            "Blog or dynamic content system setup",
-                            "Advanced technical & on-page SEO optimization",
+                            "Conversion strategy planning ",
+                            "Funnel-based page structure (not just pages)",
+                            "Advanced caching + performance tuning",
+                            "Analytics setup (Google Analytics / tracking)",
                             "Core Web Vitals & performance optimization",
-                            "Scalable architecture built for future growth",
-                            "CMS dashboard for easy content management",
-                            "Priority project timeline (20–30 business days)",
-                            "10 days of post-launch priority support",
+                            "Scalable architecture for future expansion",
+                            "30 days of post-launch priority support",
+                            "Priority project timeline (60–90 business days)",
+                            "Unlimited revisions",
 
                         ].map((item, index) => {
                             return (
