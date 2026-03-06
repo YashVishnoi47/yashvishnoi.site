@@ -23,7 +23,7 @@ const AboutSection = () => {
   return (
     <motion.div
       ref={ref}
-      style={{ scale, borderRadius: bRadius }}
+      style={{ scale }}
       transition={{ type: "spring", stiffness: 800, damping: 2 }}
       id="about"
       className="w-full max-w-400 min-h-180 flex justify-center items-center lg:flex-row flex-col bg-bg-light rounded-xl p-12 border-black/30 mt-37.5 mb-40 relative lg:gap-0 gap-12"

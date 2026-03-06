@@ -42,9 +42,9 @@ const ProjectsCTA = () => {
 
                     <ConnectPopOver>
 
-                        <button className="border border-gray-500 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-white hover:text-black transition cursor-pointer">
+                        <div className="border border-gray-500 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-white hover:text-black transition cursor-pointer">
                             Hire Me
-                        </button>
+                        </div>
 
                     </ConnectPopOver>
                 </div>

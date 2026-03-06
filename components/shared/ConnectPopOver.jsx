@@ -129,7 +129,7 @@ const ConnectPopOver = ({ children }) => {
 
                                 <div className='w-full h-full flex flex-col gap-4 border-black justify-start items-center'>
                                     <div className='w-full h-37.5 flex gap-4 border-black justify-center items-center'>
-                                        <Link href="/bookacall" className='h-full w-1/2 bg-bg-dark boder border-black flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1 border border-black/10'>
+                                        <Link href="/bookacall" className='h-full w-1/2 bg-bg-dark boder flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1 border-black/10'>
                                             <div className='w-10 h-10 rounded-full flex justify-center bg-white border-[#7C3AED]/30 items-center border'>
                                                 <Image src={"/other/call.svg"} alt={""} width={17} height={17} />
                                             </div>
@@ -137,7 +137,7 @@ const ConnectPopOver = ({ children }) => {
                                             <span className='lg:text-[15px] text-[12px] font-light w-full text-start'>Book a 30min voice call</span>
                                         </Link>
 
-                                        <Link href='mailto:yashvishnoi309@gmail.com' className='h-full w-1/2 bg-bg-dark boder border-black/10 flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1'>
+                                        <Link href='mailto:yashvishnoi309@gmail.com' className='h-full w-1/2 bg-bg-dark flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1 overflow-hidden'>
                                             <div className='w-10 h-10 rounded-full flex justify-center bg-white border-[#7C3AED]/30 items-center border'>
                                                 <Image src={"/other/email.svg"} alt={""} width={24} height={24} />
                                             </div>

@@ -95,7 +95,7 @@ const Tag = () => {
           ease: "easeOut",
         }}
         data-text="Explore the Selected work & case studies"
-        className="bg-[#7C3AED]/15 rounded-sm border flex justify-center items-center gap-3 md:text-[13px] text-[10px] border-[#7C3AED]/5 px-2 py-1 cursor-pointer select-none ring-1 ring-white hover:ring-[#7C3AED] transition-all duration-300 ease-in-out active:scale-[0.95]"
+        className="bg-[#7C3AED]/15 rounded-xs border flex justify-between items-center gap-3 md:text-[13px] text-[10px] border-[#7C3AED]/5 px-2 py-1 cursor-pointer select-none ring-1 ring-white hover:ring-[#7C3AED] transition-all duration-300 ease-in-out active:scale-[0.95]"
       >
         Selected work & case studies
         <div className="bg-white h-5 w-8.75 rounded-[2px] flex justify-center items-center">

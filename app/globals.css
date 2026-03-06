@@ -71,6 +71,7 @@ body {
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);
   --color-text-muted2: var(--text-muted2);
+  --color-text-white: var(--text-white);
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

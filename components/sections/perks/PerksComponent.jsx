@@ -32,7 +32,7 @@ const PerksComponent = () => {
 
                     <motion.div
                         key={idx}
-                        className='w-[32%] rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
+                        className='w-115 rounded-xl flex flex-col gap-6 min-h-62.5 border p-6 bg-bg-light backdrop-blu text-black border-black/10 transition-all duration-300 ease-in-out shadow-bg-c shadow-md hover:shadow-brand/30 relative cursor-default'>
 
                         <div
                             className="absolute inset-0 z-0 pointer-events-none opacity-50"

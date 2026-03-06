@@ -310,9 +310,9 @@ const ProjectsSection2 = () => {
         return (
           <motion.div
             key={idx}
-            className={`lg:w-full w-full h-155 flex rounded-2xl py-4  gap-6 transition duration-300 ease-in-out relative group ${idx % 2 == 0 ? "flex-row" : "flex-row-reverse"} bg-whte ursor-pointer px-`}
+            className={`w-full lg:h-155 h-fit flex flex-col rounded-2xl py-4 gap-6 transition duration-300 ease-in-out relative group ${idx % 2 == 0 ? "lg:flex-row flex-col" : "lg:flex-row-reverse flex-col"} bg-whte ursor-pointer lg:px-0 px-2`}
           >
-            <div className="h-full bg-black/20 w-full rounded-xl" />
+            <div className="lg:h-full h-87.5 bg-black/20 w-full rounded-xl" />
 
             <div className="h-full w-full flex relative flex-col justify-start gap-8 items-center border-black">
 
