@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yashvishnoi.vercel.app/sitemap.xml
+Sitemap: https://yashvishnoi.site/sitemap.xml
