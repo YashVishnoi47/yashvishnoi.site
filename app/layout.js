@@ -15,7 +15,13 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Yash Vishnoi | Full-Stack Web-Developer",
+  metadataBase: new URL("https://yashvishnoi.site"),
+
+  title: {
+    default: "Yash Vishnoi | Full-Stack Next.js Developer",
+    template: "%s | Yash Vishnoi",
+  },
+
   description:
     "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications for startups and businesses.",
 
@@ -28,23 +34,23 @@ export const metadata = {
     "JavaScript Developer",
   ],
 
-  authors: [{ name: "Yash Vishnoi", url: "https://yashvishnoi.vercel.app" }],
+  authors: [{ name: "Yash Vishnoi", url: "https://yashvishnoi.site" }],
   creator: "Yash Vishnoi",
   publisher: "Yash Vishnoi",
 
   alternates: {
-    canonical: "https://yashvishnoi.vercel.app",
+    canonical: "/",
   },
 
   openGraph: {
     title: "Yash Vishnoi | Full-Stack Next.js Developer",
     description:
       "Full-Stack Next.js Developer & UI/UX Designer building modern, scalable web applications.",
-    url: "https://yashvishnoi.vercel.app",
+    url: "https://yashvishnoi.site",
     siteName: "Yash Vishnoi Portfolio",
     images: [
       {
-        url: "https://yashvishnoi.vercel.app/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yash Vishnoi - Full-Stack Next.js Developer",
@@ -59,7 +65,7 @@ export const metadata = {
     title: "Yash Vishnoi | Full-Stack Next.js Developer",
     description:
       "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer building modern web apps.",
-    images: ["https://yashvishnoi.vercel.app/og-image.png"],
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -80,10 +86,10 @@ export default function RootLayout({ children }) {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://yashvishnoi.vercel.app/#person",
+        "@id": "https://yashvishnoi.site/#person",
         name: "Yash Vishnoi",
-        url: "https://yashvishnoi.vercel.app/",
-        image: "https://yashvishnoi.vercel.app/og-image.png",
+        url: "https://yashvishnoi.site/",
+        image: "https://yashvishnoi.site/og-image.png",
         jobTitle: "Full-Stack Next.js Developer",
         description:
           "Full-Stack Web Developer specializing in Next.js, React, and scalable web applications.",
@@ -103,19 +109,17 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "WebSite",
-        "@id": "https://yashvishnoi.vercel.app/#website",
-        url: "https://yashvishnoi.vercel.app",
+        "@id": "https://yashvishnoi.site/#website",
+        url: "https://yashvishnoi.site",
         name: "Yash Vishnoi | Full-Stack Next.js Developer",
         description:
           "Portfolio website of Yash Vishnoi, a Full-Stack Next.js Developer building modern, fast, and scalable web applications.",
         publisher: {
-          "@id": "https://yashvishnoi.vercel.app/#person",
+          "@id": "https://yashvishnoi.site/#person",
         },
       },
     ],
   };
-
-
 
   return (
     <html lang="en">
@@ -124,6 +128,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="1Tw-JhoSrQ04RxMwArE7pimVOTJ2Y9wIlas6ak6i-jM"
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
