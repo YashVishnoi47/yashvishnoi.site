@@ -58,10 +58,12 @@ const MainHeading = () => {
         ease: "easeOut",
         duration: 0.7,
       }}
-      className="lg:text-[60px] sm:text-[40px] text-[30px] font-bold lg:w-[70%] w-[90%] lg:leading-17.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center text-text"
+      className="lg:text-[60px] sm:text-[40px] text-[30px] font-semibold lg:w-[80%] w-[90%] lg:leading-18.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center text-text"
     >
-      I create modern digital experiences for businesses that want real growth.
+      I create High performing websites for businesses that want real growth.
     </motion.h1>
+
+    // I create modern digital experiences for businesses that want real growth.
   );
 };
 
@@ -77,7 +79,8 @@ const SubHeading = () => {
       }}
       className="lg:text-[22px] sm:text-[18px] lg:w-[55%] w-[70%] text-center text-text-muted"
     >
-      Creating high-converting Websites that drive results and help your business grow. No Hassle. No BS.{" "}
+      Creating high-converting Websites that drive results and help your
+      business grow. No Hassle. No BS.{" "}
       <span className="font-bold">Just Results</span>.
     </motion.p>
   );
