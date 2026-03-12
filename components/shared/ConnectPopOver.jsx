@@ -142,7 +142,7 @@ const ConnectPopOver = ({ children }) => {
                                                 <Image src={"/other/email.svg"} alt={""} width={24} height={24} />
                                             </div>
                                             <span className='lg:text-[20px] text-[18px] text-start w-full font-medium'>Email me</span>
-                                            <span className='lg:text-[15px] text-[12px] text-start w-full font-light'>hello@yashvishnoi.siteF</span>
+                                            <span className='lg:text-[15px] text-[12px] text-start w-full font-light'>hello@yashvishnoi.site</span>
                                         </Link>
                                     </div>
 
