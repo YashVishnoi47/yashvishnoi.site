@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const handleCopy = () => {
-    navigator.clipboard.writeText("email@gmail.com");
+    navigator.clipboard.writeText("hello@yashvishnoi.site");
     toast.success("Email has been copied to clipboard.");
   };
 
@@ -40,7 +40,7 @@ const HeroSection = () => {
           onClick={() => handleCopy()}
           className="relative  px-8 py-4 rounded-lg text-sm font-medium text-black border border-black/10  bg-white/60 backdrop-blur-md shadow-sm transition-all duration-300 ease-out hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:shadow-[#7C3AED]/30 active:scale-[0.98] cursor-pointer"
         >
-          yashvishnoi309@gmail.com
+          hello@yashvishnoi.site
         </button>
       </motion.div>
     </div>

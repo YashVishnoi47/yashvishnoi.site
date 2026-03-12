@@ -57,7 +57,7 @@ const ServiceCards = () => {
 
                         <div className='flex flex-col gap-3 justify-start items-start w-full'>
                             <span className='text-text-muted text-[14px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:yashvishnoi309@gmail.com' className='text-text font-medium'>@yashvishnoi309@gmail.com</Link></span>
+                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>@hello@yashvishnoi.site</Link></span>
                         </div>
                     </div>
 
@@ -116,7 +116,7 @@ const ServiceCards = () => {
 
                             <div className='flex flex-col gap-3 justify-start items-start w-full'>
                                 <span className='text-text-muted text-[16px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                                <span className='text-text text-[16px]'>or email us at <Link data-text="Email me" href='mailto:yashvishnoi309@gmail.com' className='text-text font-medium' >@yashvishnoi309@gmail.com</Link></span>
+                                <span className='text-text text-[16px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium' >@hello@yashvishnoi.site</Link></span>
                             </div>
                         </div>
                     </div>
@@ -172,7 +172,7 @@ const ServiceCards = () => {
 
                         <div className='flex flex-col gap-3 justify-start items-start w-full'>
                             <span className='text-text-muted text-[14px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:yashvishnoi309@gmail.com' className='text-text font-medium'>@yashvishnoi309@gmail.com</Link></span>
+                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>@hello@yashvishnoi.site</Link></span>
                         </div>
                     </div>
 

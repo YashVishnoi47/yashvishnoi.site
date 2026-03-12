@@ -137,12 +137,12 @@ const ConnectPopOver = ({ children }) => {
                                             <span className='lg:text-[15px] text-[12px] font-light w-full text-start'>Book a 30min voice call</span>
                                         </Link>
 
-                                        <Link href='mailto:yashvishnoi309@gmail.com' className='h-full w-1/2 bg-bg-dark flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1 overflow-hidden'>
+                                        <Link href='mailto:hello@yashvishnoi.site' className='h-full w-1/2 bg-bg-dark flex flex-col rounded-md p-3 gap-1 cursor-pointer transition-all duration-300 ease-in-out shadow-sm hover:shadow-md shadow-black/20 border hover:shadow-[#7C3AED]/50 hover:-translate-y-1 overflow-hidden'>
                                             <div className='w-10 h-10 rounded-full flex justify-center bg-white border-[#7C3AED]/30 items-center border'>
                                                 <Image src={"/other/email.svg"} alt={""} width={24} height={24} />
                                             </div>
                                             <span className='lg:text-[20px] text-[18px] text-start w-full font-medium'>Email me</span>
-                                            <span className='lg:text-[15px] text-[12px] text-start w-full font-light'>yashvishnoi309@gmail.com</span>
+                                            <span className='lg:text-[15px] text-[12px] text-start w-full font-light'>hello@yashvishnoi.siteF</span>
                                         </Link>
                                     </div>
 
