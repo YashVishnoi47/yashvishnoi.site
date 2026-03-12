@@ -23,7 +23,7 @@ export const metadata = {
   },
 
   description:
-    "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and UI/UX Designer building fast, scalable, and modern web applications for startups and businesses.",
+    "Portfolio of Yash Vishnoi — Full-Stack Next.js Developer and Website Designer building High performing, scalable, and modern websites for startups and businesses.",
 
   keywords: [
     "Yash Vishnoi",
@@ -32,6 +32,10 @@ export const metadata = {
     "React Developer",
     "Web Developer Portfolio",
     "JavaScript Developer",
+    "SAAS Developer",
+    "Website Designer",
+    "Ui/UX Designer",
+    "Problem Solver",
   ],
 
   authors: [{ name: "Yash Vishnoi", url: "https://yashvishnoi.site" }],
