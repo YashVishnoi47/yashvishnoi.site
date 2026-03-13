@@ -7,6 +7,7 @@ import SmoothScroll from "@/components/SmootheScroll";
 import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
 import Footer from "@/components/layout/Footer";
 import SmootheScroll from "@/components/SmootheScroll";
+import SmallNav from "@/components/layout/SmallNav";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -146,6 +147,7 @@ export default function RootLayout({ children }) {
       >
         <SmootheScroll>
           <Navbar />
+          <SmallNav/>
 
           {children}
 
