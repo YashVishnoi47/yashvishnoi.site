@@ -7,9 +7,18 @@ body {
   background-color: #F9F9F9;
 }
 
-*{
+/* *{
   scroll-behavior: smooth;
 
+} */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
 }
 
 

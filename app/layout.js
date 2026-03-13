@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import SmoothScroll from "@/components/SmootheScroll";
 import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
 import Footer from "@/components/layout/Footer";
+import SmootheScroll from "@/components/SmootheScroll";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -143,11 +144,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.className} bg-bg-dark hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
       >
-        <Navbar />
-        {children}
-        <CtaCardSection />
-        <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
-        <Footer />
+        <SmootheScroll>
+          <Navbar />
+
+          {children}
+
+          <CtaCardSection />
+          <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
+          <Footer />
+        </SmootheScroll>
         <Toaster />
         <Cursor />
       </body>

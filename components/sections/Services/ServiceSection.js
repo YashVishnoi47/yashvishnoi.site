@@ -153,7 +153,7 @@ const ServiceSection2 = () => {
                     tag: "Continuity",
                   },
                 ].map((item, index) => (
-                  <Card key={index} item={item} />
+                  <Card idx={index} item={item} />
                 ))}
               </Marquee>
             </div>
@@ -284,10 +284,10 @@ const TechTags = ({ item }) => {
   );
 };
 
-const Card = ({ item, key }) => {
+const Card = ({ item, idx }) => {
   return (
     <div
-      key={key}
+      key={idx}
       className="w-50 h-30 border mr-2 ml-2 border-black/10 flex flex-col gap-2 justify-start items-start shadow-sm rounded-lg shadow-black/20 p-3 transition-all duration-200 ease-in-out hover:shadow-md hover:scale-[1.04]"
     >
       <Image src={item.icon} alt={"Img"} width={22} height={22} />
