@@ -57,7 +57,7 @@ const ServiceCards = () => {
 
                         <div className='flex flex-col gap-3 justify-start items-start w-full'>
                             <span className='text-text-muted text-[14px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>@hello@yashvishnoi.site</Link></span>
+                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>hello@yashvishnoi.site</Link></span>
                         </div>
                     </div>
 
@@ -116,7 +116,7 @@ const ServiceCards = () => {
 
                             <div className='flex flex-col gap-3 justify-start items-start w-full'>
                                 <span className='text-text-muted text-[16px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                                <span className='text-text text-[16px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium' >@hello@yashvishnoi.site</Link></span>
+                                <span className='text-text text-[16px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium' >hello@yashvishnoi.site</Link></span>
                             </div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@ const ServiceCards = () => {
                             Advanced Growth Website
                         </h4>
                         <span className="text-[14px] text-text-muted2 font-light text-left">
-                           Built to scale your business and maximize conversions.
+                            Built to scale your business and maximize conversions.
                         </span>
                     </div>
 
@@ -172,7 +172,7 @@ const ServiceCards = () => {
 
                         <div className='flex flex-col gap-3 justify-start items-start w-full'>
                             <span className='text-text-muted text-[14px]'>Questions? <span className='text-text font-medium cursor-pointer hover:underline transition-all duration-300 ease-in-out'>Chat with us</span></span>
-                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>@hello@yashvishnoi.site</Link></span>
+                            <span className='text-text text-[14px]'>or email us at <Link data-text="Email me" href='mailto:hello@yashvishnoi.site' className='text-text font-medium'>hello@yashvishnoi.site</Link></span>
                         </div>
                     </div>
 
