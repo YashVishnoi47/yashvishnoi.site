@@ -27,7 +27,7 @@ const SmallNav = () => {
             animate={scrollDirection === "down" ? { opacity: 1, y: -100 } : { opacity: 1, y: 0 }}
             transition={{ ease: "easeIn" }}
             exit={{ opacity: 0 }}
-            className={`h-fit w-fit  border border-black px-8 py-4 bg-black text-white sm:flex hidden gap-6 justify-center items-center rounded-md fixed top-4 z-1000000 >
+            className={`h-fit w-fit  borde brder-black px-8 py-4 bg-black/80 backdrop-blur-xl text-white sm:flex hidden gap-6 justify-center items-center rounded-md fixed top-4 z-1000000 >
             `}>
 
 
