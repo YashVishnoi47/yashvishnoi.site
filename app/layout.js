@@ -147,7 +147,7 @@ export default function RootLayout({ children }) {
       >
         <SmootheScroll>
           <Navbar />
-          <SmallNav/>
+          <SmallNav />
 
           {children}
 

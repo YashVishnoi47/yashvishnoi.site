@@ -26,7 +26,7 @@ const ServiceSection2 = () => {
             <div className="gap-2 flex flex-col justify-center  items-center w-full">
               <Tag text={"Modern. Efficient. Reliable."} />
               <h4 className="lg:text-[36px] text-[30px] lg:text-left text-center">
-                Full-Stack Web development
+                Full Stack Websites
               </h4>
               <span className="text-[16px] font-light lg:text-left text-text-mued text-center">
                 Creating reliable, high-performance digital systems.
@@ -201,7 +201,7 @@ const Window = () => {
         <div className="w-1/2 flex gap-2 justify-center items-center h-[60%] bg-[#F2F2F2] relative z-1000 rounded-full transition-all duration-300 ease-in-out group-hover:w-[65%] ml-8">
           <LockSvg />
           <span className="text-xs opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
-            www.yashvishnoi.com
+            www.yashvishnoi.site
           </span>
         </div>
       </div>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { div } from "three/src/nodes/math/OperatorNode";
+import { ProjectsList } from "@/lib/projects";
 
 
 
@@ -116,7 +117,7 @@ const ProjectsSection2 = () => {
         />
       </div>
 
-      {projects.map((item, idx) => {
+      {ProjectsList.map((item, idx) => {
         return (
           <motion.div
             key={idx}
@@ -127,7 +128,35 @@ const ProjectsSection2 = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ ease: "easeInOut", duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="lg:h-full h-87.5 bg-black/20 w-full rounded-xl" />
+              className="lg:h-full h-87.5 bg-blac/20 overflow-hidden w-full rounded-xl relative">
+
+              {idx % 2 == 1 ? (
+                <div
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `
+        radial-gradient(circle 600px at 0% 200px, #a99bf7, transparent),
+        radial-gradient(circle 600px at 100% 200px, #a99bf7, transparent)
+      `,
+                  }}
+                />
+
+              ) : (
+                <div
+                  className="absolute inset-0 z-0"
+                  style={{
+                    backgroundImage: `
+        radial-gradient(circle 600px at 0% 200px, #bfdbfe, transparent),
+        radial-gradient(circle 600px at 100% 200px, #bfdbfe, transparent)
+      `,
+                  }}
+                />
+              )}
+
+
+            </motion.div>
+
+
 
             <motion.div
               initial={{ opacity: 0, x: idx % 2 == 1 ? -100 : 100 }}
@@ -147,7 +176,7 @@ const ProjectsSection2 = () => {
                     {item.subHeading}
                   </p>
                 </div>
-                <div className="flex flex-wrap w-full justify-start gap-2 items-start h-fit">
+                <div className="flex flex-wrap w-[80%] justify-start gap-2 items-start h-fit">
                   {item.techIcons.map((item, idx) => (
                     <TechTags key={idx} item={item} />
                   ))}
