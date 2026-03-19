@@ -9,6 +9,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Spotlight } from "@/components/motion-primitives/spotlight";
 import Link from "next/link";
+import { ScrollParallax } from "react-just-parallax";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -127,8 +128,21 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="w-125 h-fit flex lg:justify-end justify-center items-center  border-black relative z-10">
-        <div className="w-75 h-75 rounded-[40px] bg-gray-400 rotate-3" />
+      <div className="w-140 h-fit flex lg:justify-end justify-center items-center  border-black relative z-10">
+
+        <div className="w-90 h-90 rounded-[40px] bg-gray-400 rotate-3 flex justify-center items-center overflow-hiden relative" >
+          {/* <ScrollParallax className="absolute w-50 h-25 rounded-xl z-10000 bg-black/80 -bottom-10 -right-20">
+            <div className="absolute w-50 h-25 rounded-xl z-10000 bg-black/80 -bottom-10 -right-20" />
+            </ScrollParallax>
+            <div className="absolute w-50 h-25 rounded-xl z-10000 bg-black/80 -top-10 -left-20" /> */}
+
+
+          <div className="w-full h-full overflow-hidden">
+            <Image src="/me/me.jpeg" alt="yash" className="object-cover w-full h-full rounded-[40px]" width={300} height={300} />
+
+          </div>
+
+        </div>
       </div>
     </motion.div>
   );
