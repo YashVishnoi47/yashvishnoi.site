@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="w-full flex lg:flex-col flex-col justify-center items-center lg:gap-0 gap-12 h-fit border-black bg-bg-light max-w-360 relative">
 
       <div className="w-full px-8 flex lg:flex-row flex-col h-fit justify-center items-center">
-        <div className="h-50 lg:w-1/2 mt-8 w-full gap-6 lg:justify-start justify-center lg:items-start items-center border-black flex flex-col relative z-2">
+        <div className="h-50 lg:w-1/2 mt-8 w-full gap-4 lg:justify-start justify-center lg:items-start items-center border-black flex flex-col relative z-2">
           <Image
             className="hover:-rotate-15 transition-all duration-300 ease-in-out"
             src="/yash-logo-black.svg"
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
 
         <div className="h-50 lg:w-1/2 mt-8 w-full gap-4 justify-start items-start border-black flex flex-row  relative z-2">
-          <div className="lg:w-1/2 w-full h-full flex flex-col items-start  gap-2 border-black">
+          <div className="lg:w-1/2 w-full h-full flex flex-col items-start  gap-3 border-black">
             <span className="text-[20px] text-text font-bold mb-2">Generel</span>
 
             {[
@@ -36,25 +36,28 @@ const Footer = () => {
               { name: "Projects", link: "/projects" },
             ].map((item, index) => {
               return (
-                <Link className="w-fit flex justify-center items-center gap-1 text-text-muted transition-all duration-300 ease-in-out hover:text-black group" href={`${item.link}`} key={index}>
-                  <span className="text-[16px] font-light w-fit">
+                <Link className="w-fit flex justify-start items-center gap-1 text-text-muted transition-all duration-300 ease-in-out hover:text-black group relative" href={`${item.link}`} key={index}>
+                  <span className="text-[16px] font- relative w-fit r">
                     {item.name}
+                    <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
                   </span>
                   <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 transition-all duration-300  ease-in-out" />
+
                 </Link>
               );
             })}
           </div>
-          <div className="lg:w-1/2 w-full h-full flex flex-col items-start  gap-2 border-black">
+          <div className="lg:w-1/2 w-full h-full flex flex-col items-start  gap-3 border-black">
             <span className="text-[20px] font-bold mb-2 text-text">
               Specifics
             </span>
 
             {["Privacy", "Terms", "Uses"].map((item, index) => {
               return (
-                <Link className="w-fit flex justify-center items-center gap-1 text-text-muted transition-all duration-300 ease-in-out hover:text-black group" href={`/`} key={index}>
-                  <span className="text-[16px] font-light w-fit">
+                <Link className="w-fit flex justify-start items-center gap-1 text-text-muted transition-all duration-300 ease-in-out hover:text-black group relative" href={`/`} key={index}>
+                  <span className="text-[16px] font- relative w-fit">
                     {item}
+                    <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
                   </span>
                   <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 transition-all duration-300  ease-in-out" />
                 </Link>
@@ -74,7 +77,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="w-full bg-bg-dark flex flex-col items-center py-4 gap-3" />
+      <div className="w-full bg-bg-light flex flex-col items-center py-4 gap-3" />
 
 
 

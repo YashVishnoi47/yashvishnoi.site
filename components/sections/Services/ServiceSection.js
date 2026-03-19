@@ -1,8 +1,8 @@
 "use client";
 import Tag from "@/components/ui/Tag";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import HeadingCard from "@/components/ui/HeadingCard";
 import Marquee from "react-fast-marquee";
