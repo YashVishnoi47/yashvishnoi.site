@@ -32,7 +32,7 @@ const Cursor = () => {
         } else {
             opacity.set(0)
         }
-    }, [hover])
+    }, [])
 
     useEffect(() => {
         const handleMouseMove = (e) => {

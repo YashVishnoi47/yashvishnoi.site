@@ -16,7 +16,6 @@ export default function Home() {
       <ProjectsSection />
       <ProjectsCTA />
       <ServiceCards />
-      {/* <OngoingCard />  */}
       <PerksComponent />
       <AboutSection />
       <FaqSection />

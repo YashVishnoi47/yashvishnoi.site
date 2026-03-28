@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.div
-      className="h-20 max-w-[1228.8px] flex items-center justify-center gap-8 px-4 mt-4 rounded-lg text-white bg-black border border-black sm:w-[75%] w-[90%] z-50"
+      className="h-fit py-4 max-w-312.5 flex items-center justify-center gap-8 px-4 mt-4 rounded-md text-white bg-black border border-black sm:w-[79%] w-[90%] z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{
@@ -68,6 +68,9 @@ const Navbar = () => {
   );
 };
 
+
+
+
 export default Navbar;
 
 const NavLink = ({ item, idx }) => {
@@ -75,10 +78,10 @@ const NavLink = ({ item, idx }) => {
     <Link
       key={idx}
       href={item.link}
-      className="cursor-pointer text-[17px] font-medium flex relative group"
+      className="cursor-pointer text-[18px] font-medium flex relative group"
       data-text={item.name}
     >
-      <span>{item.name}</span>
+      <span className="">{item.name}</span>
       <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
     </Link>
   );

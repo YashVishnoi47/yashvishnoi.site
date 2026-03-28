@@ -25,9 +25,9 @@ const SmallNav = () => {
         <motion.div
             initial={{ opacity: 1, y: -100 }}
             animate={scrollDirection === "down" ? { opacity: 1, y: -100 } : { opacity: 1, y: 0 }}
-            transition={{ ease: "easeIn" }}
+            transition={{ ease: "easeOut" }}
             exit={{ opacity: 0 }}
-            className={`h-fit w-fit  borde brder-black px-8 py-4 bg-black/80 backdrop-blur-xl text-white sm:flex hidden gap-6 justify-center items-center rounded-md fixed top-4 z-1000000 >
+            className={`h-fit w-fit  borde brder-black px-8 py-4 bg-black backdrop-blur-xl text-white sm:flex hidden gap-6 justify-center items-center rounded-md fixed top-4 z-1000000 shadow-2xl shadow-black/10 >
             `}>
 
 
@@ -54,15 +54,15 @@ export default SmallNav
 
 
 const NavLink = ({ item, idx }) => {
-    return (
-        <Link
-            key={idx}
-            href={item.link}
-            className="cursor-pointer text-[17px] font-medium flex relative group"
-            data-text={item.name}
-        >
-            <span>{item.name}</span>
-            <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
-        </Link>
-    );
+  return (
+    <Link
+      key={idx}
+      href={item.link}
+      className="cursor-pointer text-[18px] font-medium flex relative group"
+      data-text={item.name}
+    >
+      <span className="">{item.name}</span>
+      <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
+    </Link>
+  );
 };
