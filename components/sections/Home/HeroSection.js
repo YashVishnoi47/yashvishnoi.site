@@ -52,18 +52,18 @@ export default HeroSection;
 const MainHeading = () => {
   return (
     <motion.h1
+      className="lg:text-[58px] sm:text-[40px] text-[30px] font-bold lg:w-[80%] w-[90%] lg:leading-18  sm:leading-12 leading-9 tracking-[-0.04em] text-center text-text"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         ease: "easeOut",
         duration: 0.7,
       }}
-      className="lg:text-[60px] sm:text-[40px] text-[30px] font-semibold lg:w-[80%] w-[90%] lg:leading-18.5 sm:leading-12 leading-9 tracking-[-0.02em] text-center text-text"
     >
-      I create High performing websites for businesses that want real growth.
+      {/* I create High performing websites sfor businesses that want real growth. */}
+      Modern and Extreamly Good Looking Websites for Businesses and
+      Startups
     </motion.h1>
-
-    // I create modern digital experiences for businesses that want real growth.
   );
 };
 
@@ -77,7 +77,7 @@ const SubHeading = () => {
         duration: 1,
         delay: 0.7,
       }}
-      className="lg:text-[22px] sm:text-[18px] lg:w-[55%] w-[70%] text-center text-text-muted"
+      className="lg:text-[20px] sm:text-[18px] lg:w-[50%] leading-8 w-[70%] text-center text-text-muted"
     >
       Creating high-converting Websites that drive results and help your
       business grow. No Hassle. No BS.{" "}
