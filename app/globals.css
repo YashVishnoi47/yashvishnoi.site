@@ -143,7 +143,7 @@ html.lenis body {
   --bg-dark: hsl(0,0%,99%);
   --bg-c: hsl(0, 0%, 90%);
   --bg-light: hsl(0, 0%, 100%);
-  --text: hsl(0, 0%, 5%);
+  --text: hsl(0, 0%, 10%);
   --text-muted: hsl(0,0,40%);
   --text-muted2: hsl(0, 0%, 20%);
   --text-white: hsl(0, 0%, 95%);

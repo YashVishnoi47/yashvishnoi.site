@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Roboto_Condensed,Inter,Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
@@ -13,6 +13,27 @@ const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
+  display: "swap",
+});
+
+const RobotoCondensed = Roboto_Condensed({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+const inter = Inter({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-outfit",
   display: "swap",
 });
 

@@ -61,8 +61,7 @@ const MainHeading = () => {
       }}
     >
       {/* I create High performing websites sfor businesses that want real growth. */}
-      Modern and Extreamly Good Looking Websites for Businesses and
-      Startups
+      Modern and Extreamly Good Looking Websites for Businesses and Startups
     </motion.h1>
   );
 };
@@ -88,7 +87,7 @@ const SubHeading = () => {
 
 const Tag = () => {
   return (
-    <Link href="/projects">
+    <Link href="https://dontreact.yashvishnoi.site/" target="_blank">
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -100,7 +99,7 @@ const Tag = () => {
         data-text="Explore the Selected work & case studies"
         className="bg-[#7C3AED]/15 rounded-xs border flex justify-between items-center gap-3 md:text-[13px] text-[10px] border-[#7C3AED]/5 px-2 py-1 cursor-pointer select-none ring-1 ring-white hover:ring-[#7C3AED] transition-all duration-300 ease-in-out active:scale-[0.95]"
       >
-        Selected work & case studies
+        Building Don't React UI
         <div className="bg-white h-5 w-8.75 rounded-[2px] flex justify-center items-center">
           <ArrowRight height={18} width={18} />
         </div>
