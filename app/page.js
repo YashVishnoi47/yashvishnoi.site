@@ -10,7 +10,7 @@ import ServiceSection from "@/components/sections/Services/ServiceSection";
 
 export default function Home() {
   return (
-    <div className="bg-bg-k flex flex-col justify-center items-center h-fit w-full mx-w-360 relative ">
+    <div className=" flex flex-col justify-center items-center h-fit w-full mx-w-360 relative ">
       <HeroSection />
       <ServiceSection />
       <ProjectsSection />

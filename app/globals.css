@@ -97,6 +97,34 @@ html.lenis body {
   --color-text-muted: var(--text-muted);
   --color-text-muted2: var(--text-muted2);
   --color-text-white: var(--text-white);
+
+  /* Fonts */
+  --font-head: var(--font-ibm-plex-mono);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-ibm-plex-mono);
+
+  /* Colors */
+  --color-main-bg:var(--main-bg);
+  --color-sec-bg:var(--sec-bg);
+  --color-card-bg:var(--card-bg);
+  --color-main-text:var(--main-text);
+  --color-sec-text:var(--sec-text);
+  --color-faint-text:var(--faint-text);
+  --color-main-border:var(--main-border);
+  --color-sec-border:var(--sec-border);
+
+  /* Sizes */
+  --text-h1:var(--text-h1);
+  --text-h2:var(--text-h2);
+
+  /* Spaces */
+  --spacing-small: var(--space-small);
+  --spacing-medium: var(--space-medium);
+  --spacing-large: var(--space-large);
+  --spacing-xl: var(--space-xl);
+  --spacing-hero: var(--space-hero);
+  
+
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -147,6 +175,29 @@ html.lenis body {
   --text-muted: hsl(0,0,40%);
   --text-muted2: hsl(0, 0%, 20%);
   --text-white: hsl(0, 0%, 95%);
+
+  /* colors */
+  --main-bg: #0B0D0E;
+  --sec-bg:#111417;
+  --card-bg:#15181B;
+  --main-text:#EDEAE4;
+  --sec-text:#9C9F9F;
+  --faint-text:#5B5F60;
+  --main-border:#262B2F;
+  --sec-border:#1D2124;
+
+  /* text Sizes */
+  --text-h1: clamp(40px, 5vw, 68px);
+  --text-h2: clamp(32px, 4vw, 52px);
+
+
+  /* spaces */
+  --space-small: clamp(8px, 1.2vw, 16px);
+  --space-medium: clamp(20px, 2.5vw, 32px);
+  --space-large: clamp(44px, 4.5vw, 56px);
+  --space-xl: clamp(88px, 8vw, 104px);
+  --space-hero: clamp(150px, 14vw, 196px);
+
 
 
   --radius: 0.625rem;

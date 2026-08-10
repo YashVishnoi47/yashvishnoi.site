@@ -52,7 +52,7 @@ export default HeroSection;
 const MainHeading = () => {
   return (
     <motion.h1
-      className="lg:text-[58px] sm:text-[40px] text-[30px] font-bold lg:w-[80%] w-[90%] lg:leading-18  sm:leading-12 leading-9 tracking-[-0.04em] text-center text-text"
+      className="text-h1 font-bold lg:w-[80%] w-[90%] lg:leading-18 font-head sm:leading-12 leading-9 tracking-[-0.04em] text-center text-text"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

@@ -1,39 +1,30 @@
-import { Geist, Geist_Mono, Roboto, Roboto_Condensed,Inter,Outfit } from "next/font/google";
+import { Roboto, Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
 import { Toaster } from "@/components/ui/sonner";
-import SmoothScroll from "@/components/SmootheScroll";
 import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
 import Footer from "@/components/layout/Footer";
-import SmootheScroll from "@/components/SmootheScroll";
-import SmallNav from "@/components/layout/SmallNav";
-
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  display: "swap",
-});
-
-const RobotoCondensed = Roboto_Condensed({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  display: "swap",
-});
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const outfit = Outfit({
-  weight: ["300", "400", "500", "700"],
+const fraunces = Fraunces({
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
@@ -164,18 +155,16 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${roboto.className} bg-bg-dark hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white `}
+        className={cn(
+          "bg-main-bg hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white",
+          `${inter.variable} ${ibmPlexMono.variable} ${fraunces.variable}`,
+        )}
       >
-        <SmootheScroll>
-          <Navbar />
-          <SmallNav />
-
-          {children}
-
-          <CtaCardSection />
-          <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
-          <Footer />
-        </SmootheScroll>
+        <Navbar />
+        {children}
+        <CtaCardSection />
+        <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
+        <Footer />
         <Toaster />
         <Cursor />
       </body>
