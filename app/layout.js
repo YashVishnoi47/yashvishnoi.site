@@ -156,17 +156,12 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={cn(
-          "bg-main-bg hsb2 relative antialiased flex flex-col justify-center items-center selection:bg-[#7C3AED] selection:text-white",
+          "bg-main-bg relative antialiased selection:bg-accent-main selection:text-white mx-auto max-w-[1056px]",
           `${inter.variable} ${ibmPlexMono.variable} ${fraunces.variable}`,
         )}
       >
         <Navbar />
         {children}
-        <CtaCardSection />
-        <div className="w-full h-10 bg-black/2 roundedsm max-w-360"></div>
-        <Footer />
-        <Toaster />
-        <Cursor />
       </body>
     </html>
   );

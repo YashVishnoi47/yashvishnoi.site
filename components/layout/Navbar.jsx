@@ -1,119 +1,76 @@
-"use client";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import CTAButton from "../ui/CTAButton";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { motion } from "framer-motion";
+import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
 
 const Navbar = () => {
+  const Links = [
+    {
+      name: "Work",
+      href: "/",
+    },
+    {
+      name: "Stack",
+      href: "/",
+    },
+    {
+      name: "Process",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "/",
+    },
+  ];
+
   return (
-    <motion.div
-      className="h-fit py-4 max-w-312.5 flex items-center justify-center gap-8 px-4 mt-4 rounded-md text-white bg-black border border-black sm:w-[79%] w-[90%] z-50"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{
-        type: "spring",
-        bounce: 0.3,
-        visualDuration: 0.5,
-        stiffness: 50,
-        delay: 1.4,
-      }}
-    >
-      <div className="h-full w-full flex justify-start items-center">
-        <Link
-          href={"/"}
-          className="flex justify-center items-center gap-4 cursor-pointer transition-all duration-300 ease-in-out group"
+    <div className={cn("w-full ", "flex justify-center items-center")}>
+      <div className={cn("w-[100%] h-20", "flex justify-between items-center")}>
+        <div
+          className={cn(
+            "w-[33%] h-full",
+            "flex gap-3 justify-start items-center",
+          )}
         >
-          <Image
-            className="group-hover:-rotate-15 transition-all duration-300 ease-in-out"
-            src="/yash-logo.svg"
-            alt="logo"
-            width={50}
-            height={50}
-          />
-          <h1 className="lg:text-2xl text-lg sm:block hidden font-bold">
+          <div className="size-10 rounded-[4px] border border-main-border text-[16px] flex justify-center items-center font-head text-accent-main bg-card-bg p-2 cursor-pointer">
+            Y
+          </div>
+
+          <p className="text-[16px] tracking-tighter text-main-text font-head cursor-pointer">
             Yash Vishnoi
-          </h1>
-        </Link>
-      </div>
-
-      <div className="h-full w-full lg:flex hidden gap-6 justify-center items-center">
-        {[
-          { name: "Home", link: "/" },
-          { name: "About", link: "#about" },
-          { name: "Services", link: "#services" },
-          { name: "Projects", link: "/projects" },
-        ].map((item, idx) => {
-          return (
-            <div key={idx}>
-              <NavLink idx={idx} item={item} />
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="h-full w-full flex justify-end items-center">
-        <div className="lg:block hidden">
-          <CTAButton text={"Book a call"} />
+          </p>
         </div>
 
-        <MobileDropdown />
-      </div>
-    </motion.div>
-  );
-};
-
-
-
-
-export default Navbar;
-
-const NavLink = ({ item, idx }) => {
-  return (
-    <Link
-      key={idx}
-      href={item.link}
-      className="cursor-pointer text-[18px] font-medium flex relative group"
-      data-text={item.name}
-    >
-      <span className="">{item.name}</span>
-      <span className="absolute bottom-0 right-0 group-hover:left-0 w-0 group-hover:w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
-    </Link>
-  );
-};
-
-const MobileDropdown = () => {
-  return (
-    <div className="lg:hidden block">
-      <Popover>
-        <PopoverTrigger>
-          <Image src="/menu.svg" alt="logo" width={40} height={40} />
-        </PopoverTrigger>
-        <PopoverContent className="mr-5 mt-5 w-56 rounded-xl border border-white/10 bg-black/90 p-3 text-white shadow-2xl backdrop-blur-xl">
-          <ul className="flex flex-col gap-1">
-            {[
-              { name: "Home", link: "/" },
-              { name: "About", link: "/" },
-              { name: "Services", link: "/" },
-              { name: "Projects", link: "/projects" },
-            ].map((item, idx) => (
+        <div
+          className={cn(
+            "w-[33%] h-full",
+            "sm:flex hidden gap-8 justify-center items-center",
+          )}
+        >
+          {Links.map((item, idx) => {
+            return (
               <Link
+                href={item.href}
                 key={idx}
-                href={item.link}
-                className="group relative overflow-hidden rounded-lg px-4 py-2 cursor-pointer"
+                className="text-[14px] text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out"
               >
                 {item.name}
-                <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0" />
               </Link>
-            ))}
-          </ul>
-        </PopoverContent>
-      </Popover>
+            );
+          })}
+        </div>
+
+        <div
+          className={cn(
+            "w-[33%] h-full",
+            "flex gap-2 justify-end items-center",
+          )}
+        >
+          <PrimaryButtonV2 text="Talk with Yash" />
+        </div>
+      </div>
     </div>
   );
 };
+
+export default Navbar;

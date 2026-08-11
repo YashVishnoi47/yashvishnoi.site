@@ -1,24 +1,15 @@
-import AboutSection from "@/components/sections/about/AboutSection";
-import FaqSection from "@/components/sections/FAQ/FaqSection";
-import HeroSection from "@/components/sections/Home/HeroSection";
-import PerksComponent from "@/components/sections/perks/PerksComponent";
-import ProjectsCTA from "@/components/sections/projects/ProjectsCTA";
-import ProjectsSection from "@/components/sections/projects/ProjectsSection";
-import OngoingCard from "@/components/sections/Services/OngoingCard";
-import ServiceCards from "@/components/sections/Services/ServiceCards";
-import ServiceSection from "@/components/sections/Services/ServiceSection";
+import HeroSection from "@/components/pages/HomePage/HeroSection";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col justify-center items-center h-fit w-full mx-w-360 relative ">
+    <div
+      className={cn(
+        "h-screen w-full relative",
+        "flex flex-col justify-start items-center",
+      )}
+    >
       <HeroSection />
-      <ServiceSection />
-      <ProjectsSection />
-      <ProjectsCTA />
-      <ServiceCards />
-      <PerksComponent />
-      <AboutSection />
-      <FaqSection />
     </div>
   );
 }

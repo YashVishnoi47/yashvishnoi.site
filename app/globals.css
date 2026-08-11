@@ -3,9 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-body {
-  background-color: #F9F9F9;
-}
 
 *{
   scroll-behavior: smooth;
@@ -99,7 +96,7 @@ html.lenis body {
   --color-text-white: var(--text-white);
 
   /* Fonts */
-  --font-head: var(--font-ibm-plex-mono);
+  --font-head: var(--font-fraunces);
   --font-body: var(--font-inter);
   --font-label: var(--font-ibm-plex-mono);
 
@@ -112,6 +109,10 @@ html.lenis body {
   --color-faint-text:var(--faint-text);
   --color-main-border:var(--main-border);
   --color-sec-border:var(--sec-border);
+  --color-accent-main: var(--accent-main);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-tint: var(--color-accent-tint);
+  --color-accent-border: var(--color-accent-border);
 
   /* Sizes */
   --text-h1:var(--text-h1);
@@ -185,6 +186,10 @@ html.lenis body {
   --faint-text:#5B5F60;
   --main-border:#262B2F;
   --sec-border:#1D2124;
+  --accent-main: #E3A34C;
+  --color-accent-hover: #EDB262;
+  --color-accent-tint: rgba(227, 163, 76, 0.12);
+  --color-accent-border: rgba(227, 163, 76, 0.35);
 
   /* text Sizes */
   --text-h1: clamp(40px, 5vw, 68px);
