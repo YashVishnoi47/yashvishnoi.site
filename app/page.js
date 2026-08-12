@@ -1,15 +1,43 @@
+import HeadingBox from "@/components/layout/HeadingBox";
 import HeroSection from "@/components/pages/HomePage/HeroSection";
+import WorkSection from "@/components/pages/HomePage/WorkSection";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
     <div
       className={cn(
-        "h-screen w-full relative",
-        "flex flex-col justify-start items-center sm:px-0 p-2",
+        "min-h-screen w-full relative",
+        "flex flex-col justify-start items-center sm:px-0 p-2 gap-40",
       )}
     >
       <HeroSection />
+
+      <div className="w-full flex flex-col gap-20 justify-center items-center">
+        <HeadingBox
+          heading={"Products and systems I've shipped"}
+          subheading={
+            "A mix of client engineering and my own product, built end to end — design through deployment."
+          }
+          tag={"Selected work"}
+        />
+
+        <WorkSection />
+      </div>
+
+
+      <div className="w-full flex flex-col gap-20 justify-center items-center">
+        <HeadingBox
+          heading={"Full-Service Website Development"}
+          subheading={
+            "Three stages. No lengthy discovery decks — just a working system, fast."
+          }
+          tag={"Services"}
+        />
+
+      </div>
+
+      <div className="h-screen"></div>
     </div>
   );
 }
