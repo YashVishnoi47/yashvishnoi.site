@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className={cn("w-[100%] h-20", "flex justify-between items-center")}>
         <div
           className={cn(
-            "w-[33%] h-full",
+            "sm:w-[33%] w-full h-full",
             "flex gap-3 justify-start items-center",
           )}
         >
@@ -62,7 +62,7 @@ const Navbar = () => {
 
         <div
           className={cn(
-            "w-[33%] h-full",
+            "sm:w-[33%] w-1/2 h-full",
             "flex gap-2 justify-end items-center",
           )}
         >

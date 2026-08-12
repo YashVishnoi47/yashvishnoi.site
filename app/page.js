@@ -6,7 +6,7 @@ export default function Home() {
     <div
       className={cn(
         "h-screen w-full relative",
-        "flex flex-col justify-start items-center",
+        "flex flex-col justify-start items-center sm:px-0 p-2",
       )}
     >
       <HeroSection />
