@@ -70,6 +70,7 @@ const ServicesSection = () => {
     //     "Connect your tools and cut the repetitive busywork out of your day.",
     // },
   ];
+
   return (
     <div id="work" className="w-full grid grid-rows-2 gap-20">
       <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
@@ -93,7 +94,7 @@ const ServicesSection = () => {
         ))}
       </div>
 
-      <div className="w-full h-100 bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
+      <div className="w-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
         <div
           className={
             "h-full md:w-[55%] w-full flex gap-4 flex-col justify-start items-start md:p-10 p-8"
@@ -103,19 +104,24 @@ const ServicesSection = () => {
             GET STARTED
           </p>
           <p className="text-main-text font-head text-[28px] text-pretty">
-            See Your Site Live — Before You Pay a Dime
+            Let's Discuss Your Project
           </p>
           <p className="text-[16px] w-[90%] text-sec-text text-pretty tracking-wide leading-[1.5]">
-            Book a free call. If it's a fit, I'll build your landing page first
-            — you only move forward if you like what you see.
+            A short call to understand your goals, followed by a working preview
+            of your site — so you know exactly what you're getting before any
+            commitment is made.
           </p>
 
           <Link href="/" className={"mt-4"}>
             <PrimaryButtonV2 text={"Start a Project"} />
           </Link>
         </div>
+
+
         <div
-          className={"md:w-[45%] w-full md:h-full bg-sec-bg border-l border-main-border"}
+          className={
+            "md:w-[45%] w-full h-80 bg-sec-bg border-l border-main-border"
+          }
         ></div>
       </div>
     </div>
