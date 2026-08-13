@@ -3,6 +3,8 @@ import HeadingBox from "@/components/layout/HeadingBox";
 import HeroSection from "@/components/pages/HomePage/HeroSection";
 import ServicesSection from "@/components/pages/HomePage/ServicesSection";
 import WorkSection from "@/components/pages/HomePage/WorkSection";
+import ProcessSection from "@/components/pages/HomePage/ProcessSection";
+import AboutSection from "@/components/pages/HomePage/AboutSection";
 
 export default function Home() {
   return (
@@ -36,6 +38,30 @@ export default function Home() {
         />
 
         <ServicesSection />
+      </div>
+
+      {/* <div className="w-full flex flex-col gap-20 justify-center items-center">
+        <HeadingBox
+          heading={"We take care of things from start to finish"}
+          subheading={
+            "From first call to fully deployed — no bloated deliverables, no handoffs, just execution."
+          }
+          tag={"Process"}
+        />
+
+        <ProcessSection />
+      </div> */}
+
+      <div className="w-full flex flex-col gap-20 justify-center items-center">
+        <HeadingBox
+          heading={"The person behind the code"}
+          subheading={
+            "Know your developer. Get to know the person behind the code."
+          }
+          tag={"About"}
+        />
+
+        <AboutSection />
       </div>
 
       <div className="h-screen"></div>

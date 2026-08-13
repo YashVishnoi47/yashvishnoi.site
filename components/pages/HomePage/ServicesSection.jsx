@@ -72,7 +72,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div id="work" className="w-full grid grid-rows-2 gap-20">
+    <div id="work" className="w-full grid md:grid-rows-2 grid-rows-1 gap-20 min-h-0 min-w-0">
       <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
         {Services.map((item, idx) => (
           <div
@@ -94,7 +94,7 @@ const ServicesSection = () => {
         ))}
       </div>
 
-      <div className="w-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
+      <div className="w-full row-span-1 md:h-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
         <div
           className={
             "h-full md:w-[55%] w-full flex gap-4 flex-col justify-start items-start md:p-10 p-8"
@@ -120,7 +120,7 @@ const ServicesSection = () => {
 
         <div
           className={
-            "md:w-[45%] w-full h-80 bg-sec-bg border-l border-main-border"
+            "md:w-[45%] w-full md:h-full h-fit bg-sec-bg border-l border-main-border"
           }
         ></div>
       </div>
