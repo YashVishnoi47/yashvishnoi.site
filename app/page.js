@@ -5,12 +5,13 @@ import ServicesSection from "@/components/pages/HomePage/ServicesSection";
 import WorkSection from "@/components/pages/HomePage/WorkSection";
 import ProcessSection from "@/components/pages/HomePage/ProcessSection";
 import AboutSection from "@/components/pages/HomePage/AboutSection";
+import FAQ from "@/components/pages/HomePage/FAQ";
 
 export default function Home() {
   return (
     <div
       className={cn(
-        "min-h-screen w-full relative",
+        "min-h-fit w-full relative",
         "flex flex-col justify-start items-center sm:px-0 p-2 gap-40",
       )}
     >
@@ -62,6 +63,16 @@ export default function Home() {
         />
 
         <AboutSection />
+      </div>
+
+      <div className="w-full flex flex-col gap-20 justify-center items-center">
+        <HeadingBox
+          heading={"Got Questions?"}
+          subheading={"Straight answers to what clients ask before we start."}
+          tag={"FAQs"}
+        />
+
+        <FAQ />
       </div>
 
       <div className="h-screen"></div>
