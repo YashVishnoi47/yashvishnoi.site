@@ -1,9 +1,19 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 const Navbar = () => {
+  const { scrollY } = useScroll();
+  const [scrollDirection, setScrollDirection] = useState("up");
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const diff = current - scrollY.getPrevious();
+    setScrollDirection(diff > 0 ? "down" : "up");
+  });
+
   const Links = [
     {
       name: "Work",
@@ -22,9 +32,18 @@ const Navbar = () => {
       href: "/",
     },
   ];
+  
 
   return (
-    <div className={cn("w-full ", "flex justify-center items-center")}>
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: scrollDirection === "up" ? 0 : -100 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+      className={cn(
+        "w-full sticky top-0",
+        "flex justify-center items-center bg-main-bg/90 backdrop-blur-2xl z-10000",
+      )}
+    >
       <div className={cn("w-[100%] h-20", "flex justify-between items-center")}>
         <div
           className={cn(
@@ -69,7 +88,7 @@ const Navbar = () => {
           <PrimaryButtonV2 text="Talk with Yash" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
