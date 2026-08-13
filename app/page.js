@@ -1,5 +1,6 @@
 import HeadingBox from "@/components/layout/HeadingBox";
 import HeroSection from "@/components/pages/HomePage/HeroSection";
+import ServicesSection from "@/components/pages/HomePage/ServicesSection";
 import WorkSection from "@/components/pages/HomePage/WorkSection";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +26,6 @@ export default function Home() {
         <WorkSection />
       </div>
 
-
       <div className="w-full flex flex-col gap-20 justify-center items-center">
         <HeadingBox
           heading={"Full-Service Website Development"}
@@ -35,6 +35,7 @@ export default function Home() {
           tag={"Services"}
         />
 
+        <ServicesSection />
       </div>
 
       <div className="h-screen"></div>

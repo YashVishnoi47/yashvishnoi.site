@@ -74,7 +74,7 @@ const WorkSection = () => {
             Website Services and AI Automation
           </p>
 
-          <p className="md:text-[16px] text-[14px] text-sec-text text-pretty tracking-wide leading-[1.5]">
+          <p className="md:text-[16px] text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5]">
             I build Websites and AI Automations for founders who need a website
             and the backend systems behind it — booking flows, CRM sync, and
             internal automation, custom-coded rather than templated.
@@ -89,7 +89,7 @@ const WorkSection = () => {
             More on request
           </p>
 
-          <p className="md:text-[16px] text-[14px] text-sec-text text-pretty tracking-wide leading-[1.5]">
+          <p className="md:text-[16px] text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5]">
             Client work is often under NDA. Happy to walk through additional
             case studies, code samples, or architecture decisions on a call.
           </p>

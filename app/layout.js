@@ -157,7 +157,7 @@ export default function RootLayout({ children }) {
       <body
         className={cn(
           "bg-main-bg relative antialiased selection:bg-accent-main selection:text-white mx-auto max-w-[1056px]",
-          `${inter.variable} ${ibmPlexMono.variable} ${fraunces.variable}`,
+          `${inter.variable} ${inter.className} ${ibmPlexMono.variable} ${fraunces.variable}`,
         )}
       >
         <Navbar />
