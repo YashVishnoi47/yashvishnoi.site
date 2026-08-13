@@ -2,14 +2,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  Mic,
-  BookOpenCheck,
-  PhoneIncoming,
-  History,
-  Siren,
-  Mail,
+import {    
   Workflow,
   Clock,
   Smartphone,

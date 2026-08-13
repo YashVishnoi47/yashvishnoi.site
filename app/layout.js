@@ -1,10 +1,6 @@
-import { Roboto, Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import Cursor from "@/components/ui/Cursor";
-import { Toaster } from "@/components/ui/sonner";
-import CtaCardSection from "@/components/sections/CtaCard/CtaCardSection";
-import Footer from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({
