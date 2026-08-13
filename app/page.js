@@ -12,7 +12,7 @@ export default function Home() {
     <div
       className={cn(
         "min-h-fit w-full relative",
-        "flex flex-col justify-start items-center sm:px-0 p-2 gap-40",
+        "flex flex-col justify-start items-center sm:px-0 p-2 gap-40 mb-40",
       )}
     >
       <HeroSection />
@@ -75,7 +75,9 @@ export default function Home() {
         <FAQ />
       </div>
 
-      <div className="h-screen"></div>
+
+
+      {/* <div className="h-screen"></div> */}
     </div>
   );
 }
