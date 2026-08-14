@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  Globe,
-  Smartphone,
-  Palette,
-  Search,
-  Wrench,
-  Bot,
-} from "lucide-react";
+import { Globe, Smartphone, Palette, Search, Wrench, Bot } from "lucide-react";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
 import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
+import Folder from "@/components/ui/Folder";
 
 const ServicesSection = () => {
   const IconStyles = "size-4 text-accent-main";
@@ -99,9 +93,11 @@ const ServicesSection = () => {
 
         <div
           className={
-            "md:w-[45%] w-full md:h-full h-fit bg-sec-bg border-l border-main-border"
+            "md:w-[45%] w-full md:h-full flex justify-center items-center h-fit bg-sec-bg border-l border-main-border"
           }
-        ></div>
+        >
+          <Folder />
+        </div>
       </div>
     </div>
   );

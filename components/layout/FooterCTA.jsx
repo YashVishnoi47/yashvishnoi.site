@@ -82,8 +82,7 @@ const FooterCTA = () => {
       </p>
 
       <p className="md:text-[16px] md:w-2/3 w-full text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5] relative z-1 bg-sec-bg">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-        commodi distinctio quis tempora nam? Facere corrupti, atque dignissimos
+        From idea to live website — I'll handle the design, development, and technical details so you don't have to.
       </p>
 
       <div className="w-fit flex md:flex-row flex-col justify-start items-start gap-4 mt-2 relative z-1 bg-sec-bg">

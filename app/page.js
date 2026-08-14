@@ -5,6 +5,7 @@ import ServicesSection from "@/components/pages/HomePage/ServicesSection";
 import WorkSection from "@/components/pages/HomePage/WorkSection";
 import AboutSection from "@/components/pages/HomePage/AboutSection";
 import FAQ from "@/components/pages/HomePage/FAQ";
+import AnimateAll from "@/components/layout/AnimateAll";
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
     >
       <HeroSection />
 
-      <div
-        className="w-full flex flex-col gap-20 justify-center items-center"
-        id="work"
+      <AnimateAll
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
+        id={"work"}
       >
         <HeadingBox
           heading={"Products and systems I've shipped"}
@@ -29,11 +30,11 @@ export default function Home() {
         />
 
         <WorkSection />
-      </div>
+      </AnimateAll>
 
-      <div
-        id="services"
-        className="w-full flex flex-col gap-20 justify-center items-center"
+      <AnimateAll
+        id={"services"}
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
       >
         <HeadingBox
           heading={"End-to-End Web Development"}
@@ -44,11 +45,11 @@ export default function Home() {
         />
 
         <ServicesSection />
-      </div>
+      </AnimateAll>
 
-      <div
-        id="about"
-        className="w-full flex flex-col gap-20 justify-center items-center"
+      <AnimateAll
+        id={"about"}
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
       >
         <HeadingBox
           heading={"The person behind the code"}
@@ -59,11 +60,11 @@ export default function Home() {
         />
 
         <AboutSection />
-      </div>
+      </AnimateAll>
 
-      <div
-        id="faq"
-        className="w-full flex flex-col gap-20 justify-center items-center"
+      <AnimateAll
+        id={"faq"}
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
       >
         <HeadingBox
           heading={"Got Questions?"}
@@ -72,11 +73,7 @@ export default function Home() {
         />
 
         <FAQ />
-      </div>
-
-
-
-
+      </AnimateAll>
 
       {/* <div className="w-full flex flex-col gap-20 justify-center items-center">
         <HeadingBox

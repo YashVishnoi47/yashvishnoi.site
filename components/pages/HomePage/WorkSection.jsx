@@ -5,12 +5,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
+import Image from "next/image";
+import LegalIntakeOS from "@/assets/svg/LegalIntakeOS";
 
 const WorkSection = () => {
   const Projects = [
     {
       Label: "Own Product 2026",
       name: "Legal Intake OS™",
+      link: "https://yashvishnoi.pro",
+      icon: <LegalIntakeOS width={160} height={160} />,
       desc: " An AI receptionist built for U.S. law firms. It answers every call, qualifies the lead, detects emergencies, and books the consultation directly onto the firm's calendar — so no client ever reaches voicemail.",
       tech: [
         {
@@ -27,12 +31,31 @@ const WorkSection = () => {
         },
       ],
     },
+    {
+      Label: "Own Product 2026",
+      name: "My Portfolio",
+      link: "https://yashvishnoi.site",
+      desc: "A custom-built developer portfolio designed to showcase my projects, skills, and experience through a clean, interactive, and responsive interface.",
+      icon: <Image src="/website-logo.svg" width={160} height={160} alt="yash" />,
+      tech: [
+        {
+          name: "Next.js",
+        },
+        {
+          name: "Tailwind CSS",
+        },
+        {
+          name: "Framer Motion",
+        },
+        {
+          name: "Mongo Db",
+        },
+      ],
+    },
   ];
 
   return (
-    <div
-      className="w-full flex flex-col gap-6 justify-center items-center"
-    >
+    <div className="w-full flex flex-col gap-6 justify-center items-center">
       <div className="w-full gap-6 flex justify-center items-center flex-wrap">
         {Projects.map((item, idx) => (
           <div
@@ -61,12 +84,25 @@ const WorkSection = () => {
                 ))}
               </div>
 
-              <Link href="/" className={"mt-4"}>
+              <Link href={item.link} target="_blank" className={"mt-4"}>
                 <ProjectButton />
               </Link>
             </div>
 
-            <div className="h-100 md:w-[45%] w-full bg-sec-bg border-l border-main-border"></div>
+            <div className="h-100 flex justify-center items-center md:w-[45%] w-full bg-sec-bg border-l border-main-border relative">
+              <div className="w-[85%] h-[220px]  flex justify-center items-center p-1 rounded-[8px]">
+                {item.image && (
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={160}
+                    height={160}
+                  />
+                )}
+
+                {item.icon && item.icon}
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -91,12 +127,12 @@ const WorkSection = () => {
         </div>
         <div className="md:w-1/2 w-full md:h-60 h-fit p-8 flex flex-col gap-4 justify-center items-start rounded-[8px] bg-sec-bg border border-main-border">
           <p className="text-[20px] font-head text-main-text font-medium">
-            More on request
+            Have a project in mind?
           </p>
 
           <p className="md:text-[16px] text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5]">
-            Client work is often under NDA. Happy to walk through additional
-            case studies, code samples, or architecture decisions on a call.
+            Whether you need a website, web app, or custom automation, let's
+            build something that works for your business.
           </p>
 
           <Link href="/" className={"mt-2"}>
