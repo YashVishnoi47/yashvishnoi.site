@@ -3,7 +3,6 @@ import HeadingBox from "@/components/layout/HeadingBox";
 import HeroSection from "@/components/pages/HomePage/HeroSection";
 import ServicesSection from "@/components/pages/HomePage/ServicesSection";
 import WorkSection from "@/components/pages/HomePage/WorkSection";
-import ProcessSection from "@/components/pages/HomePage/ProcessSection";
 import AboutSection from "@/components/pages/HomePage/AboutSection";
 import FAQ from "@/components/pages/HomePage/FAQ";
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import BookaCallPopUp from "../ui/BookaCallPopUp";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -32,7 +33,6 @@ const Navbar = () => {
       href: "/",
     },
   ];
-  
 
   return (
     <motion.div
@@ -85,7 +85,9 @@ const Navbar = () => {
             "flex gap-2 justify-end items-center",
           )}
         >
-          <PrimaryButtonV2 text="Talk with Yash" />
+          <BookaCallPopUp>
+            <PrimaryButtonV2 text="Talk with Yash" />
+          </BookaCallPopUp>
         </div>
       </div>
     </motion.div>

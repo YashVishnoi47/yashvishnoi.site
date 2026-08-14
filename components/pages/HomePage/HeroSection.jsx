@@ -5,7 +5,8 @@ import SecondaryButton from "@/components/ui/SecondaryButton";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
+import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
+import Link from "next/link";
 
 const HeroSection = () => {
   // No Hassle. No BS. Just Results.
@@ -20,9 +21,10 @@ const HeroSection = () => {
 
       <h1 className="text-h1 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
         Extremely Good Looking Websites for{" "}
-
         <span className="relative px-1">
-          <span className="relative z-2 sm:bg-transparent bg-accent-main sm:text-main-text text-main-bg italic">Businesses and Startups</span>{" "}
+          <span className="relative z-2 sm:bg-transparent bg-accent-main sm:text-main-text text-main-bg italic">
+            Businesses and Startups
+          </span>{" "}
           <motion.span
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -36,20 +38,22 @@ const HeroSection = () => {
             </span>{" "}
           </motion.span>
         </span>
-
-
       </h1>
 
       <h2 className="md:text-[18px] text-[14px] md:w-[70%] w-full text-sec-text text-pretty font-body mt-1">
-       I'm a full-stack developer who builds high-performing websites for businesses and startups. From design to deployment, I focus on speed, clarity, and conversion — so your site doesn't just look good, it actually brings in customers.
-
-
-
+        I'm a full-stack developer who builds high-performing websites for
+        businesses and startups. From design to deployment, I focus on speed,
+        clarity, and conversion — so your site doesn't just look good, it
+        actually brings in customers.
       </h2>
 
       <div className="w-full flex justify-start items-start gap-4 mt-2">
-        <PrimaryButtonV2 text={"Start a Project"} />
-        <SecondaryButton text={"Learn More"} />
+        <BookaCallPopUp>
+          <PrimaryButtonV2 text={"Start a Project"} />
+        </BookaCallPopUp>
+        <Link href="/#work">
+          <SecondaryButton text={"Explore Work"} />
+        </Link>
       </div>
     </div>
   );

@@ -1,26 +1,27 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Instagram, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Footer = () => {
   const iconsStyles = "size-4 text-sec-text text-sec-text hover:text-main-text transition-all duration-200 ease-out";
+
   const socialLinks = [
     {
       name: "Twitter",
-      href: "https://twitter.com/yashvishnoi",
+      href: "https://x.com/Yash_Vishnoi7",
       icon: <Twitter className={iconsStyles} />,
     },
     {
       name: "Linkedin",
-      href: "https://www.linkedin.com/in/yashvishnoi/",
+      href: "https://www.linkedin.com/in/yash-vishnoi-654318384/",
       icon: <Linkedin className={iconsStyles} />,
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/yashvishnoi/",
-      icon: <Instagram className={iconsStyles} />,
+      href: "https://github.com/YashVishnoi47",
+      icon: <Github className={iconsStyles} />,
     },
   ];
 
@@ -35,12 +36,11 @@ const Footer = () => {
       ],
     },
     {
-      type: "Company",
+      type: "More",
       l: [
-        { name: "About", href: "/" },
-        { name: "Work", href: "/" },
-        { name: "Stack", href: "/" },
-        { name: "Process", href: "/" },
+        { name: "Guestbook", href: "/" },
+        { name: "Book a call", href: "/" },
+        { name: "Contact", href: "/" },
       ],
     },
   ];

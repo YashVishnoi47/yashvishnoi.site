@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
 
 const WorkSection = () => {
   const Projects = [
@@ -29,7 +30,10 @@ const WorkSection = () => {
   ];
 
   return (
-    <div id="work" className="w-full flex flex-col gap-6 justify-center items-center">
+    <div
+      id="work"
+      className="w-full flex flex-col gap-6 justify-center items-center"
+    >
       <div className="w-full gap-6 flex justify-center items-center flex-wrap">
         {Projects.map((item, idx) => (
           <div
@@ -81,7 +85,9 @@ const WorkSection = () => {
           </p>
 
           <Link href="/" className={"mt-2"}>
-            <ProjectButton text={"Work with me"} />
+            <BookaCallPopUp>
+              <ProjectButton text={"Work with me"} />
+            </BookaCallPopUp>
           </Link>
         </div>
         <div className="md:w-1/2 w-full md:h-60 h-fit p-8 flex flex-col gap-4 justify-center items-start rounded-[8px] bg-sec-bg border border-main-border">
@@ -95,7 +101,9 @@ const WorkSection = () => {
           </p>
 
           <Link href="/" className={"mt-2"}>
-            <ProjectButton text={"Book a call"} />
+            <BookaCallPopUp>
+              <ProjectButton text={"Book a call"} />
+            </BookaCallPopUp>
           </Link>
         </div>
       </div>
