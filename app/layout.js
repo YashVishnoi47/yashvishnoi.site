@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/layout/Footer";
+import FooterCTA from "@/components/layout/FooterCTA";
 
 const inter = Inter({
   weight: ["400", "500", "600"],
@@ -159,6 +160,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <FooterCTA />
         <Footer />
       </body>
     </html>

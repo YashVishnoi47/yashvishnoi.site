@@ -26,7 +26,7 @@ const FAQ = () => {
       icon: <Clock className={IconStyles} />,
       question: "How long will my project take?",
       Answer:
-        "A standard website typically takes 2–4 weeks; more complex builds with custom integrations can run longer. You'll get a clear timeline upfront, before any work begins.",
+        "A standard website typically takes 4-8 Days; more complex builds with custom integrations can run longer. You'll get a clear timeline upfront, before any work begins.",
     },
     {
       icon: <Smartphone className={IconStyles} />,
@@ -56,7 +56,6 @@ const FAQ = () => {
 
   return (
     <div
-      id="faq"
       className="w-full h-fit flex flex-col justify-center gap-4 items-start"
     >
       <div className="w-full h-fit grid gap-6 md:grid-cols-2 grid-cols-1 flex-wrap">

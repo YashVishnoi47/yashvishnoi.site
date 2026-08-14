@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import BookaCallPopUp from "../ui/BookaCallPopUp";
+import Image from "next/image";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -17,21 +18,25 @@ const Navbar = () => {
 
   const Links = [
     {
+      name: "Home",
+      href: "/",
+    },
+    {
       name: "Work",
-      href: "/",
-    },
-    {
-      name: "Stack",
-      href: "/",
-    },
-    {
-      name: "Process",
-      href: "/",
+      href: "/#work",
     },
     {
       name: "About",
-      href: "/",
+      href: "/#about",
     },
+    {
+      name: "Services",
+      href: "/#services",
+    },
+    // {
+    //   name: "More",
+    //   href: "/#process",
+    // },
   ];
 
   return (
@@ -51,9 +56,7 @@ const Navbar = () => {
             "flex gap-3 justify-start items-center",
           )}
         >
-          <div className="size-10 rounded-[4px] border border-main-border text-[16px] flex justify-center items-center font-head text-accent-main bg-card-bg p-2 cursor-pointer">
-            Y
-          </div>
+          <Image src="/website-logo.svg" alt="logo" width={40} height={40} />
 
           <p className="text-[16px] tracking-tighter text-main-text font-head cursor-pointer">
             Yash Vishnoi

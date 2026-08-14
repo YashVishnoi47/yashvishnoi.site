@@ -3,12 +3,8 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <div
-      id="about"
-      className="w-full md:h-80 h-fit flex md:flex-row flex-col md:gap-0 gap-12 justify-start items-center"
-    >
+    <div className="w-full md:h-80 h-fit flex md:flex-row flex-col md:gap-0 gap-12 justify-start items-center">
       <div className="md:w-[30%] w-full h-full flex md:justify-start justify-center items-start">
-        
         <div className="size-65 rounded-[12px] bg-sec-bg border border-main-border flex justify-center items-center overflow-hidden">
           <Image
             src="/me/me.jpeg"
@@ -18,8 +14,6 @@ const AboutSection = () => {
             height={300}
           />
         </div>
-
-        
       </div>
 
       <div className="md:w-[70%] w-full h-full flex flex-col gap-4 justify-start items-start">

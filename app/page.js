@@ -11,12 +11,15 @@ export default function Home() {
     <div
       className={cn(
         "min-h-fit w-full relative",
-        "flex flex-col justify-start items-center sm:px-0 p-2 gap-40 mb-40",
+        "flex flex-col justify-start items-center sm:px-0 p-2 gap-40",
       )}
     >
       <HeroSection />
 
-      <div className="w-full flex flex-col gap-20 justify-center items-center">
+      <div
+        className="w-full flex flex-col gap-20 justify-center items-center"
+        id="work"
+      >
         <HeadingBox
           heading={"Products and systems I've shipped"}
           subheading={
@@ -28,17 +31,52 @@ export default function Home() {
         <WorkSection />
       </div>
 
-      <div className="w-full flex flex-col gap-20 justify-center items-center">
+      <div
+        id="services"
+        className="w-full flex flex-col gap-20 justify-center items-center"
+      >
         <HeadingBox
-          heading={"Full-Service Website Development"}
+          heading={"End-to-End Web Development"}
           subheading={
-            "Three stages. No lengthy discovery decks — just a working system, fast."
+            "From the first idea to a polished, production-ready website, I handle every stage of the build."
           }
           tag={"Services"}
         />
 
         <ServicesSection />
       </div>
+
+      <div
+        id="about"
+        className="w-full flex flex-col gap-20 justify-center items-center"
+      >
+        <HeadingBox
+          heading={"The person behind the code"}
+          subheading={
+            "Know your developer. Get to know the person behind the code."
+          }
+          tag={"About"}
+        />
+
+        <AboutSection />
+      </div>
+
+      <div
+        id="faq"
+        className="w-full flex flex-col gap-20 justify-center items-center"
+      >
+        <HeadingBox
+          heading={"Got Questions?"}
+          subheading={"Straight answers to what clients ask before we start."}
+          tag={"FAQs"}
+        />
+
+        <FAQ />
+      </div>
+
+
+
+
 
       {/* <div className="w-full flex flex-col gap-20 justify-center items-center">
         <HeadingBox
@@ -51,32 +89,6 @@ export default function Home() {
 
         <ProcessSection />
       </div> */}
-
-      <div className="w-full flex flex-col gap-20 justify-center items-center">
-        <HeadingBox
-          heading={"The person behind the code"}
-          subheading={
-            "Know your developer. Get to know the person behind the code."
-          }
-          tag={"About"}
-        />
-
-        <AboutSection />
-      </div>
-
-      <div className="w-full flex flex-col gap-20 justify-center items-center">
-        <HeadingBox
-          heading={"Got Questions?"}
-          subheading={"Straight answers to what clients ask before we start."}
-          tag={"FAQs"}
-        />
-
-        <FAQ />
-      </div>
-
-
-
-      {/* <div className="h-screen"></div> */}
     </div>
   );
 }

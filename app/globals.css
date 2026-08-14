@@ -188,7 +188,7 @@ html.lenis body {
   --sec-border:#1D2124;
   --accent-main: #E3A34C;
   --color-accent-hover: #EDB262;
-  --color-accent-tint: rgba(227, 163, 76, 0.12);
+  --color-accent-tint: #e3a34c1f;
   --color-accent-border: rgba(227, 163, 76, 0.35);
 
   /* text Sizes */

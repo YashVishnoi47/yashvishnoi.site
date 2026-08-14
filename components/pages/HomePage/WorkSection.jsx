@@ -31,7 +31,6 @@ const WorkSection = () => {
 
   return (
     <div
-      id="work"
       className="w-full flex flex-col gap-6 justify-center items-center"
     >
       <div className="w-full gap-6 flex justify-center items-center flex-wrap">

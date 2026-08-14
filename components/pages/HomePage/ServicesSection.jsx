@@ -1,16 +1,14 @@
 import React from "react";
 import {
   Globe,
-  ShoppingCart,
   Smartphone,
   Palette,
   Search,
   Wrench,
-  Rocket,
   Bot,
 } from "lucide-react";
-import Link from "next/link";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
+import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
 
 const ServicesSection = () => {
   const IconStyles = "size-4 text-accent-main";
@@ -23,22 +21,16 @@ const ServicesSection = () => {
         "A site built around your business, not a template — fast, clean, and yours.",
     },
     {
-      icon: <ShoppingCart className={IconStyles} />,
-      heading: "E-commerce Stores",
+      icon: <Palette className={IconStyles} />,
+      heading: "Website Design",
       subheading:
-        "From product pages to checkout — a store that actually sells while you sleep.",
+        "Interfaces people enjoy using, with a flow that just makes sense.",
     },
     {
       icon: <Smartphone className={IconStyles} />,
       heading: "Responsive Design",
       subheading:
         "Looks sharp on phones, tablets, and desktops — no zooming, no squinting.",
-    },
-    {
-      icon: <Palette className={IconStyles} />,
-      heading: "UI/UX Design",
-      subheading:
-        "Interfaces people enjoy using, with a flow that just makes sense.",
     },
     {
       icon: <Search className={IconStyles} />,
@@ -51,28 +43,16 @@ const ServicesSection = () => {
       subheading:
         "Updates, fixes, and check-ins — so your site stays fast and never breaks silently.",
     },
-    // {
-    //   icon: <Rocket className={IconStyles} />,
-    //   heading: "Landing Pages",
-    //   subheading:
-    //     "High-converting pages built for launches, campaigns, and ads.",
-    // },
-    // {
-    //   icon: <Bot className={IconStyles} />,
-    //   heading: "Automation & Integrations",
-    //   subheading:
-    //     "Connect your tools and cut the repetitive busywork out of your day.",
-    // },
-    // {
-    //   icon: <Bot className={IconStyles} />,
-    //   heading: "Automation & Integrations",
-    //   subheading:
-    //     "Connect your tools and cut the repetitive busywork out of your day.",
-    // },
+    {
+      icon: <Bot className={IconStyles} />,
+      heading: "Automation & Integrations",
+      subheading:
+        "Connect your tools and cut the repetitive busywork out of your day.",
+    },
   ];
 
   return (
-    <div id="work" className="w-full grid md:grid-rows-2 grid-rows-1 gap-20 min-h-0 min-w-0">
+    <div className="w-full grid md:grid-rows-2 grid-rows-1 gap-20 min-h-0 min-w-0">
       <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
         {Services.map((item, idx) => (
           <div
@@ -97,7 +77,7 @@ const ServicesSection = () => {
       <div className="w-full row-span-1 md:h-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
         <div
           className={
-            "h-full md:w-[55%] w-full flex gap-4 flex-col justify-start items-start md:p-10 p-8"
+            "h-full md:w-[55%] w-full flex gap-6 flex-col justify-start items-start md:p-10 p-8"
           }
         >
           <p className="text-[12px] text-accent-main font-label uppercase tracking-wider">
@@ -112,11 +92,10 @@ const ServicesSection = () => {
             commitment is made.
           </p>
 
-          <Link href="/" className={"mt-4"}>
+          <BookaCallPopUp>
             <PrimaryButtonV2 text={"Start a Project"} />
-          </Link>
+          </BookaCallPopUp>
         </div>
-
 
         <div
           className={

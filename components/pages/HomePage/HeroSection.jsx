@@ -17,7 +17,9 @@ const HeroSection = () => {
         "flex flex-col sm:gap-8 gap-6 justify-center items-start sm:mt-30 mt-20",
       )}
     >
-      <CTALabel />
+      <BookaCallPopUp>
+        <CTALabel />
+      </BookaCallPopUp>
 
       <h1 className="text-h1 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
         Extremely Good Looking Websites for{" "}
