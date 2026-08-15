@@ -92,7 +92,10 @@ const GuestList = () => {
     }
     return (
       <div className="w-full flex flex-col gap-2 mt-4">
-        <button className="py-2 w-full flex justify-center items-center gap-4 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label hover:bg-accent-tint border border-main-border hover:border-accent-border">
+        <button
+          onClick={() => signIn("google")}
+          className="py-2 w-full flex justify-center items-center gap-4 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label hover:bg-accent-tint border border-main-border hover:border-accent-border"
+        >
           <Image
             src="/socials/google.svg"
             width={18}
