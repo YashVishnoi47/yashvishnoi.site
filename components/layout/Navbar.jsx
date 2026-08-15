@@ -56,11 +56,13 @@ const Navbar = () => {
             "flex gap-3 justify-start items-center",
           )}
         >
-          <Image src="/website-logo.svg" alt="logo" width={40} height={40} />
+          <Link href="/" className="flex gap-3 justify-start items-center">
+            <Image src="/website-logo.svg" alt="logo" width={40} height={40} />
 
-          <p className="text-[16px] tracking-tighter text-main-text font-head cursor-pointer">
-            Yash Vishnoi
-          </p>
+            <p className="text-[16px] tracking-tighter text-main-text font-head cursor-pointer">
+              Yash Vishnoi
+            </p>
+          </Link>
         </div>
 
         <div
