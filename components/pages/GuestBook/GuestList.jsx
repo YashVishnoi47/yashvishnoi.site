@@ -6,24 +6,26 @@ import { signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
 
 const GuestList = () => {
-  const { data: session } = useSession();
-  const [data, setData] = useState({
-    name: session?.user?.name,
-    message: "",
-    image: session?.user?.image,
-  });
+  const { data: session, status } = useSession();
+  const [dataMessages, setDataMessages] = useState();
   const [messages, setMessages] = useState([]);
 
   const handleCreateMessage = async (e) => {
     e.preventDefault();
+    if (!dataMessages) {
+      console.log("NO message");
+      return;
+    }
     if (!session) return;
 
-    const finalData = {
-      name: session?.user?.name,
-      message: data.message,
-      image: session?.user?.image,
-    };
     try {
+      const finalData = {
+        name: session?.user?.name,
+        message: dataMessages,
+        image: session?.user?.image,
+        userId: session?.user?.id,
+      };
+
       const res = await fetch("/api/createMessage", {
         method: "POST",
         headers: {
@@ -32,15 +34,14 @@ const GuestList = () => {
         body: JSON.stringify(finalData),
       });
 
-      if (!res) {
+      if (!res.ok) {
         const error = await res.json();
         console.log(error);
         return;
       }
 
       const message = await res.json();
-
-      setMessages((prev) => [...prev, message]);
+      setMessages((prev) => [...prev, message.message]);
     } catch (error) {
       console.log(error);
     }
@@ -104,7 +105,10 @@ const GuestList = () => {
           >
             <textarea
               placeholder="Leave something behind"
-              onChange={(e) => setData({ ...data, message: e.target.value })}
+              name="message"
+              id="message"
+              value={dataMessages}
+              onChange={(e) => setDataMessages(e.target.value)}
               className="w-full min-h-[100px] border mt-4 border-accent-border outline-none rounded-[8px] bg-accent-tint p-4 hsb2 text-main-text placeholder:text-[14px]"
             />
             <button
@@ -134,12 +138,17 @@ const GuestList = () => {
                 height={30}
                 alt="image"
               />
-              {/* <span className="text-[14px] text-accent-main">YV</span> */}
             </div>
 
             <div className="flex flex-col justify-start items-start">
               <span className="text-[14px] text-main-text">{item.Name}</span>
-              <span className="text-[10px] text-sec-text">Aug 10, 2026</span>
+              <span className="text-[10px] text-sec-text">
+                {new Date(item.createdAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </span>
             </div>
           </div>
         </div>
