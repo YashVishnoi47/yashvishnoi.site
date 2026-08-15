@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/layout/Footer";
 import FooterCTA from "@/components/layout/FooterCTA";
+import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({
   weight: ["400", "500", "600"],
@@ -158,10 +159,12 @@ export default function RootLayout({ children }) {
           `${inter.variable} ${inter.className} ${ibmPlexMono.variable} ${fraunces.variable}`,
         )}
       >
-        <Navbar />
-        {children}
-        <FooterCTA />
-        <Footer />
+        <SessionProvider>
+          <Navbar />
+          {children}
+          <FooterCTA />
+          <Footer />
+        </SessionProvider>
       </body>
     </html>
   );
