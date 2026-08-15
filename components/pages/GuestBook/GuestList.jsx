@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import GithibLoginButton from "./GithibLoginButton";
-import { signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
 import { toast } from "@/components/ui/toast";
 
