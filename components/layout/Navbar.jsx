@@ -6,6 +6,15 @@ import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import BookaCallPopUp from "../ui/BookaCallPopUp";
 import Image from "next/image";
+import { Menu } from "lucide-react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -87,12 +96,40 @@ const Navbar = () => {
         <div
           className={cn(
             "sm:w-[33%] w-1/2 h-full",
-            "flex gap-2 justify-end items-center",
+            "md:flex hidden gap-2 justify-end items-center",
           )}
         >
           <BookaCallPopUp>
             <PrimaryButtonV2 text="Talk with Yash" />
           </BookaCallPopUp>
+        </div>
+
+        <div
+          className={cn(
+            "sm:w-[33%] w-1/2 h-full",
+            "md:hidden flex gap-2 justify-end items-center mr-2",
+          )}
+        >
+          <Popover>
+            <PopoverTrigger render={<Menu className="text-main-text" />} />
+            <PopoverContent
+              className={"bg-main-bg flex flex-col gap-2 border relative z-100000 border-main-border h-fit mr-2 mt-5"}
+            >
+              <PopoverHeader>
+                {Links.map((item, idx) => {
+                  return (
+                    <Link
+                      href={item.href}
+                      key={idx}
+                      className="text-[14px] w-full py-2 text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out flex justify-start items-start"
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </PopoverHeader>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </motion.div>
