@@ -33,10 +33,10 @@ const Navbar = () => {
       name: "Services",
       href: "/#services",
     },
-    // {
-    //   name: "More",
-    //   href: "/#process",
-    // },
+    {
+      name: "Guestbook",
+      href: "/guestbook",
+    },
   ];
 
   return (

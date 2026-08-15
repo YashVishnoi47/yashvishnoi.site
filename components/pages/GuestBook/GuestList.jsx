@@ -4,6 +4,7 @@ import Image from "next/image";
 import GithibLoginButton from "./GithibLoginButton";
 import { signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
+import { toast } from "@/components/ui/toast";
 
 const GuestList = () => {
   const { data: session, status } = useSession();
@@ -41,7 +42,14 @@ const GuestList = () => {
       }
 
       const message = await res.json();
-      setMessages((prev) => [...prev, message.message]);
+      if (message) {
+        toast.add({
+          type: "success",
+          description: "Thank you for your Review.",
+        });
+        setMessages((prev) => [...prev, message.message]);
+        setDataMessages("");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -74,6 +82,31 @@ const GuestList = () => {
     fetchMessages();
   }, []);
 
+  const renderInputArea = () => {
+    if (status === "loading") {
+      return (
+        <div className="w-full h-full flex justify-center items-center text-main-text">
+          Loading...
+        </div>
+      );
+    }
+    return (
+      <div className="w-full flex flex-col gap-2 mt-4">
+        <button className="py-2 w-full flex justify-center items-center gap-4 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label hover:bg-accent-tint border border-main-border hover:border-accent-border">
+          <Image
+            src="/socials/google.svg"
+            width={18}
+            height={18}
+            alt="google"
+          />
+          Continue with Google
+        </button>
+
+        <GithibLoginButton />
+      </div>
+    );
+  };
+
   return (
     <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-start items-start">
       <div className="w-full min-h-[220px] flex gap-2 flex-col  justify-start items-start border border-accent-border p-6 rounded-[8px] bg-accent-tint">
@@ -85,19 +118,7 @@ const GuestList = () => {
         </p>
 
         {!session ? (
-          <div className="w-full flex flex-col gap-2 mt-4">
-            <button className="py-2 w-full flex justify-center items-center gap-4 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label hover:bg-accent-tint border border-main-border hover:border-accent-border">
-              <Image
-                src="/socials/google.svg"
-                width={18}
-                height={18}
-                alt="google"
-              />
-              Continue with Google
-            </button>
-
-            <GithibLoginButton />
-          </div>
+          renderInputArea()
         ) : (
           <form
             onSubmit={handleCreateMessage}

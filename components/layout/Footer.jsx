@@ -39,7 +39,7 @@ const Footer = () => {
     {
       type: "More",
       l: [
-        { name: "Guestbook", href: "/" },
+        { name: "Guestbook", href: "/guestbook" },
         { name: "Book a call", href: "/" },
         { name: "Contact", href: "/" },
       ],

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
 
-const HeadingSection = () => {
+const HeadingSection = ({ messages }) => {
   return (
     <div
       className={cn(
@@ -45,7 +45,7 @@ const HeadingSection = () => {
 
       <div className="w-full flex justify-start items-start gap-8 mt-8">
         <div className="text-[13px] flex gap-1.5">
-          <div className="text-sec-text">32</div>
+          <div className="text-sec-text">{messages || 0}</div>
           <div className="text-faint-text">Notes</div>
         </div>
 

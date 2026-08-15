@@ -2,8 +2,11 @@ import { cn } from "@/lib/utils";
 import GuestList from "@/components/pages/GuestBook/GuestList";
 import HeadingSection from "@/components/pages/GuestBook/HeadingSection";
 import React from "react";
+import { GetMessages } from "@/lib/funtion";
 
-const page = () => {
+const page = async () => {
+  const messages = await GetMessages();
+
   return (
     <div
       className={cn(
@@ -11,7 +14,7 @@ const page = () => {
         "flex flex-col justify-start items-center sm:px-0 p-2 md:gap-30 gap-20",
       )}
     >
-      <HeadingSection />
+      <HeadingSection messages={messages.length} />
       <GuestList />
     </div>
   );
