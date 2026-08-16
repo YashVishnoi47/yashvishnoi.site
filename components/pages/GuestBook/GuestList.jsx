@@ -90,6 +90,7 @@ const GuestList = () => {
         </div>
       );
     }
+
     return (
       <div className="w-full flex flex-col gap-2 mt-4">
         <button
@@ -111,8 +112,8 @@ const GuestList = () => {
   };
 
   return (
-    <div className="w-full grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-start items-start">
-      <div className="w-full min-h-[220px] flex gap-2 flex-col  justify-start items-start border border-accent-border p-6 rounded-[8px] bg-accent-tint">
+    <div className="w-full md:columns-3 sm:columns-2 columns-1 gap-x-6 justify-center items-start">
+      <div className="w-full min-h-[220px] flex gap-2 flex-col  justify-start items-start border border-accent-border p-6 rounded-[8px] bg-accent-tint break-inside-avoid mb-6">
         <p className="text-[20px] text-main-text font-head italic">
           "Leave something behind"
         </p>
@@ -149,7 +150,7 @@ const GuestList = () => {
       {messages.map((item, idx) => (
         <div
           key={idx}
-          className="w-full min-h-[220px] flex gap-2 flex-col justify-between itesta border border-main-border p-6 rounded-[8px] bg-sec-bg hover:border-accent-border transition-all duration-200 ease-out shadow-md shadow-bg-main hover:shadow-accent-tint"
+          className="w-full min-h-[220px] flex gap-2 flex-col justify-between itesta border border-main-border p-6 rounded-[8px] bg-sec-bg hover:border-accent-border transition-all duration-200 ease-out shadow-md shadow-bg-main hover:shadow-accent-tint break-inside-avoid mb-6"
         >
           <p className="text-[16px] text-main-text w-[80%]">{item.message}</p>
 
