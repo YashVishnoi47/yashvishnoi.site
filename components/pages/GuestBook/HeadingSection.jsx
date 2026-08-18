@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
 
-const HeadingSection = ({ messages }) => {
+const HeadingSection = ({ messages, latestUploaded }) => {
   return (
     <div
       className={cn(
@@ -51,7 +51,7 @@ const HeadingSection = ({ messages }) => {
 
         <div className="text-[13px] flex gap-1.5">
           <div className="text-faint-text">Last one</div>
-          <div className="text-sec-text">2 Days Ago</div>
+          <div className="text-sec-text">{latestUploaded}</div>
         </div>
       </div>
     </div>
