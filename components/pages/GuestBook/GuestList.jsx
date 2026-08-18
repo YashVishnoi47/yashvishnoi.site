@@ -6,10 +6,10 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
 import { toast } from "@/components/ui/toast";
 
-const GuestList = () => {
+const GuestList = ({messages}) => {
   const { data: session, status } = useSession();
   const [dataMessages, setDataMessages] = useState();
-  const [messages, setMessages] = useState([]);
+  // const [messages, setMessages] = useState([]);
 
   const handleCreateMessage = async (e) => {
     e.preventDefault();
@@ -55,32 +55,32 @@ const GuestList = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchMessages = async () => {
-      try {
-        const res = await fetch("/api/getMessages", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+  // useEffect(() => {
+  //   const fetchMessages = async () => {
+  //     try {
+  //       const res = await fetch("/api/getMessages", {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       });
 
-        if (!res.ok) {
-          const error = await res.json();
-          console.log(error);
-          return;
-        }
+  //       if (!res.ok) {
+  //         const error = await res.json();
+  //         console.log(error);
+  //         return;
+  //       }
 
-        const mes = await res.json();
+  //       const mes = await res.json();
 
-        setMessages(mes.messages);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  //       setMessages(mes.messages);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
-    fetchMessages();
-  }, []);
+  //   fetchMessages();
+  // }, []);
 
   const renderInputArea = () => {
     if (status === "loading") {

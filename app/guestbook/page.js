@@ -21,7 +21,7 @@ const page = async () => {
       )}
     >
       <HeadingSection messages={messages.length} latestUploaded={timeAgo} />
-      <GuestList />
+      <GuestList messages={messages} />
     </div>
   );
 };
