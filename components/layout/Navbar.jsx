@@ -43,11 +43,7 @@ const Navbar = () => {
       href: "/#services",
     },
     {
-<<<<<<< Updated upstream
       name: "Guestbook",
-=======
-      name: "GuestBook",
->>>>>>> Stashed changes
       href: "/guestbook",
     },
   ];
@@ -117,7 +113,9 @@ const Navbar = () => {
           <Popover>
             <PopoverTrigger render={<Menu className="text-main-text" />} />
             <PopoverContent
-              className={"bg-main-bg flex flex-col gap-2 border relative z-100000 border-main-border h-fit mr-2 mt-5"}
+              className={
+                "bg-main-bg flex flex-col gap-2 border relative z-100000 border-main-border h-fit mr-2 mt-5"
+              }
             >
               <PopoverHeader>
                 {Links.map((item, idx) => {
