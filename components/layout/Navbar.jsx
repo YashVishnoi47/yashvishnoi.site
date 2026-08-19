@@ -43,7 +43,11 @@ const Navbar = () => {
       href: "/#services",
     },
     {
+<<<<<<< Updated upstream
       name: "Guestbook",
+=======
+      name: "GuestBook",
+>>>>>>> Stashed changes
       href: "/guestbook",
     },
   ];

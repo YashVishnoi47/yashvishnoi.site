@@ -6,10 +6,16 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
 import { toast } from "@/components/ui/toast";
 
+<<<<<<< Updated upstream
 const GuestList = ({messages}) => {
   const { data: session, status } = useSession();
   const [dataMessages, setDataMessages] = useState();
   // const [messages, setMessages] = useState([]);
+=======
+const GuestList = ({ messages }) => {
+  const { data: session, status } = useSession();
+  const [dataMessages, setDataMessages] = useState();
+>>>>>>> Stashed changes
 
   const handleCreateMessage = async (e) => {
     e.preventDefault();
@@ -55,6 +61,7 @@ const GuestList = ({messages}) => {
     }
   };
 
+<<<<<<< Updated upstream
   // useEffect(() => {
   //   const fetchMessages = async () => {
   //     try {
@@ -106,6 +113,32 @@ const GuestList = ({messages}) => {
           Continue with Google
         </button>
 
+=======
+  const renderInputArea = () => {
+    if (status === "loading") {
+      return (
+        <div className="w-full h-full flex justify-center items-center text-main-text">
+          Loading...
+        </div>
+      );
+    }
+
+    return (
+      <div className="w-full flex flex-col gap-2 mt-4">
+        <button
+          onClick={() => signIn("google")}
+          className="py-2 w-full flex justify-center items-center gap-4 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label hover:bg-accent-tint border border-main-border hover:border-accent-border"
+        >
+          <Image
+            src="/socials/google.svg"
+            width={18}
+            height={18}
+            alt="google"
+          />
+          Continue with Google
+        </button>
+
+>>>>>>> Stashed changes
         <GithibLoginButton />
       </div>
     );
