@@ -3,10 +3,15 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { useState } from "react";
 import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import BookaCallPopUp from "../ui/BookaCallPopUp";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import {
   Popover,
   PopoverContent,
@@ -15,10 +20,12 @@ import {
   PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import NavOptionsMenu from "./NavOptionsMenu";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
   const [scrollDirection, setScrollDirection] = useState("up");
+  const [open, setOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (current) => {
     const diff = current - scrollY.getPrevious();
@@ -42,10 +49,10 @@ const Navbar = () => {
       name: "Services",
       href: "/#services",
     },
-    {
-      name: "Guestbook",
-      href: "/guestbook",
-    },
+    // {
+    //   name: "Guestbook",
+    //   href: "/guestbook",
+    // },
   ];
 
   return (
@@ -61,7 +68,7 @@ const Navbar = () => {
       <div className={cn("w-[100%] h-20", "flex justify-between items-center")}>
         <div
           className={cn(
-            "sm:w-[33%] w-full h-full",
+            "sm:w-[30%] w-full h-full",
             "flex gap-3 justify-start items-center",
           )}
         >
@@ -76,8 +83,8 @@ const Navbar = () => {
 
         <div
           className={cn(
-            "w-[33%] h-full",
-            "sm:flex hidden gap-8 justify-center items-center",
+            "w-[39%] h-[50px]",
+            "sm:flex hidden gap-8 justify-center items-center relative",
           )}
         >
           {Links.map((item, idx) => {
@@ -85,17 +92,37 @@ const Navbar = () => {
               <Link
                 href={item.href}
                 key={idx}
-                className="text-[14px] text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out"
+                className="text-[14px] text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out relative z-2"
               >
                 {item.name}
               </Link>
             );
           })}
+
+          <NavOptionsMenu open={open} setOpen={setOpen} />
+          <button
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+            className={cn(
+              "text-[14px] font-body hover:text-mai-text transition-all duration-200 ease-in-ou cursor-pointer flex justify-center items-center gap-1 relative z-2",
+              open ? "text-main-text" : "text-sec-text",
+            )}
+          >
+            More
+            <ChevronDown
+              size={18}
+              className={
+                open
+                  ? "rotate-180 transition-all duration-500 ease-in-out"
+                  : "transition-all duration-500 ease-in-out"
+              }
+            />
+          </button>
         </div>
 
         <div
           className={cn(
-            "sm:w-[33%] w-1/2 h-full",
+            "sm:w-[30%] w-1/2 h-full",
             "md:flex hidden gap-2 justify-end items-center",
           )}
         >
@@ -104,6 +131,7 @@ const Navbar = () => {
           </BookaCallPopUp>
         </div>
 
+        {/* Mobile nav menu */}
         <div
           className={cn(
             "sm:w-[33%] w-1/2 h-full",

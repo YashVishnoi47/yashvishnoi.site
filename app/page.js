@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import HeadingBox from "@/components/layout/HeadingBox";
 import HeroSection from "@/components/pages/HomePage/HeroSection";
 import ServicesSection from "@/components/pages/HomePage/ServicesSection";
@@ -6,9 +5,7 @@ import WorkSection from "@/components/pages/HomePage/WorkSection";
 import AboutSection from "@/components/pages/HomePage/AboutSection";
 import FAQ from "@/components/pages/HomePage/FAQ";
 import AnimateAll from "@/components/layout/AnimateAll";
-import GuestNotes from "@/components/pages/HomePage/GuestNotes";
-import CardButton from "@/components/ui/CardButton";
-import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -76,24 +73,6 @@ export default function Home() {
         />
 
         <FAQ />
-      </AnimateAll>
-
-      <AnimateAll
-        id={"Guestbook"}
-        className={"w-full flex flex-col gap-20 justify-center items-center select-none"}
-      >
-        <HeadingBox
-          heading={"Notes from people who stopped by"}
-          subheading={"Let me know you are here."}
-          tag={"Guestbook"}
-          button={
-            <Link href="/guestbook">
-              <CardButton text={"Leave a note"} />
-            </Link>
-          }
-        />
-
-        <GuestNotes />
       </AnimateAll>
 
       {/* <div className="w-full flex flex-col gap-20 justify-center items-center">
