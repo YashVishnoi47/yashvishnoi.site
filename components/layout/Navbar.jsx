@@ -3,24 +3,17 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { useState } from "react";
 import PrimaryButtonV2 from "../ui/PrimaryButtonV2";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
 import BookaCallPopUp from "../ui/BookaCallPopUp";
 import Image from "next/image";
 import { ChevronDown, Menu } from "lucide-react";
+import NavOptionsMenu from "./NavOptionsMenu";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import {
   Popover,
   PopoverContent,
-  PopoverDescription,
   PopoverHeader,
-  PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import NavOptionsMenu from "./NavOptionsMenu";
 
 const Navbar = () => {
   const { scrollY } = useScroll();

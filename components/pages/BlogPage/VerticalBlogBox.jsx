@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const BlogBox = () => {
+const VerticalBlogBox = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -13,43 +13,34 @@ const BlogBox = () => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       href="/"
-      className="w-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse"
+      className="w-full h-fit bg-card-bg border border-main-border hover:border-accent-border overflow-hidden transition-all duration-200  ease-in-out rounded-[12px] flex flex-col-reverse shadow-lg shadow-bg-main hover:shadow-accent-tint justify-start items-start gap-8"
     >
-      <div className="h-full md:w-[55%] w-full flex gap-4 flex-col justify-start items-start md:p-10 p-8">
-        <p className="text-[12px] text-accent-main font-label uppercase tracking-wider">
-          Latest - {new Date().toDateString()}
-        </p>
-        <p className="text-main-text font-head leading-tight text-[28px]">
+      <div className="h-full pb-4 w-[90%] flex gap-4 flex-col justify-start items-start px-4">
+        <p className="text-main-text font-head leading-tight text-[24px]">
           Building an AI receptionist that doesn't sound like one
         </p>
-        <p className="text-[16px] w-[90%] text-sec-text text-pretty tracking-wide leading-[1.5]">
+        <p className="text-[14px] w-full text-sec-text text-pretty tracking-wide leading-[1.5]">
           Most voice AI demos are impressive for thirty seconds and unbearable
-          after two minutes. Notes on the specific decisions — pacing,
-          interruption handling, knowing when to just transfer the call — that
-          went into making Legal Intake OS feel like a person picked up.
+          after two minutes. Notes on the specific decisions.
         </p>
 
-        <div className="w-full flex gap-3 justify-start items-start flex-wrap mt-4"></div>
-
-        <Link href={"/"} target="_blank" className={"mt-4"}>
+        <div className="mt-4 w-full flex justify-between items-center">
           <ProjectButton hovered={hovered} text={"Read More"} />
-        </Link>
+        </div>
       </div>
 
-      <div className="h-100 flex justify-center items-center md:w-[45%] w-full bg-sec-bg border-l border-main-border relative">
-        <div className="w-[85%] h-[220px]  flex justify-center items-center p-1 rounded-[8px]">
-          {/* {item.image && (
-            <Image src={item.image} alt={item.name} width={160} height={160} />
-          )}
+      <div className="w-full aspect-video flex justify-center items-center wfull bg-sec-bg relative border-b border-main-border">
+        <div className="w-[85%] h-[220px]  flex justify-center items-center p-1 rounded-[8px]"></div>
 
-          {item.icon && item.icon} */}
-        </div>
+        <p className="text-[10px] text-accent-main font-label uppercase tracking-wider absolute top-4 right-4 p-2 bg-accent-tint rounded-[4px]">
+          12 min read - {new Date().toDateString({})}
+        </p>
       </div>
     </Link>
   );
 };
 
-export default BlogBox;
+export default VerticalBlogBox;
 
 const ProjectButton = ({ text, hovered }) => {
   const easing = [0.19, 1, 0.22, 1];
