@@ -1,0 +1,59 @@
+---
+title: "How I Built My Portfolio with Next.js"
+description: "A quick look at how I built my portfolio, the technologies I used, and a few lessons I learned along the way."
+date: "2026-08-21"
+tags:
+  - Next.js
+  - React
+  - Tailwind CSS
+  - Web Development
+cover: "/og-image.png"
+read: "5 min read"
+---
+
+
+Building a portfolio isn't just about showing what you can build. It's also about **how you present your work**.
+
+For this project, I wanted something that felt **minimal, fast, and personal** rather than another generic developer portfolio.
+
+## The Goal
+
+The main goal was simple:
+
+> Build a portfolio that feels like a product rather than a résumé.
+
+I wanted the website to:
+
+- Load quickly
+- Look clean and modern
+- Showcase my projects
+- Make it easy to contact me
+- Have a place where I could write about things I'm building
+
+## Why I Chose Next.js
+
+I decided to use **Next.js** because it gives me a lot of the tools I need without having to build everything from scratch.
+
+Some of the features I found particularly useful were:
+
+1. App Router
+2. Server Components
+3. Static generation
+4. File-based routing
+5. Easy deployment with Vercel
+
+The App Router also makes it really easy to organize pages and dynamic routes.
+
+For example, my blog structure looks something like this:
+
+```text
+app/
+├── blog/
+│   ├── page.jsx
+│   └── [slug]/
+│       └── page.jsx
+│
+content/
+└── blogs/
+    ├── my-first-blog.mdx
+    └── building-my-portfolio.mdx

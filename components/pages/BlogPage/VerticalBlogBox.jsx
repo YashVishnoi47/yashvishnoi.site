@@ -4,24 +4,24 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
-const VerticalBlogBox = () => {
+const VerticalBlogBox = ({ item }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <Link
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      href="/"
-      className="w-full h-fit bg-card-bg border border-main-border hover:border-accent-border overflow-hidden transition-all duration-200  ease-in-out rounded-[12px] flex flex-col-reverse shadow-lg shadow-bg-main hover:shadow-accent-tint justify-start items-start gap-8"
+      href={`/blog/${item.slug}`}
+      className="w-full h-fit bg-card-bg border border-main-border hover:border-accent-border overflow-hidden transition-all duration-200  ease-in-out rounded-[12px] flex flex-col-reverse shadow-lg shadow-bg-main hover:shadow-accent-tint justify-start items-start gap-8 group"
     >
       <div className="h-full pb-4 w-[90%] flex gap-4 flex-col justify-start items-start px-4">
         <p className="text-main-text font-head leading-tight text-[24px]">
-          Building an AI receptionist that doesn't sound like one
+          {item.title || "Blog Title"}
         </p>
         <p className="text-[14px] w-full text-sec-text text-pretty tracking-wide leading-[1.5]">
-          Most voice AI demos are impressive for thirty seconds and unbearable
-          after two minutes. Notes on the specific decisions.
+          {item.description || "Blog Description"}
         </p>
 
         <div className="mt-4 w-full flex justify-between items-center">
@@ -29,10 +29,16 @@ const VerticalBlogBox = () => {
         </div>
       </div>
 
-      <div className="w-full aspect-video flex justify-center items-center wfull bg-sec-bg relative border-b border-main-border">
-        <div className="w-[85%] h-[220px]  flex justify-center items-center p-1 rounded-[8px]"></div>
+      <div className="w-full aspect-video flex justify-center items-center wfull bg-sec-bg relative border-b border-main-border overflow-hidden">
+        <Image
+          src={item.cover}
+          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-200 ease-in-out"
+          width={1000}
+          height={1000}
+          alt="image"
+        />
 
-        <p className="text-[10px] text-accent-main font-label uppercase tracking-wider absolute top-4 right-4 p-2 bg-accent-tint rounded-[4px]">
+        <p className="text-[10px] text-accent-main font-label uppercase tracking-wider absolute top-4 right-4 p-2 bg-accent-tint rounded-[4px] backdrop-blur-2xl">
           12 min read - {new Date().toDateString({})}
         </p>
       </div>
