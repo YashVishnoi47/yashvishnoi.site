@@ -13,6 +13,8 @@ const page = async ({ params }) => {
 
   const OtherBolgs = getAllBlogs().filter((item) => item.slug !== blog.slug);
 
+  if (!blog) return notFound();
+
   return (
     <div
       className={cn(
