@@ -43,8 +43,8 @@ const Navbar = () => {
       href: "/#services",
     },
     // {
-    //   name: "Guestbook",
-    //   href: "/guestbook",
+    //   name: "Blog",
+    //   href: "/blog",
     // },
   ];
 

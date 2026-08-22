@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeadingSection = ({ messages, latestUploaded }) => {
   return (
-    <div  
+    <div
       className={cn(
         "w-full h-fit",
         "flex flex-col sm:gap-6 gap-6 justify-center items-start sm:mt-30 mt-20",

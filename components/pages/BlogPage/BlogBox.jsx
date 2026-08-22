@@ -5,14 +5,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const BlogBox = () => {
+const BlogBox = ({ item }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <Link
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      href="/"
+      href={`/blog/${item.slug}`}
       className="w-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse"
     >
       <div className="h-full md:w-[55%] w-full flex gap-4 flex-col justify-start items-start md:p-10 p-8">
@@ -20,20 +20,15 @@ const BlogBox = () => {
           Latest - {new Date().toDateString()}
         </p>
         <p className="text-main-text font-head leading-tight text-[28px]">
-          Building an AI receptionist that doesn't sound like one
+          {item.title || "Blog Title"}
         </p>
         <p className="text-[16px] w-[90%] text-sec-text text-pretty tracking-wide leading-[1.5]">
-          Most voice AI demos are impressive for thirty seconds and unbearable
-          after two minutes. Notes on the specific decisions — pacing,
-          interruption handling, knowing when to just transfer the call — that
-          went into making Legal Intake OS feel like a person picked up.
+          {item.description || "Blog Description"}
         </p>
 
         <div className="w-full flex gap-3 justify-start items-start flex-wrap mt-4"></div>
 
-        <Link href={"/"} target="_blank" className={"mt-4"}>
-          <ProjectButton hovered={hovered} text={"Read More"} />
-        </Link>
+        <ProjectButton hovered={hovered} text={"Read More"} />
       </div>
 
       <div className="h-100 flex justify-center items-center md:w-[45%] w-full bg-sec-bg border-l border-main-border relative">
