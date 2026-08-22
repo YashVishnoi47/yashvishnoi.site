@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="md:w-[30%] w-full h-full flex md:justify-start justify-center items-start">
         <div className="size-65 rounded-[12px] bg-sec-bg border border-main-border flex justify-center items-center overflow-hidden">
           <Image
-            src="/me/me.jpeg"
+            src="/me/me.png"
             className="w-full h-full object-cover border border-main-border"
             alt="yash"
             width={300}
