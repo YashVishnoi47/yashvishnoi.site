@@ -53,8 +53,8 @@ const PrimaryButtonV2 = ({ text, className }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.1, ease: easing }}
-              className="w-full h-full object-cover"
-              src="/me/me.jpeg"
+              className="w-full h-full object-cover border border-white"
+              src="/me/me.png"
               unoptimized
               width={24}
               height={24}
