@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Footer from "@/components/layout/Footer";
 import FooterCTA from "@/components/layout/FooterCTA";
 import { SessionProvider } from "next-auth/react";
-import { Toaster } from "@/components/ui/toast"
+import { Toaster } from "@/components/ui/toast";
 
 const inter = Inter({
   weight: ["400", "500", "600"],
@@ -161,12 +161,8 @@ export default function RootLayout({ children }) {
         )}
       >
         <SessionProvider>
-          <Navbar />
           {children}
           <Toaster />
-
-          <FooterCTA />
-          <Footer />
         </SessionProvider>
       </body>
     </html>

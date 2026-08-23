@@ -13,14 +13,14 @@ const HeadingSection = ({ messages, latestUploaded }) => {
       )}
     >
       <span className="text-[13px] uppercase text-sec-text font-label tracking-widest">
-        Blog
+        Guestbook
       </span>
 
-      <h1 className="text-h1 md:w-3/4 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
-        Behind the{" "}
+      <h1 className="text-h1 md:w-1/2 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
+        Leave Your Mark on the{" "}
         <span className="relative px-1">
           <span className="relative z-2 sm:bg-transparent bg-accent-main sm:text-main-text">
-            Build
+            Journey
           </span>{" "}
           <motion.span
             initial={{ width: 0 }}
@@ -31,15 +31,16 @@ const HeadingSection = ({ messages, latestUploaded }) => {
             }
           >
             <span className="relative  text-main-bg shrink-0 whitespace-nowrap italic">
-              Build
+              Journey
             </span>{" "}
           </motion.span>
         </span>
       </h1>
 
       <h2 className="md:text-[18px] text-[14px] md:w-[70%] w-full text-sec-text text-pretty font-body mt-1">
-        Write-ups on the work — what I'm building, what I've learned shipping
-        it, and the occasional note on running a one-person studio.
+        Every visitor experiences my portfolio a little differently. Leave a
+        note and share what you think about me, my work, and the journey behind
+        it.
       </h2>
 
       <div className="w-full flex justify-start items-start gap-8 mt-8">
@@ -50,7 +51,7 @@ const HeadingSection = ({ messages, latestUploaded }) => {
 
         <div className="text-[13px] flex gap-1.5">
           <div className="text-faint-text">Last one</div>
-          <div className="text-sec-text">{latestUploaded || "-"}</div>
+          <div className="text-sec-text">{latestUploaded}</div>
         </div>
       </div>
     </div>

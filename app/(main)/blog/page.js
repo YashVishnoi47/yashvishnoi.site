@@ -1,15 +1,30 @@
 import BlogBox from "@/components/pages/BlogPage/BlogBox";
+import HeadingSection from "@/components/pages/BlogPage/HeadingSection";
 import VerticalBlogBox from "@/components/pages/BlogPage/VerticalBlogBox";
-import HeadingSection from "@/components/pages/GuestBook/HeadingSection";
 import { getAllBlogs } from "@/lib/BlogFunctions";
 import { cn } from "@/lib/utils";
 import React from "react";
 
+export const metadata = {
+  title: "Blog",
+  description:
+    "Write-ups on the work — what I'm building, what I've learned shipping it, and the occasional note on running a one-person studio.",
+
+  alternates: {
+    canonical: "/blog",
+  },
+
+  openGraph: {
+    title: "Blog | Yash Vishnoi",
+    description:
+      "Explore Yash Vishnoi's portfolio of web applications, SaaS products, and modern websites.",
+    url: "https://yashvishnoi.site/blog",
+  },
+};
+
 const Blog = () => {
   const blogPosts = getAllBlogs();
-
   const latestBlog = blogPosts[0];
-
 
   const renderBlogSList = () => {
     if (blogPosts.length > 0) {
@@ -54,7 +69,6 @@ const Blog = () => {
       )}
     >
       {blogPosts.length > 0 && <HeadingSection />}
-
 
       <BlogBox item={latestBlog} />
 
