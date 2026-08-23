@@ -1,3 +1,4 @@
+import ComingSoon from "@/components/layout/ComingSoon";
 import BlogBox from "@/components/pages/BlogPage/BlogBox";
 import HeadingSection from "@/components/pages/BlogPage/HeadingSection";
 import VerticalBlogBox from "@/components/pages/BlogPage/VerticalBlogBox";
@@ -60,6 +61,10 @@ const Blog = () => {
       </div>
     );
   };
+
+  if (process.env.NEXT_PUBLIC_ENV === "prod") {
+    return <ComingSoon />;
+  }
 
   return (
     <div

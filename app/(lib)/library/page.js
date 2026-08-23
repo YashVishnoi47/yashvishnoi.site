@@ -1,3 +1,4 @@
+import ComingSoon from "@/components/layout/ComingSoon";
 import LibHeading from "@/components/pages/LibraryPage/LibHeading";
 import { cn } from "@/lib/utils";
 import { redirect } from "next/navigation";
@@ -25,6 +26,10 @@ const Library = async ({ searchParams }) => {
 
   if (!show) {
     redirect("/library/?show=components");
+  }
+
+  if (process.env.NEXT_PUBLIC_ENV === "prod") {
+    return <ComingSoon />;
   }
 
   return (

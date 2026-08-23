@@ -6,6 +6,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import VerticalBlogBox from "@/components/pages/BlogPage/VerticalBlogBox";
+import ComingSoon from "@/components/layout/ComingSoon";
 
 const page = async ({ params }) => {
   const { slug } = await params;
@@ -14,6 +15,10 @@ const page = async ({ params }) => {
   const OtherBolgs = getAllBlogs().filter((item) => item.slug !== blog.slug);
 
   if (!blog) return notFound();
+
+  if (process.env.NEXT_PUBLIC_ENV === "prod") {
+    return <ComingSoon />;
+  }
 
   return (
     <div

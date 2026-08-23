@@ -4,12 +4,11 @@ import Link from "next/link";
 import React from "react";
 
 const LibNav = () => {
-
   const links = [
     {
       name: "Components",
       href: "/library/components",
-      soon: false,
+      soon: true,
     },
     {
       name: "Templates",
@@ -27,7 +26,7 @@ const LibNav = () => {
     <div
       className={cn(
         "w-full",
-        "flex justify-between h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10000",
+        "flex justify-between md:px-0 px-4 h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10000",
       )}
     >
       <div className="sm:w-[30%] w-full h-full flex gap-3 justify-start items-center">
@@ -45,7 +44,7 @@ const LibNav = () => {
         </span>
       </div>
 
-      <div className="sm:w-[30%] w-full h-full flex gap-4 justify-center items-center">
+      <div className="sm:w-[30%] w-full h-full md:flex hidden gap-4 justify-center items-center">
         {links.map((item, idx) => (
           <button
             key={idx}
@@ -65,7 +64,7 @@ const LibNav = () => {
 
       <div className="sm:w-[32%] w-full h-full flex gap-6 justify-end items-center">
         {/* Search */}
-        <div className="w-[50%] h-10 px-2 py-1 flex justify-between items-center border-main-border border rounded-[4px] hover:bg-sec-bg cursor-pointer transition-all duration-300 ease-in-out active:scale-[0.97]">
+        <div className="w-[50%] h-10 px-2 py-1 md:flex hidden justify-between items-center border-main-border border rounded-[4px] hover:bg-sec-bg cursor-pointer transition-all duration-300 ease-in-out active:scale-[0.97]">
           <span className="text-[12px] text-faint-text font-label">
             Search...
           </span>

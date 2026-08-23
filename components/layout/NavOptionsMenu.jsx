@@ -6,6 +6,7 @@ import { FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import { BookText } from "lucide-react";
 const easing = [0.19, 1, 0.22, 1];
 
 const NavOptionsMenu = ({ open, setOpen }) => {
@@ -14,22 +15,22 @@ const NavOptionsMenu = ({ open, setOpen }) => {
 
   const socialLinks = [
     {
-      name: "linkedin",
-      at: "@yashvishnii",
-      href: "https://www.linkedin.com/in/abdulrahman-ibrahim/",
-      icon: <FaLinkedin className={iconClasses} />,
+      name: "Blog",
+      at: "What I have been up to",
+      href: "/blog",
+      icon: <BookText className={iconClasses} />,
     },
     {
-      name: "X",
-      at: "@yashvishnii",
-      href: "https://www.linkedin.com/in/abdulrahman-ibrahim/",
+      name: "X (Twitter)",
+      at: "@Yash_Vishnoi7",
+      href: "https://x.com/Yash_Vishnoi7",
       icon: <FaXTwitter className={iconClasses} />,
     },
     {
       name: "linkedin",
-      at: "@yashvishnii",
-      href: "https://www.linkedin.com/in/abdulrahman-ibrahim/",
-      icon: <FaLinkedin className={iconClasses} />,
+      at: "@yash-vishnoi-654318384",
+      href: "https://www.linkedin.com/in/yash-vishnoi-654318384/",
+      icon: <FaLinkedinIn className={iconClasses} />,
     },
   ];
 
@@ -99,7 +100,7 @@ const NavOptionsMenu = ({ open, setOpen }) => {
             {open && (
               <MotionLink
                 className="w-1/3 aspect-square bg-white/10 rounded-[12px] flex justify-center items-end overflow-hidden relative cursor-pointer group p-2"
-                href="/blog"
+                href="/library"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -110,7 +111,7 @@ const NavOptionsMenu = ({ open, setOpen }) => {
                 }}
               >
                 <Image
-                  src="/images/blog.png"
+                  src="/images/library.png"
                   className="w-full h-full object-cover absolute inset-0 group-hover:scale-110 transition-all duration-300 ease-out"
                   unoptimized
                   width={50}
@@ -120,10 +121,10 @@ const NavOptionsMenu = ({ open, setOpen }) => {
 
                 <div className="w-full flex flex-col gap- justify-around items-start relative z-2 shrink-0 whitespace-nowrap">
                   <span className="text-[16px] text-white font-medium">
-                    Blog
+                    Components
                   </span>
                   <span className="text-[13px] text-sec-text">
-                    What I've been up to
+                    Reusable components
                   </span>
                 </div>
 
@@ -157,7 +158,7 @@ const NavOptionsMenu = ({ open, setOpen }) => {
                       <span className="text-white text-[12px] font-medium capitalize">
                         {item.name}
                       </span>
-                      <span className="text-sec-text text-[10px]">
+                      <span className="text-sec-text text-[12px] line-clamp-1">
                         {item.at}
                       </span>
                     </div>
