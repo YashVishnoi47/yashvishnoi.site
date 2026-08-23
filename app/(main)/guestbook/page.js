@@ -23,7 +23,6 @@ export const metadata = {
 
 const page = async () => {
   const messages = await GetMessages();
-  console.log(messages);
 
   const latestMessage = messages.reduce((latest, message) =>
     new Date(message.createdAt) > new Date(latest.createdAt) ? message : latest,

@@ -6,8 +6,10 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Send } from "lucide-react";
 import { toast } from "@/components/ui/toast";
 import MessageBox from "./MessageBox";
+import { useRouter } from "next/navigation";
 
 const GuestList = ({ messages }) => {
+  const router = useRouter();
   const { data: session, status } = useSession();
   const [dataMessages, setDataMessages] = useState();
 
@@ -47,14 +49,14 @@ const GuestList = ({ messages }) => {
           type: "success",
           description: "Thank you for your Review.",
         });
-        
+
         setDataMessages("");
+        router.refresh();
       }
     } catch (error) {
       console.log(error);
     }
   };
-
 
   const renderInputArea = () => {
     if (status === "loading") {
