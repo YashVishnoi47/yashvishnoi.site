@@ -9,7 +9,6 @@ import { toast } from "@/components/ui/toast";
 const GuestList = ({messages}) => {
   const { data: session, status } = useSession();
   const [dataMessages, setDataMessages] = useState();
-  // const [messages, setMessages] = useState([]);
 
   const handleCreateMessage = async (e) => {
     e.preventDefault();
@@ -47,7 +46,7 @@ const GuestList = ({messages}) => {
           type: "success",
           description: "Thank you for your Review.",
         });
-        setMessages((prev) => [...prev, message.message]);
+        
         setDataMessages("");
       }
     } catch (error) {
@@ -55,32 +54,6 @@ const GuestList = ({messages}) => {
     }
   };
 
-  // useEffect(() => {
-  //   const fetchMessages = async () => {
-  //     try {
-  //       const res = await fetch("/api/getMessages", {
-  //         method: "GET",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       });
-
-  //       if (!res.ok) {
-  //         const error = await res.json();
-  //         console.log(error);
-  //         return;
-  //       }
-
-  //       const mes = await res.json();
-
-  //       setMessages(mes.messages);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   fetchMessages();
-  // }, []);
 
   const renderInputArea = () => {
     if (status === "loading") {
