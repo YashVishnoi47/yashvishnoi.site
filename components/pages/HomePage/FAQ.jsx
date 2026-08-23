@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import {    
+import {
   Workflow,
   Clock,
   Smartphone,
@@ -10,6 +10,7 @@ import {
   LifeBuoy,
   DollarSign,
 } from "lucide-react";
+import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
 
 const FAQ = () => {
   const [open, setOpen] = React.useState([]);
@@ -55,9 +56,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div
-      className="w-full h-fit flex flex-col justify-center gap-4 items-start"
-    >
+    <div className="w-full h-fit flex flex-col justify-center gap-4 items-start">
       <div className="w-full h-fit grid gap-6 md:grid-cols-2 grid-cols-1 flex-wrap">
         {FAQ.map((item, idx) => (
           <div
@@ -88,23 +87,21 @@ const FAQ = () => {
             </div>
           </div>
         ))}
-
-        <div
-          className={cn(
-            "w-full h-12 flex gap-1 justify-center items-center -y -line",
-            open.includes(5) || (open.includes(7) && "-t"),
-          )}
-        >
-          <span className="text-[14px] text-secondary-text">
-            Can't find the answer you're looking for?
-          </span>{" "}
-          <Link
-            href="/bookCall"
-            className="text-[14px] text-accent-color font-medium underline decoration-black"
-          >
+      </div>
+      <div
+        className={cn(
+          "w-full h-12 flex gap-1 justify-center items-center",
+          open.includes(5) || (open.includes(7) && "-t"),
+        )}
+      >
+        <span className="text-[14px] text-sec-text">
+          Can't find the answer you're looking for?
+        </span>{" "}
+        <BookaCallPopUp>
+          <div className="text-[14px] text-accent-main cursor-pointer font-medium underline decoration-accent-main">
             Talk to Yash
-          </Link>
-        </div>
+          </div>
+        </BookaCallPopUp>
       </div>
     </div>
   );
