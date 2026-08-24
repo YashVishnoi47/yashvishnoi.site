@@ -1,11 +1,8 @@
 import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import { cn } from "@/lib/utils";
-import Footer from "@/components/layout/Footer";
-import FooterCTA from "@/components/layout/FooterCTA";
 import { SessionProvider } from "next-auth/react";
 import { Toaster } from "@/components/ui/toast";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   weight: ["400", "500", "600"],
@@ -160,6 +157,7 @@ export default function RootLayout({ children }) {
           `${inter.variable} ${inter.className} ${ibmPlexMono.variable} ${fraunces.variable}`,
         )}
       >
+        <SpeedInsights />
         <SessionProvider>
           {children}
           <Toaster />
