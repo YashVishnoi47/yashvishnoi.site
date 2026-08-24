@@ -8,7 +8,7 @@ import { toast } from "@/components/ui/toast";
 import MessageBox from "./MessageBox";
 import { useRouter } from "next/navigation";
 
-const GuestList = ({ messages }) => {
+const GuestList = ({ messages, latestMessage }) => {
   const router = useRouter();
   const { data: session, status } = useSession();
   const [dataMessages, setDataMessages] = useState();
