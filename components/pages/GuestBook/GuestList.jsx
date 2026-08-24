@@ -90,41 +90,39 @@ const GuestList = ({ messages, latestMessage, loading }) => {
 
   return (
     <div className="w-full md:columns-3 sm:columns-2 columns-1 gap-x-6 justify-center items-center">
-      {!loading && (
-        <div className="w-full min-h-[220px] flex gap-2 flex-col  justify-start items-start border border-accent-border p-6 rounded-[8px] bg-accent-tint break-inside-avoid mb-6">
-          <p className="text-[20px] text-main-text font-head italic">
-            "Leave something behind"
-          </p>
-          <p className="text-[14px] text-sec-text">
-            Sign in to post — takes a few seconds.
-          </p>
+      <div className="w-full min-h-[220px] flex gap-2 flex-col  justify-start items-start border border-accent-border p-6 rounded-[8px] bg-accent-tint break-inside-avoid mb-6">
+        <p className="text-[20px] text-main-text font-head italic">
+          "Leave something behind"
+        </p>
+        <p className="text-[14px] text-sec-text">
+          Sign in to post — takes a few seconds.
+        </p>
 
-          {!session ? (
-            renderInputArea()
-          ) : (
-            <form
-              onSubmit={handleCreateMessage}
-              className="w-full flex flex-col gap-4"
+        {!session ? (
+          renderInputArea()
+        ) : (
+          <form
+            onSubmit={handleCreateMessage}
+            className="w-full flex flex-col gap-4"
+          >
+            <textarea
+              placeholder="Leave something behind"
+              name="message"
+              id="message"
+              value={dataMessages}
+              onChange={(e) => setDataMessages(e.target.value)}
+              className="w-full min-h-[100px] border mt-4 border-accent-border outline-none rounded-[8px] bg-accent-tint p-4 hsb2 text-main-text placeholder:text-[14px]"
+            />
+            <button
+              type="submit"
+              className="py-2 w-full flex justify-center items-center gap-2 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label bg-accent-tint hover:bg-accent-tint/50 border border-accent-border hover:border-accent-border group "
             >
-              <textarea
-                placeholder="Leave something behind"
-                name="message"
-                id="message"
-                value={dataMessages}
-                onChange={(e) => setDataMessages(e.target.value)}
-                className="w-full min-h-[100px] border mt-4 border-accent-border outline-none rounded-[8px] bg-accent-tint p-4 hsb2 text-main-text placeholder:text-[14px]"
-              />
-              <button
-                type="submit"
-                className="py-2 w-full flex justify-center items-center gap-2 cursor-pointer rounded-[8px] transition-all duration-300 ease-out text-[14px] text-main-text font-label bg-accent-tint hover:bg-accent-tint/50 border border-accent-border hover:border-accent-border group "
-              >
-                Post
-                <Send size={18} />
-              </button>
-            </form>
-          )}
-        </div>
-      )}
+              Post
+              <Send size={18} />
+            </button>
+          </form>
+        )}
+      </div>
 
       {messages.map((item, idx) => (
         <MessageBox key={idx} item={item} />
