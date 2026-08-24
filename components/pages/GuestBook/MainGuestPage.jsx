@@ -11,16 +11,22 @@ const MainGuestPage = () => {
   const [timeAgo, setTimeAgo] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
     const handleFetchMessages = async () => {
       setLoading(true);
+
       const messages = await GetMessages();
-      if (!messages) return;
+
+      if (!messages) {
+        setLoading(false);
+        return;
+      }
+
       setMessages(messages);
       setLoading(false);
     };
 
-    await handleFetchMessages();
+    handleFetchMessages();
   }, []);
 
   useEffect(() => {
@@ -51,7 +57,11 @@ const MainGuestPage = () => {
       )}
     >
       <HeadingSection messages={messages.length} latestUploaded={timeAgo} />
-      <GuestList messages={messages} latestMessage={latestMessage} />
+      <GuestList
+        loading={loading}
+        messages={messages}
+        latestMessage={latestMessage}
+      />
     </div>
   );
 };
