@@ -3,6 +3,7 @@ import { Globe, Smartphone, Palette, Search, Wrench, Bot } from "lucide-react";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
 import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
 import Folder from "@/components/ui/Folder";
+import ServiceFolder from "./ServiceFolder";
 
 const ServicesSection = () => {
   const IconStyles = "size-4 text-accent-main";
@@ -66,6 +67,8 @@ const ServicesSection = () => {
             </p>
           </div>
         ))}
+
+        {/* <ServiceFolder /> */}
       </div>
 
       <div className="w-full row-span-1 md:h-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">

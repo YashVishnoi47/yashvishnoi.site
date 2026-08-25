@@ -37,7 +37,7 @@ export default function Home() {
         className={"w-full flex flex-col gap-20 justify-center items-center"}
       >
         <HeadingBox
-          heading={"End-to-End Web Development"}
+          heading={"End-to-End Website Development"}
           subheading={
             "From the first idea to a polished, production-ready website, I handle every stage of the build."
           }
