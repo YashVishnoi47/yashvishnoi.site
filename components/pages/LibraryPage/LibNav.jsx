@@ -26,11 +26,11 @@ const LibNav = () => {
     <div
       className={cn(
         "w-full",
-        "flex justify-between md:px-0 px-4 h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10000",
+        "flex justify-between md:px-0 px-4 h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10000 sticky top-0",
       )}
     >
       <div className="sm:w-[30%] w-full h-full flex gap-3 justify-start items-center">
-        <Link href="/library" className="flex gap-3 justify-start items-center">
+        <Link href="/library/components" className="flex gap-3 justify-start items-center">
           <div className="size-10 rounded-[4px] flex justify-center items-center border border-main-border bg-sec-bg text-accent-main font-label">
             UI
           </div>

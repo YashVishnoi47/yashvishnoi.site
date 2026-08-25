@@ -42,10 +42,6 @@ const Navbar = () => {
       name: "Services",
       href: "/#services",
     },
-    // {
-    //   name: "Blog",
-    //   href: "/blog",
-    // },
   ];
 
   return (
@@ -138,19 +134,24 @@ const Navbar = () => {
                 "bg-main-bg flex flex-col gap-2 border relative z-100000 border-main-border h-fit mr-2 mt-5"
               }
             >
-              <PopoverHeader>
-                {Links.map((item, idx) => {
-                  return (
-                    <Link
-                      href={item.href}
-                      key={idx}
-                      className="text-[14px] w-full py-2 text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out flex justify-start items-start"
-                    >
-                      {item.name}
-                    </Link>
-                  );
-                })}
-              </PopoverHeader>
+              {Links.map((item, idx) => {
+                return (
+                  <Link
+                    href={item.href}
+                    key={idx}
+                    className="text-[14px] w-full py-2 text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out flex justify-start items-start"
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
+
+              <Link
+                href={"/guestbook"}
+                className="text-[14px] w-full py-2 text-sec-text font-body hover:text-main-text transition-all duration-200 ease-in-out flex justify-start items-start"
+              >
+                Guestbook
+              </Link>
             </PopoverContent>
           </Popover>
         </div>

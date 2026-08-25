@@ -1,0 +1,105 @@
+"use client";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
+const SweepButton = ({ text }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const MotionLink = motion(Link);
+  const MotionArrowUpRight = motion(ArrowUpRight);
+  const easing = [0.19, 1, 0.22, 1];
+
+  return (
+    <motion.button
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      initial={{ backgroundColor: "#ffffff", scale: 1 }}
+      animate={{
+        backgroundColor: isHovered ? "#000000" : "#ffffff",
+        scale: isHovered ? 1.1 : 1,
+      }}
+      whileTap={{ scale: 1 }}
+      transition={{
+        duration: 1,
+        ease: easing,
+      }}
+      className="p-2 flex gap-3 justify-center items-center text-[15px] text-black rounded-full cursor-pointer relative overflow-hidden "
+    >
+      <motion.span
+        animate={{ color: isHovered ? "#ffffff" : "#000000" }}
+        transition={{
+          duration: 1,
+          ease: easing,
+        }}
+        className="ml-2 relative z-2"
+      >
+        {text}
+      </motion.span>
+
+      <div className="size-7 flex justify-center items-center aspect-square rounded-full bg-black relative overflow-hidden z-2">
+        <AnimatePresence mode="sync">
+          {!isHovered ? (
+            <MotionArrowUpRight
+              key={2}
+              initial={{
+                translateY: !isHovered ? -30 : 0,
+                translateX: !isHovered ? 30 : 0,
+              }}
+              animate={{
+                translateY: !isHovered ? 0 : -30,
+                translateX: !isHovered ? 0 : 30,
+              }}
+              exit={{
+                translateY: -30,
+                translateX: 30,
+              }}
+              transition={{
+                duration: 1,
+                ease: easing,
+              }}
+              className="text-white size-4.5 absolute"
+            />
+          ) : (
+            <MotionArrowUpRight
+              key={1}
+              initial={{
+                translateY: 30,
+                translateX: -30,
+              }}
+              animate={{
+                translateY: 0,
+                translateX: 0,
+              }}
+              exit={{
+                translateY: 30,
+                translateX: -30,
+              }}
+              transition={{
+                duration: 1,
+                ease: easing,
+              }}
+              className="text-white size-4.5 absolute"
+            />
+          )}
+        </AnimatePresence>
+      </div>
+
+      <motion.div
+        initial={{ width: "28px", height: "28px" }}
+        animate={{
+          width: isHovered ? "100%" : "28px",
+          height: isHovered ? "100%" : "28px",
+          right: isHovered ? 0 : "8px",
+        }}
+        transition={{
+          duration: 0.5,
+          ease: easing,
+        }}
+        className="absolute top-1/2 -translate-y-1/2 right-2 size7 rounded-full bg-black z-1"
+      />
+    </motion.button>
+  );
+};
+
+export default SweepButton;

@@ -100,7 +100,7 @@ const NavOptionsMenu = ({ open, setOpen }) => {
             {open && (
               <MotionLink
                 className="w-1/3 aspect-square bg-white/10 rounded-[12px] flex justify-center items-end overflow-hidden relative cursor-pointer group p-2"
-                href="/library"
+                href="/library/components"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
