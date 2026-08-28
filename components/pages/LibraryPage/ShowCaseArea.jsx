@@ -17,7 +17,7 @@ const ShowCaseArea = ({ show, registries }) => {
 
 
   return (
-    <div className="w-full h-fit grid grid-cols-3 gap-6 justify-center items-start">
+    <div className="w-full h-fit grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-6 justify-center items-start">
       {filteredRegistries.map((item, idx) => (
         <MotionLink
           href={`/library/components/${item.name.replace(" ", "-").toLowerCase()}`}

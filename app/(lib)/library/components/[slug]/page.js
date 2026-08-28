@@ -25,12 +25,12 @@ const page = async ({ params }) => {
   }
 
   return (
-    <div className="w-full flex flex-col justify-start items-center min-h-screen">
-      <div className="w-[80%] h-fit flex flex-col gap-12 justify-start items-start">
+    <div className="w-full flex flex-col justify-start items-start min-h-screen">
+      <div className="w-full h-fit flex flex-col gap-12 justify-start items-start">
         <LibHeading
           heading={component.name}
           subHeading={component.description}
-          className={"md:w-[80%]"}
+          tag={"Component"}
         />
 
         <CodeBox code={code} component={component} />

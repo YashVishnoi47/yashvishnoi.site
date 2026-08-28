@@ -43,6 +43,8 @@ const ComponentsPage = async ({ searchParams }) => {
         subHeading={
           "Every reusable piece from yashvishnoi.site, laid out for a quick scan. Click through to a component for the full preview and code."
         }
+        tag={"Coming soon"}
+        className="md:w-full"
       />
 
       <div className="w-full h-fit flex flex-col gap-10">

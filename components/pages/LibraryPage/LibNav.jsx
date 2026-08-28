@@ -6,11 +6,15 @@ import React, { useEffect, useState } from "react";
 import SearchDialog from "./SearchDialog";
 
 const LibNav = () => {
+  const [open, setOpen] = useState(false);
+  const url = window.location.href;
+  console.log(url.includes("components"));
+
   const links = [
     {
       name: "Components",
       href: "/library/components",
-      soon: true,
+      // soon: true,
     },
     {
       name: "Templates",
@@ -23,7 +27,6 @@ const LibNav = () => {
       soon: true,
     },
   ];
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -70,7 +73,10 @@ const LibNav = () => {
           <button
             key={idx}
             disabled={item.soon}
-            className="px-2 py-2 text-[13px] text-sec-text flex gap-2 justify-center items-center cursor-pointer hover:bg-accent-tint hover:border-accent-border rounded-[6px] transition-all duration-200 ease-in-out active:scale-[0.99] hover:text-accent-main disabled:cursor-not-allowed disabled:text-faint-text disabled:hover:bg-sec-bg disabled:hover:border-main-border"
+            className={cn(
+              "px-2 py-2 text-[13px] text-sec-text flex gap-2 justify-center items-center cursor-pointer hover:bg-accent-tint hover:border-accent-border rounded-[6px] transition-all duration-200 ease-in-out active:scale-[0.99] hover:text-accent-main disabled:cursor-not-allowed disabled:text-faint-text disabled:hover:bg-sec-bg disabled:hover:border-main-border font-label",
+              url.includes(item.name.toLocaleLowerCase().replace(" ", "-")) && "text-accent-main bg-accent-tint",
+            )}
           >
             {item.name}
 
