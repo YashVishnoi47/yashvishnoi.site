@@ -3,9 +3,8 @@ import FiltersBar from "@/components/pages/LibraryPage/FiltersBar";
 import LibHeading from "@/components/pages/LibraryPage/LibHeading";
 import ShowCaseArea from "@/components/pages/LibraryPage/ShowCaseArea";
 import { cn } from "@/lib/utils";
-import { redirect } from "next/navigation";
 import React from "react";
-import { ButtonsRegistry, IconsRegistry } from "@/LibraryDatabase/registry";
+import { ButtonsRegistry, MotionIconsRegistry } from "@/LibraryDatabase/registry";
 
 export const metadata = {
   title: "Components Library",
@@ -26,11 +25,11 @@ export const metadata = {
 const ComponentsPage = async ({ searchParams }) => {
   const params = await searchParams;
   const show = params.show;
-  const registries = [...ButtonsRegistry, ...IconsRegistry];
+  const registries = [...ButtonsRegistry, ...MotionIconsRegistry];
 
-  if (process.env.NEXT_PUBLIC_ENV === "prod") {
-    return <ComingSoon />;
-  }
+  // if (process.env.NEXT_PUBLIC_ENV === "prod") {
+  //   return <ComingSoon />;
+  // }
 
   return (
     <div

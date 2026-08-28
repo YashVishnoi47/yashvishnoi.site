@@ -3,13 +3,15 @@ import RightArrowSVG from "@/assets/svg/RightArrowSVG";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { easing } from "@/lib/utils";
+import Link from "next/link";
 
 const ShowCaseArea = ({ show, registries }) => {
+  const MotionLink = motion(Link);
   const [hovered, setHovered] = useState(null);
   const filteredRegistries = !show
     ? registries
     : registries.filter(
-        (item) => item.category.toLowerCase() === show,
+        (item) => item.category.toLowerCase().replace(" ", "-") === show.toLowerCase().replace(" ", "-"),
       );
 
 
@@ -17,7 +19,8 @@ const ShowCaseArea = ({ show, registries }) => {
   return (
     <div className="w-full h-fit grid grid-cols-3 gap-6 justify-center items-start">
       {filteredRegistries.map((item, idx) => (
-        <motion.div
+        <MotionLink
+          href={`/library/components/${item.name.replace(" ", "-").toLowerCase()}`}
           key={idx}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 1, ease: easing }}
@@ -41,7 +44,7 @@ const ShowCaseArea = ({ show, registries }) => {
 
             <RightArrowSVG hovered={hovered === idx} />
           </div>
-        </motion.div>
+        </MotionLink>
       ))}
     </div>
   );

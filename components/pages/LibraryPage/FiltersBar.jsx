@@ -11,7 +11,7 @@ const FiltersBar = ({ registries, show }) => {
   categories.unshift(`All - ${registries.length}`);
 
   return (
-    <div className="w-full h-10 flex gap-2 justify-start items-center sticky top-20 bg-main-bg z-1000">
+    <div className="w-full h-10 flex gap-2 justify-start items-center sticky top-20 bg-main-bg z-10">
       {categories.map((item, idx) => (
         <MotionLink
           scroll={false}

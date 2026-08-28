@@ -1,7 +1,9 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import SearchDialog from "./SearchDialog";
 
 const LibNav = () => {
   const links = [
@@ -21,16 +23,35 @@ const LibNav = () => {
       soon: true,
     },
   ];
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setOpen(true);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div
       className={cn(
         "w-full",
-        "flex justify-between md:px-0 px-4 h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10000 sticky top-0",
+        "flex justify-between md:px-0 px-4 h-20 items-center bg-main-bg/90 backdrop-blur-2xl z-10 sticky top-0",
       )}
     >
       <div className="sm:w-[30%] w-full h-full flex gap-3 justify-start items-center">
-        <Link href="/library/components" className="flex gap-3 justify-start items-center">
+        <Link
+          href="/library/components"
+          className="flex gap-3 justify-start items-center"
+        >
           <div className="size-10 rounded-[4px] flex justify-center items-center border border-main-border bg-sec-bg text-accent-main font-label">
             UI
           </div>
@@ -64,7 +85,10 @@ const LibNav = () => {
 
       <div className="sm:w-[32%] w-full h-full flex gap-6 justify-end items-center">
         {/* Search */}
-        <div className="w-[50%] h-10 px-2 py-1 md:flex hidden justify-between items-center border-main-border border rounded-[4px] hover:bg-sec-bg cursor-pointer transition-all duration-300 ease-in-out active:scale-[0.97]">
+        <div
+          onClick={() => setOpen(!open)}
+          className="w-[50%] h-10 px-2 py-1 md:flex hidden justify-between items-center border-main-border border rounded-[4px] hover:bg-sec-bg cursor-pointer transition-all duration-300 ease-in-out active:scale-[0.97]"
+        >
           <span className="text-[12px] text-faint-text font-label">
             Search...
           </span>
@@ -72,6 +96,7 @@ const LibNav = () => {
             ⌘ K
           </span>
         </div>
+        <SearchDialog open={open} setOpen={setOpen} />
 
         <Link
           href="/"
