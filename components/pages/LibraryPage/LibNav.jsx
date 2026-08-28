@@ -4,11 +4,12 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import SearchDialog from "./SearchDialog";
+import { usePathname } from "next/navigation";
 
 const LibNav = () => {
   const [open, setOpen] = useState(false);
-  const url = window?.location?.href;
-  console.log(url.includes("components"));
+
+  const url = usePathname();
 
   const links = [
     {
@@ -75,7 +76,8 @@ const LibNav = () => {
             disabled={item.soon}
             className={cn(
               "px-2 py-2 text-[13px] text-sec-text flex gap-2 justify-center items-center cursor-pointer hover:bg-accent-tint hover:border-accent-border rounded-[6px] transition-all duration-200 ease-in-out active:scale-[0.99] hover:text-accent-main disabled:cursor-not-allowed disabled:text-faint-text disabled:hover:bg-sec-bg disabled:hover:border-main-border font-label",
-              url.includes(item.name.toLocaleLowerCase().replace(" ", "-")) && "text-accent-main bg-accent-tint",
+              url.includes(item.name.toLocaleLowerCase().replace(" ", "-")) &&
+                "text-accent-main bg-accent-tint",
             )}
           >
             {item.name}
