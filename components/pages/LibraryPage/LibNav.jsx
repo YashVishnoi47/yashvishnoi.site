@@ -7,7 +7,7 @@ import SearchDialog from "./SearchDialog";
 
 const LibNav = () => {
   const [open, setOpen] = useState(false);
-  const url = window.location.href;
+  const url = window?.location?.href;
   console.log(url.includes("components"));
 
   const links = [
