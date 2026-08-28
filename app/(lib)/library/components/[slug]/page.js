@@ -1,3 +1,4 @@
+import ComingSoon from "@/components/layout/ComingSoon";
 import CodeBox from "@/components/pages/CodePage/CodeBox";
 import LibHeading from "@/components/pages/LibraryPage/LibHeading";
 import { getComponentCode } from "@/lib/getCode";
