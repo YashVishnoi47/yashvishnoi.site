@@ -40,11 +40,14 @@ const Footer = () => {
       type: "More",
       l: [
         { name: "Guestbook", href: "/guestbook" },
+        { name: "Components", href: "/library/components" },
         { name: "Book a call", href: "/" },
-        { name: "Contact", href: "/" },
+        { name: "Bolg", href: "/blog" },
       ],
     },
   ];
+
+
   return (
     <div className="w-full flex flex-col h-fit">
       <div className="w-full h-fit border-t border-main-border py-8 md:px-0 px-2 flex md:flex-row flex-col justify-between items-center">

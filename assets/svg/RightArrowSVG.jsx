@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { easing } from "@/lib/utils";
+import { cn, easing } from "@/lib/utils";
 
-const RightArrowSVG = ({ hovered }) => {
-
+const RightArrowSVG = ({ hovered, className }) => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +15,10 @@ const RightArrowSVG = ({ hovered }) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-arrow-right-icon lucide-arrow-right mr-2"
+      className={cn(
+        "lucide lucide-arrow-right-icon lucide-arrow-right mr-2",
+        className,
+      )}
       initial={{ x: 0 }}
       animate={{ x: hovered ? 10 : 0 }}
       transition={{ duration: 0.9, ease: easing }}

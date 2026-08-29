@@ -30,9 +30,10 @@ const SearchDialog = ({ open, setOpen }) => {
             <CommandGroup heading="Components">
               {comps.map((registry, idx) => (
                 <Link
+                  key={idx}
                   href={`/library/components/${registry.name.replace(" ", "-").toLowerCase()}`}
                 >
-                  <CommandItem className="cursor-pointer" key={idx}>
+                  <CommandItem className="cursor-pointer">
                     <ArrowRight />
                     <span>{registry.name}</span>
                     <CommandShortcut>↵</CommandShortcut>

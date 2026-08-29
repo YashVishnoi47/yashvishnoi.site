@@ -1,5 +1,8 @@
 import ComingSoon from "@/components/layout/ComingSoon";
 import CodeBox from "@/components/pages/CodePage/CodeBox";
+import Installation from "@/components/pages/CodePage/Installation";
+import NextPrevious from "@/components/pages/CodePage/NextPrevious";
+import PropsTable from "@/components/pages/CodePage/PropsTable";
 import LibHeading from "@/components/pages/LibraryPage/LibHeading";
 import { getComponentCode } from "@/lib/getCode";
 import { ButtonsRegistry } from "@/LibraryDatabase/registry";
@@ -25,7 +28,7 @@ const page = async ({ params }) => {
   }
 
   return (
-    <div className="w-full flex flex-col justify-start items-start min-h-screen">
+    <div className="w-full flex flex-col justify-start items-start min-h-screen pb-30">
       <div className="w-full h-fit flex flex-col gap-12 justify-start items-start">
         <LibHeading
           heading={component.name}
@@ -34,6 +37,10 @@ const page = async ({ params }) => {
         />
 
         <CodeBox code={code} component={component} />
+        <Installation code={code} component={component} />
+        <PropsTable component={component} />
+
+        <NextPrevious registries={AllRegistries} component={component} />
       </div>
     </div>
   );
