@@ -6,6 +6,8 @@ import AboutSection from "@/components/pages/HomePage/AboutSection";
 import FAQ from "@/components/pages/HomePage/FAQ";
 import AnimateAll from "@/components/layout/AnimateAll";
 import { cn } from "@/lib/utils";
+import ClientWorkSection from "@/components/pages/HomePage/ClientWorkSection";
+import ProcessSection from "@/components/pages/HomePage/ProcessSection";
 
 export default function Home() {
   return (
@@ -22,14 +24,16 @@ export default function Home() {
         id={"work"}
       >
         <HeadingBox
-          heading={"Products and systems I've shipped"}
+          heading={"Buisnesses We have worked with"}
           subheading={
-            "A mix of client engineering and my own product, built end to end — design through deployment."
+            "A look at the websites we’ve built to help law firms and businesses."
           }
-          tag={"Selected work"}
+          tag={"Client Projects"}
         />
 
-        <WorkSection />
+        <div className="w-full h-fit flex flex-col gap-6 justify-center items-center">
+          <ClientWorkSection />
+        </div>
       </AnimateAll>
 
       <AnimateAll
@@ -46,6 +50,21 @@ export default function Home() {
 
         <ServicesSection />
       </AnimateAll>
+
+      {/* <AnimateAll
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
+        id={"work"}
+      >
+        <HeadingBox
+          heading={"Products and systems I've shipped"}
+          subheading={
+            "A mix of client engineering and my own product, built end to end — design through deployment."
+          }
+          tag={"Selected work"}
+        />
+
+        <WorkSection />
+      </AnimateAll> */}
 
       <AnimateAll
         id={"about"}

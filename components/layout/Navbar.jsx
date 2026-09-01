@@ -54,7 +54,7 @@ const Navbar = () => {
         "flex justify-center items-center bg-main-bg/90 backdrop-blur-2xl z-10000",
       )}
     >
-      <div className={cn("w-[100%] h-20", "flex justify-between items-center")}>
+      <div className={cn("w-[100%] h-23", "flex justify-between items-center")}>
         <div
           className={cn(
             "sm:w-[30%] w-full h-full",

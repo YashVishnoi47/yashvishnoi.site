@@ -1,7 +1,6 @@
 import { GetMessages } from "@/lib/funtion";
 import React from "react";
 import MessageBox from "../GuestBook/MessageBox";
-import CardButton from "@/components/ui/CardButton";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";

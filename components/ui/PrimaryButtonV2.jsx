@@ -28,22 +28,23 @@ const PrimaryButtonV2 = ({ text, className }) => {
       <motion.div
         className={cn(
           "h-full aspect-square rounded-[4px]",
-          "flex justify-center items-center overflow-hidden relative z-2 bg-white text-black",
+          "flex justify-center items-center overflow-hidden relative z-2 bg-white text-black relative",
         )}
         style={{ order: hover ? 2 : 1 }}
         transition={{ duration: 0.9, ease: easing }}
         initial={{ rotate: 0 }}
-        animate={{ rotate: hover ? 360 : 0 }}
+        animate={{ rotate: hover ? 180 : 0 }}
         layout
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
           {!hover ? (
             <motion.div
               key={2}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               className="w-full h-full flex justify-center items-center absolute inset-0"
-              transition={{ duration: 0.1, ease: easing }}
+              transition={{ duration: 0.3, ease: easing }}
             >
               <ArrowRight className="opacity-60" />
             </motion.div>
@@ -52,8 +53,9 @@ const PrimaryButtonV2 = ({ text, className }) => {
               key={1}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, ease: easing }}
-              className="w-full h-full object-cover border border-white"
+              transition={{ duration: 0.3, ease: easing }}
+              exit={{ opacity: 0 }}
+              className="w-full h-full object-cover border border-white rotate-180 absolute inset-0"
               src="/me/me.png"
               unoptimized
               width={24}
@@ -68,7 +70,10 @@ const PrimaryButtonV2 = ({ text, className }) => {
         style={{ order: hover ? 1 : 2 }}
         layout
         transition={{ duration: 0.9, ease: easing }}
-        className={cn("text-[14px] font-medium font-body relative text-text-main z-1", "mr-2")}
+        className={cn(
+          "text-[14px] font-medium font-body relative text-text-main z-1",
+          "mr-2",
+        )}
       >
         {text || "Click me"}
       </motion.span>

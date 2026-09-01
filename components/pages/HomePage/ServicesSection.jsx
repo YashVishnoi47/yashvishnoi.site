@@ -1,16 +1,21 @@
-import React from "react";
-import { Globe, Smartphone, Palette, Search, Wrench, Bot } from "lucide-react";
+"use client"
+import React ,{ useState } from "react";
+import { Globe as Globee, Smartphone, Palette, Search, Wrench, Bot, ArrowRight } from "lucide-react";
 import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
 import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
 import Folder from "@/components/ui/Folder";
 import ServiceFolder from "./ServiceFolder";
-
+import Globe from "@/components/ui/Globe";
+import Link from "next/link";
+import {motion} from "framer-motion";
+import { cn } from "@/lib/utils";
+import ProjectButton from "@/components/ui/ProjectButton";
 const ServicesSection = () => {
   const IconStyles = "size-4 text-accent-main";
 
   const Services = [
     {
-      icon: <Globe className={IconStyles} />,
+      icon: <Globee className={IconStyles} />,
       heading: "Custom Websites",
       subheading:
         "A site built around your business, not a template — fast, clean, and yours.",
@@ -71,35 +76,33 @@ const ServicesSection = () => {
         {/* <ServiceFolder /> */}
       </div>
 
-      <div className="w-full row-span-1 md:h-full h-fit bg-card-bg border border-main-border rounded-[12px] flex justify-between items-center md:flex-row flex-col-reverse">
-        <div
-          className={
-            "h-full md:w-[55%] w-full flex gap-6 flex-col justify-start items-start md:p-10 p-8"
-          }
-        >
-          <p className="text-[12px] text-accent-main font-label uppercase tracking-wider">
-            GET STARTED
-          </p>
-          <p className="text-main-text font-head text-[28px] text-pretty">
-            Let's Discuss Your Project
-          </p>
-          <p className="text-[16px] w-[90%] text-sec-text text-pretty tracking-wide leading-[1.5]">
-            A short call to understand your goals, followed by a working preview
-            of your site — so you know exactly what you're getting before any
-            commitment is made.
+      <div className="w-full md:h-100 h-fit flex gap-4 justify-start items-start rounded-[8px] bg-sec-bg border border-main-border">
+        <div className="w-1/2 h-full flex flex-col gap-4 justify-start items-start p-8">
+          <p className="text-[20px] font-head text-main-text font-medium">
+            Global Website Development.{" "}
           </p>
 
-          <BookaCallPopUp>
-            <PrimaryButtonV2 text={"Start a Project"} />
-          </BookaCallPopUp>
+          <p className="md:text-[16px] text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5]">
+            High-performance websites designed to make your business look
+            credible, stand out from competitors, and turn visitors into
+            customers.
+          </p>
+
+          <div className="w-[46%] mt-8 flex gap-2 flex-col justify-start items-start">
+            <span className="text-[14px] text-sec-text font-label">
+              Worked with 10+ Businesses and Law Firms
+            </span>
+            <Link href="/" className={"mt-2"}>
+              <BookaCallPopUp>
+                {/* <ProjectButton text={"Work with me"} /> */}
+                <PrimaryButtonV2 text={"Talk with Yash"} />
+              </BookaCallPopUp>
+            </Link>
+          </div>
         </div>
 
-        <div
-          className={
-            "md:w-[45%] w-full md:h-full flex justify-center items-center h-fit bg-sec-bg border-l border-main-border"
-          }
-        >
-          <Folder />
+        <div className="w-1/2 h-full flex flex-col gap-4 justify-center items-center relative overflow-hidden">
+          <Globe />
         </div>
       </div>
     </div>
@@ -107,3 +110,7 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
+
+
+

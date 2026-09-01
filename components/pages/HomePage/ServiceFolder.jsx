@@ -4,14 +4,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { easing } from "@/lib/utils";
 
-const ServiceFolder = ({ InnerCards }) => {
+const ServiceFolder = ({ heading, subheading  }) => {
   const [hover, setHover] = useState(false);
 
 const InnerCard3 = [
   {
     name: "1",
     image: "/screenshots/legalintakeos.png",
-    cls: "bg-blue-200 rounded-xl absolute h-35 left-1/2 shadow-xl overflow-hidden p-1",
+    cls: "bg-[#E3A34C] rounded-[12px] absolute h-35 left-1/2 shadow-xl overflow-hidden p-[2px]",
 
     initialWidth: "78%",
     initialX: "-48%",
@@ -31,7 +31,7 @@ const InnerCard3 = [
   {
     name: "2",
     image: "/screenshots/portfolio.png",
-    cls: "bg-red-500 rounded-xl absolute h-35 left-1/2 shadow-2xl overflow-hidden p-1",
+    cls: "bg-[#E3A34C] rounded-[12px] absolute h-35 left-1/2 shadow-2xl overflow-hidden p-[2px]",
 
     initialWidth: "78%",
     initialX: "-50%",
@@ -104,7 +104,7 @@ const InnerCard3 = [
             width={100}
             height={100}
             alt="folder"
-            className="w-full h-full rounded-[16px] "
+            className="w-full h-full rounded-[8px] "
           />
         </motion.div>
       ))}

@@ -14,7 +14,7 @@ const HeroSection = () => {
     <div
       className={cn(
         "w-full h-fit",
-        "flex flex-col sm:gap-8 gap-6 justify-center items-start sm:mt-30 mt-20",
+        "flex flex-col sm:gap-8 gap-6 justify-center items-start mt-20 ",
       )}
     >
       <BookaCallPopUp>

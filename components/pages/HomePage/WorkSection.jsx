@@ -36,7 +36,9 @@ const WorkSection = () => {
       name: "My Portfolio",
       link: "https://yashvishnoi.site",
       desc: "A custom-built developer portfolio designed to showcase my projects, skills, and experience through a clean, interactive, and responsive interface.",
-      icon: <Image src="/website-logo.svg" width={160} height={160} alt="yash" />,
+      icon: (
+        <Image src="/website-logo.svg" width={160} height={160} alt="yash" />
+      ),
       tech: [
         {
           name: "Next.js",
@@ -107,7 +109,7 @@ const WorkSection = () => {
         ))}
       </div>
 
-      <div className="w-full flex justify-center gap-6 items-start md:flex-row flex-col">
+      {/* <div className="w-full flex justify-center gap-6 items-start md:flex-row flex-col">
         <div className="md:w-1/2 w-full md:h-60 h-fit p-8 flex flex-col gap-4 justify-center items-start rounded-[8px] bg-sec-bg border border-main-border">
           <p className="text-[20px] font-head text-main-text font-medium">
             Website Services and AI Automation
@@ -141,7 +143,7 @@ const WorkSection = () => {
             </BookaCallPopUp>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -167,11 +169,9 @@ const ProjectButton = ({ text }) => {
         layout
         transition={{ duration: 0.9, ease: easing }}
         initial={{ rotate: 0 }}
-        animate={
-          {
-            //   rotate: hovered ? 360 : 0,
-          }
-        }
+        animate={{
+          rotate: hovered ? 180 : 0,
+        }}
         className={cn(
           "z-2 size-[20px] bg-accent-main flex justify-center items-center rounded-[4px]",
         )}
@@ -179,7 +179,7 @@ const ProjectButton = ({ text }) => {
         <MotionArrowRight
           size={16}
           initial={{ rotate: -45 }}
-          animate={{ rotate: hovered ? 0 : -45 }}
+          animate={{ rotate: hovered ? 180 : -45 }}
           transition={{ duration: 0.9, ease: easing }}
           className="text-main-text"
         />

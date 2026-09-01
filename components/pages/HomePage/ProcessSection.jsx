@@ -1,5 +1,8 @@
 "use client";
-import CardButton from "@/components/ui/CardButton";
+import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
+import Folder from "@/components/ui/Folder";
+import PrimaryButtonV2 from "@/components/ui/PrimaryButtonV2";
+import ProjectButton from "@/components/ui/ProjectButton";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -19,7 +22,7 @@ import {
 const ProcessSection = () => {
   const iconsClasses = "size-5 text-accent-main";
 
-  const techStack = [
+  const Clients = [
     {
       name: "Next.js",
       icon: <SiNextdotjs className={iconsClasses} />,
@@ -71,31 +74,45 @@ const ProcessSection = () => {
       image: "/techIcons/next.svg",
     },
   ];
+
   return (
-    <div id="process" className="w-full h-100 grid gap-4 grid-cols-3">
-      <div className="w-full h-full flex flex-col justify-center items-center border border-main-border rounded-[8px] gap-2 bg-card-bg p-4">
+    <div id="process" className="w-full h-fit grid gap-6 grid-cols-3">
+      <div className="w-full h-100 flex flex-col justify-center items-center border border-main-border rounded-[8px] gap-2 bg-sec-bg p-4">
         <div className="w-full h-[75%] "></div>
 
         <div className="w-full h-[25%] flex gap-3 flex-col justify-center items-start">
           <p className="text-[20px] text-main-text font-head font-medium">
             Design and Development
           </p>
-          <CardButton text={"Book The Call"} />
+          <ProjectButton text={"Book The Call"} />
         </div>
       </div>
 
-      <div className="col-span-2 gap-4 grid grid-rows-3 w-full h-full">
-        <div className="grid grid-cols-2 gap-4 w-full row-span-2 min-h-0 min-w-0">
-          <div className="cols-span-1 w-full h-full flex flex-col justify-center items-center  border border-main-border rounded-[8px] bg-card-bg p-4">
-            <div className="w-full h-[15%] flex gap-3 flex-col justify-center items-start">
-              <p className="text-[20px] text-main-text font-head font-medium">
-                Get found on Google
+      <div className="col-span-2 gap-6 grid grid-rows-3 w-full h-100">
+        <div className="grid grid-cols-2 gap-6 w-full row-span-2 min-h-0 min-w-0">
+          <div className="cols-span-1 w-full h-full flex flex-col justify-between items-center  border border-accent-border rounded-[8px] bg-accent-tint ">
+            <div className="w-full h-fit flex gap-3 flex-col justify-center items-start p-4">
+              <p className="md:text-[16px] text-[14px] font-body text-sec-text text-pretty tracking-wide leading-[1.5]">
+                "High-performance websites designed to make your business look
+                credible, stand out from competitors, and turn visitors into
+                customers."
               </p>
             </div>
-            <div className="w-full h-[85%] "></div>
+
+            <div className="w-full h-fit p-4 border-t border-accent-border flex gap-3 justify-start items-center">
+              <div className="size-10 bg-white/10 border border-main-border rounded-full" />
+              <div className="flex flex-col justify-center items-start">
+                <span className="text-[15px] text-main-text font-medium">
+                  Alivin Okoli
+                </span>
+                <span className="text-[12px] text-faint-text font-medium">
+                  Co-Founder
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div className="cols-span-1 w-full h-full flex flex-col justify-center items-center  border border-main-border rounded-[8px] bg-card-bg p-4">
+          <div className="cols-span-1 w-full h-full flex flex-col justify-center items-center  border border-main-border rounded-[8px] bg-sec-bg p-4">
             <div className="w-full h-[85%] "></div>
 
             <div className="w-full h-[15%] flex gap-3 flex-col justify-center items-start">
@@ -106,14 +123,14 @@ const ProcessSection = () => {
           </div>
         </div>
 
-        <div className="row-span-1 flex justify-center items-center w-full h-full border border-main-border rounded-[8px] bg-card-bg px-4 min-h-0 min-w-0 overflow-hidden">
-          <div className="h-full w-[30%] flex justify-start items-center">
+        <div className="row-span-1 flex justify-center items-center w-full h-full border border-main-border rounded-[8px] bg-sec-bg px-4 min-h-0 min-w-0 overflow-hidden gap-4">
+          <div className="h-full w-[25%] flex justify-start items-center">
             <p className="text-[20px] text-main-text font-head font-medium">
-              Technologies I use
+              Worked With
             </p>
           </div>
 
-          <div className="h-full w-[70%] flex justify-center items-center">
+          <div className="h-full w-[75%] flex justify-center items-center">
             <Marquee
               gradient={true}
               gradientWidth={10}
@@ -121,7 +138,7 @@ const ProcessSection = () => {
               pauseOnHover={true}
               direction={"left"}
             >
-              {techStack.map((tech, index) => (
+              {Clients.map((tech, index) => (
                 <div className="bg-sec-bg size-15 border-main-border mr-2 ml-2 flex justify-center items-center rotate-[8px]">
                   <Image
                     src={tech.image}
