@@ -77,7 +77,7 @@ const ServicesSection = () => {
       </div>
 
       <div className="w-full md:h-100 h-fit flex gap-4 justify-start items-start rounded-[8px] bg-sec-bg border border-main-border">
-        <div className="w-1/2 h-full flex flex-col gap-4 justify-start items-start p-8">
+        <div className="md:w-1/2 w-full h-full flex flex-col gap-4 justify-start items-start p-8">
           <p className="text-[20px] font-head text-main-text font-medium">
             Global Website Development.{" "}
           </p>
@@ -88,7 +88,7 @@ const ServicesSection = () => {
             customers.
           </p>
 
-          <div className="w-[46%] mt-8 flex gap-2 flex-col justify-start items-start">
+          <div className="md:w-[46%] w-[70%] mt-8 flex gap-2 flex-col justify-start items-start">
             <span className="text-[14px] text-sec-text font-label">
               Worked with 10+ Businesses and Law Firms
             </span>
@@ -101,7 +101,7 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        <div className="w-1/2 h-full flex flex-col gap-4 justify-center items-center relative overflow-hidden">
+        <div className="w-1/2 h-full md:flex hidden flex-col gap-4 justify-center items-center relative overflow-hidden">
           <Globe />
         </div>
       </div>

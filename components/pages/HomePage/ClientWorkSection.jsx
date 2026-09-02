@@ -36,10 +36,10 @@ const ClientWorkSection = () => {
     },
     {
       Label: "Website",
-      name: "Meridian Immigration Law",
-      image: "/screenshots/clinetProject/Meridian.png",
+      name: "Jeffrey Stoller",
+      image: "/screenshots/clinetProject/JeffreyStoller.png",
       link: "https://yashvishnoi.pro",
-      desc: "Designed and developed a professional law firm website with a conversion-focused structure, SEO optimization, responsive design, and subtle microinteractions.",
+      desc: "Designed and developed a professional website with a conversion-focused structure, SEO optimization, responsive design, and subtle microinteractions.",
       tech: [
         { name: "Design & Development" },
         { name: "SEO Optimization" },
@@ -62,7 +62,7 @@ const ClientWorkSection = () => {
 
   return (
     <div className="w-full flex flex-col gap-6 justify-center items-center">
-      <div className="w-full gap-6 grid grid-cols-2 justify-center items-center flex-wrap">
+      <div className="w-full gap-6 grid md:grid-cols-2 grid-cols-1 justify-center items-center flex-wrap">
         {Projects.map((item, idx) => (
           <motion.div
             initial={{ sacale: 1 }}
