@@ -11,10 +11,11 @@ import {
   DollarSign,
 } from "lucide-react";
 import BookaCallPopUp from "@/components/ui/BookaCallPopUp";
+import IconBox from "@/components/ui/IconBox";
 
 const FAQ = () => {
   const [open, setOpen] = React.useState([]);
-  const IconStyles = "size-5 text-accent-main";
+  const IconStyles = "size-5 text-white";
 
   const FAQ = [
     {
@@ -71,9 +72,10 @@ const FAQ = () => {
                 "h-fit w-full gap-3 flex md:flex-row flex-col md:justify-start justify-center md:items-center items-start group transition-all duration-300 ease-in-out",
               )}
             >
-              <div className="size-10 rounded-[4px] flex justify-center items-center border border-main-border bg-sec-bg">
+              <IconBox>{item.icon}</IconBox>
+              {/* <div className="size-10 rounded-[8px] flex justify-center items-center border border-accent-border bg-accent-main">
                 {item.icon}
-              </div>
+              </div> */}
 
               <p className="text-[16px] text-main-text font-medium">
                 {item.question || "Some text here"}
@@ -94,7 +96,7 @@ const FAQ = () => {
           open.includes(5) || (open.includes(7) && "-t"),
         )}
       >
-        <span className="text-[14px] text-sec-text">
+        <span className="md:text-[14px] text-[12px] text-sec-text">
           Can't find the answer you're looking for?
         </span>{" "}
         <BookaCallPopUp>

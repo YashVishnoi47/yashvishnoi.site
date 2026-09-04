@@ -128,7 +128,7 @@ const Navbar = () => {
           )}
         >
           <Popover>
-            <PopoverTrigger render={<Menu className="text-main-text" />} />
+            <PopoverTrigger nativeButton={false} render={<Menu className="text-main-text" />} />
             <PopoverContent
               className={
                 "bg-main-bg flex flex-col gap-2 border relative z-100000 border-main-border h-fit mr-2 mt-5"

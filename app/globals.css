@@ -187,7 +187,8 @@
   --text-white: hsl(0, 0%, 95%);
 
   /* colors */
-  --main-bg: #0B0D0E;
+  /* --main-bg: #0B0D0E; */
+  --main-bg: #0D0D0F;
   --sec-bg:#111417;
   --glow-sec-bg:#3f4243;
   --card-bg:#15181B;
@@ -196,13 +197,29 @@
   --faint-text:#5B5F60;
   --main-border:#262B2F;
   --sec-border:#1D2124;
-  --accent-main: #E3A34C;
+
+  /* Orignal */
+  /* --accent-main: #E3A34C;
   --color-accent-hover: #EDB262;
   --color-accent-tint: #e3a34c1f;
-  --color-accent-border: rgba(227, 163, 76, 0.35);
+  --color-accent-border: rgba(227, 163, 76, 0.35); */
+
+  /* Steel Blue */
+  --accent-main: #5B8DEF;
+  --color-accent-hover: #79A1F2;
+  --color-accent-tint: rgba(91, 141, 239, 0.122);
+  --color-accent-border: rgba(91, 141, 239, 0.35);
+
+
+  /* --accent-main: #EC3C62;
+  --color-accent-hover: #F25C7E;
+  --color-accent-tint: #ec3c6214;
+  --color-accent-border: rgba(236, 60, 98, 0.25); */
+
 
   /* text Sizes */
-  --text-h1: clamp(28px, 5vw, 68px);
+  /* --text-h1: clamp(28px, 5vw, 68px); */
+  --text-h1: clamp(34px, 5vw, 68px);
   --text-h2: clamp(32px, 4vw, 52px);
 
   /* spaces */

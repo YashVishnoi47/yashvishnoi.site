@@ -8,6 +8,7 @@ import AnimateAll from "@/components/layout/AnimateAll";
 import { cn } from "@/lib/utils";
 import ClientWorkSection from "@/components/pages/HomePage/ClientWorkSection";
 import ProcessSection from "@/components/pages/HomePage/ProcessSection";
+import TestimonialSection from "@/components/pages/HomePage/TestimonialSection";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
         "flex flex-col justify-start items-center sm:px-0 p-2 gap-40",
       )}
     >
-      <HeroSection />
+      <AnimateAll>
+        <HeroSection />
+      </AnimateAll>
 
       <AnimateAll
         className={"w-full flex flex-col gap-20 justify-center items-center"}
@@ -37,6 +40,21 @@ export default function Home() {
       </AnimateAll>
 
       <AnimateAll
+        className={"w-full flex flex-col gap-20 justify-center items-center"}
+        id={"work"}
+      >
+        <HeadingBox
+          heading={"What clients say about me"}
+          subheading={"Everything my clients have to say about me."}
+          tag={"Testimonialss"}
+        />
+
+        <div className="w-full h-fit flex flex-col gap-6 justify-center items-center">
+          <TestimonialSection />
+        </div>
+      </AnimateAll>
+
+      <AnimateAll
         id={"services"}
         className={"w-full flex flex-col gap-20 justify-center items-center"}
       >
@@ -51,6 +69,7 @@ export default function Home() {
         <ServicesSection />
       </AnimateAll>
 
+      {/* Persnal Project Section */}
       {/* <AnimateAll
         className={"w-full flex flex-col gap-20 justify-center items-center"}
         id={"work"}

@@ -10,8 +10,9 @@ import Link from "next/link";
 import {motion} from "framer-motion";
 import { cn } from "@/lib/utils";
 import ProjectButton from "@/components/ui/ProjectButton";
+import IconBox from "@/components/ui/IconBox";
 const ServicesSection = () => {
-  const IconStyles = "size-4 text-accent-main";
+  const IconStyles = "size-5 text-white";
 
   const Services = [
     {
@@ -59,9 +60,11 @@ const ServicesSection = () => {
             key={idx}
             className="flex gap-3 w-full flex-col justify-start items-start sm:px-0 px-2 py-4"
           >
-            <div className="size-10 rounded-[4px] flex justify-center items-center border border-main-border bg-sec-bg">
+
+            <IconBox>{item.icon}</IconBox>
+            {/* <div className="size-10 rounded-[4px] flex justify-center items-center border border-main-border bg-sec-bg">
               {item.icon}
-            </div>
+            </div> */}
 
             <p className="text-[20px] font-head text-main-text mt-3">
               {item.heading}
@@ -73,7 +76,6 @@ const ServicesSection = () => {
           </div>
         ))}
 
-        {/* <ServiceFolder /> */}
       </div>
 
       <div className="w-full md:h-100 h-fit flex gap-4 justify-start items-start rounded-[8px] bg-sec-bg border border-main-border">

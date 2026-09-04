@@ -10,7 +10,7 @@ const Folder = ({ InnerCards }) => {
     {
       name: "1",
       image:"/screenshots/legalintakeos.png",
-      cls: "bg-blue-500 rounded-2xl absolute h-35 left-1/2 shadow-xl overflow-hidden p-1",
+      cls: "bg-accent-hover rounded-2xl absolute h-35 left-1/2 shadow-xl overflow-hidden p-[2px]",
 
       initialWidth: "96%",
       initialX: "-50%",
@@ -30,7 +30,7 @@ const Folder = ({ InnerCards }) => {
     {
       name: "2",
       image:"/screenshots/portfolio.png",
-      cls: "bg-red-500 rounded-2xl absolute h-35 left-1/2 shadow-2xl overflow-hidden p-1",
+      cls: "bg-accent-hover rounded-2xl absolute h-35 left-1/2 shadow-2xl overflow-hidden p-[2px]",
 
       initialWidth: "92%",
       initialX: "-50%",
@@ -50,7 +50,7 @@ const Folder = ({ InnerCards }) => {
     {
       name: "3",
       image:"/screenshots/legalintakeos.png",
-      cls: "bg-green-500 rounded-2xl absolute h-35 left-1/2 shadow-xl overflow-hidden p-1",
+      cls: "bg-accent-hover rounded-2xl absolute h-35 left-1/2 shadow-xl overflow-hidden p-[2px]",
 
       initialWidth: "88%",
       initialX: "-50%",
@@ -74,7 +74,7 @@ const Folder = ({ InnerCards }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="w-15 h-[35px] bg-accent-main bg[hsl(0,0%,0%)] absolute -top-6 rounded--[30px] rounded-tl-[20px] " />
+      <div className="w-15 h-[35px] bg-accent-main bg[hsl(0,0%,0%)] absolute -top-6 rounded-tl-[20px] " />
       <SVG color={"white"} />
 
       {InnerCard3.map((item, index) => (
@@ -143,7 +143,7 @@ const SVG = ({ color }) => {
     >
       <path
         d="M0 0H32.6524C41.8387 0 50.0154 5.82237 53.0204 14.5033C55.5642 21.8521 60.9776 27.8562 68.0246 31.1448L82.9153 38.0938C83.8849 38.5463 83.5624 40 82.4924 40H0V0Z"
-        fill="#E3A34C"
+        fill="#5B8DEF"
       />
     </svg>
   );

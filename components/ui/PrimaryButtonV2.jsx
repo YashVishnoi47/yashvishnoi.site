@@ -14,10 +14,10 @@ const PrimaryButtonV2 = ({ text, className }) => {
   return (
     <motion.div
       className={cn(
-        "w-[160px] h-[45px] p-1 rounded-[8px]",
+        "w-[160px] h-[45px] p-1 rounded-[6px]",
         "flex justify-between items-center relative overflow-hidden",
-        "bg-accent-main text-black",
-        "border border-accent-tint",
+        "bg-accent-main text-black shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)_inset] hover:shadow-[0px_0px_10px_0px_rgba(0,0,0,0.4)_inset] transition-all duration-300 ease-in-out",
+        "border border-accent-border",
         "cursor-pointer",
         hover && "pl-2",
         className,
@@ -28,7 +28,7 @@ const PrimaryButtonV2 = ({ text, className }) => {
       <motion.div
         className={cn(
           "h-full aspect-square rounded-[4px]",
-          "flex justify-center items-center overflow-hidden relative z-2 bg-white text-black relative",
+          "flex justify-center items-center overflow-hidden z-2 bg-white text-black relative",
         )}
         style={{ order: hover ? 2 : 1 }}
         transition={{ duration: 0.9, ease: easing }}
@@ -72,7 +72,7 @@ const PrimaryButtonV2 = ({ text, className }) => {
         transition={{ duration: 0.9, ease: easing }}
         className={cn(
           "text-[14px] font-medium font-body relative text-text-main z-1",
-          "mr-2",
+          "mr-2 text-white",
         )}
       >
         {text || "Click me"}

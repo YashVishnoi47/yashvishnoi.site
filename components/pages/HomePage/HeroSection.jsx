@@ -21,26 +21,27 @@ const HeroSection = () => {
         <CTALabel />
       </BookaCallPopUp>
 
-      <h1 className="text-h1 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
-        Extremely Good Looking Websites for{" "}
-        <span className="relative px-1">
-          <span className="relative z-2 sm:bg-transparent bg-accent-main sm:text-main-text text-main-bg italic">
-            Businesses and Startups
-          </span>{" "}
-          <motion.span
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
-            className={
-              "absolute inset-0 sm:flex hidden bg-accent-main overflow-hidden  rounded-[4px] z-3"
-            }
-          >
-            <span className="relative  text-main-bg shrink-0 whitespace-nowrap italic">
+     
+        <h1 className="text-h1 w-full text-main-text text-balance font-head tracking-tight leading-[1.27]">
+          Extremely Good Looking Websites for{" "}
+          <span className="relative md:px-2 ">
+            <span className="relative z-2 sm:bg-transparent bg-accent-main">
               Businesses and Startups
             </span>{" "}
-          </motion.span>
-        </span>
-      </h1>
+            <motion.span
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
+              className={
+                "absolute inset-0 sm:flex hidden bg-accent-main overflow-hidden border-accent-border border rounded-[6px] z-3 italic shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)_inset]"
+              }
+            >
+              <span className="text-white shrink-0 whitespace-nowrap">
+                Businesses and Startups
+              </span>{" "}
+            </motion.span>
+          </span>
+        </h1>
 
       <h2 className="md:text-[18px] text-[14px] md:w-[70%] w-full text-sec-text text-pretty font-body mt-1">
         I'm a full-stack developer who builds high-performing websites for
